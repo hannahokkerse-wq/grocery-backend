@@ -560,10 +560,16 @@ def upload_data(file: UploadFile = File(...)):
         "count": len(PRODUCTS)
     }
 
+DATA_FILE = "grocery_data.json"
+
+if os.path.exists(DATA_FILE):
+    with open(DATA_FILE, "r") as f:
+        PRODUCTS = json.load(f)
+
+
 @app.get("/data/status")
 def data_status():
     return {
         "total_products": len(PRODUCTS),
         "source": "file" if os.path.exists(DATA_FILE) else "default"
     }
-
