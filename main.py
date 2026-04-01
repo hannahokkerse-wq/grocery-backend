@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 import os
 import requests
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,81 +22,24 @@ STORES = [
     {"id": "lidl", "name": "Lidl", "distanceKm": 3.0},
     {"id": "aldi", "name": "Aldi", "distanceKm": 3.5},
 ]
+
 PRODUCTS = [
-    {
-    "id": 1,
-    "name": "Halfvolle melk 1L",
-    "category": "Zuivel",
-    "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.55, "aldi": 1.49},
-    "tags": ["bonus"],
-    "substitute": "Huismerk halfvolle melk 1L",
-},
-    {
-        "id": 2,
-        "name": "Eggs 12 pack",
-        "category": "Dairy",
-        "prices": {"freshmart": 3.49, "valuefoods": 2.99, "greenbasket": 3.29},
-        "tags": ["coupon"],
-        "substitute": "Eggs 6 pack x2",
-    },
-    {
-        "id": 3,
-        "name": "Chicken Breast 500g",
-        "category": "Meat",
-        "prices": {"freshmart": 5.99, "valuefoods": 6.49, "greenbasket": 5.59},
-        "tags": ["protein", "popular"],
-        "substitute": "Chicken Thighs 500g",
-    },
-    {
-        "id": 4,
-        "name": "Bananas 1kg",
-        "category": "Produce",
-        "prices": {"freshmart": 1.99, "valuefoods": 1.69, "greenbasket": 1.89},
-        "tags": ["produce"],
-        "substitute": "Loose Bananas",
-    },
-    {
-        "id": 5,
-        "name": "Rice 1kg",
-        "category": "Pantry",
-        "prices": {"freshmart": 2.79, "valuefoods": 2.49, "greenbasket": 2.59},
-        "tags": ["pantry staple"],
-        "substitute": "Store Brand Rice 1kg",
-    },
-    {
-        "id": 6,
-        "name": "Greek Yogurt 500g",
-        "category": "Dairy",
-        "prices": {"freshmart": 3.99, "valuefoods": 4.29, "greenbasket": 3.49},
-        "tags": ["healthy"],
-        "substitute": "Plain Yogurt 500g",
-    },
-    {
-        "id": 7,
-        "name": "Pasta 500g",
-        "category": "Pantry",
-        "prices": {"freshmart": 1.49, "valuefoods": 1.19, "greenbasket": 1.39},
-        "tags": ["weekly deal"],
-        "substitute": "Store Brand Pasta 500g",
-    },
-    {
-        "id": 8,
-        "name": "Olive Oil 1L",
-        "category": "Pantry",
-        "prices": {"freshmart": 9.99, "valuefoods": 8.99, "greenbasket": 9.49},
-        "tags": ["tracked item"],
-        "substitute": "Sunflower Oil 1L",
-    },
+    {"id": 1, "name": "Halfvolle melk 1L", "category": "Zuivel", "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.55, "aldi": 1.49}, "tags": ["bonus"], "substitute": "Huismerk melk 1L"},
+    {"id": 2, "name": "Eieren 12 stuks", "category": "Zuivel", "prices": {"ah": 3.49, "jumbo": 3.19, "lidl": 2.89, "aldi": 2.79}, "tags": ["actie"], "substitute": "Eieren 10 stuks"},
+    {"id": 3, "name": "Kipfilet 500g", "category": "Vlees", "prices": {"ah": 5.99, "jumbo": 5.79, "lidl": 5.49, "aldi": 5.29}, "tags": ["populair"], "substitute": "Kippendijfilet 500g"},
+    {"id": 4, "name": "Bananen 1kg", "category": "Groente & Fruit", "prices": {"ah": 1.99, "jumbo": 1.89, "lidl": 1.69, "aldi": 1.59}, "tags": ["vers"], "substitute": "Losse bananen"},
+    {"id": 5, "name": "Witte rijst 1kg", "category": "Houdbaar", "prices": {"ah": 2.79, "jumbo": 2.59, "lidl": 2.29, "aldi": 2.19}, "tags": ["basis"], "substitute": "Zilvervliesrijst"},
+    {"id": 6, "name": "Griekse yoghurt 500g", "category": "Zuivel", "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.39, "aldi": 3.29}, "tags": ["gezond"], "substitute": "Magere yoghurt"},
+    {"id": 7, "name": "Pasta 500g", "category": "Houdbaar", "prices": {"ah": 1.49, "jumbo": 1.39, "lidl": 1.19, "aldi": 1.09}, "tags": ["bonus"], "substitute": "Volkoren pasta"},
+    {"id": 8, "name": "Olijfolie 1L", "category": "Houdbaar", "prices": {"ah": 9.99, "jumbo": 9.49, "lidl": 8.99, "aldi": 8.79}, "tags": ["actie"], "substitute": "Zonnebloemolie"},
+    {"id": 9, "name": "Brood volkoren", "category": "Brood", "prices": {"ah": 2.49, "jumbo": 2.39, "lidl": 1.99, "aldi": 1.89}, "tags": ["dagelijks"], "substitute": "Wit brood"},
+    {"id": 10, "name": "Appels 1kg", "category": "Groente & Fruit", "prices": {"ah": 2.99, "jumbo": 2.79, "lidl": 2.49, "aldi": 2.39}, "tags": ["vers"], "substitute": "Peren 1kg"},
+    {"id": 11, "name": "Aardappelen 2kg", "category": "Groente & Fruit", "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.49, "aldi": 3.29}, "tags": ["basis"], "substitute": "Zoete aardappel"},
+    {"id": 12, "name": "Kaas jong belegen 400g", "category": "Zuivel", "prices": {"ah": 4.99, "jumbo": 4.79, "lidl": 4.29, "aldi": 4.19}, "tags": ["bonus"], "substitute": "30+ kaas"},
+    {"id": 13, "name": "Frisdrank cola 1.5L", "category": "Drinken", "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.49, "aldi": 1.39}, "tags": ["actie"], "substitute": "Cola zero"},
+    {"id": 14, "name": "Sinaasappelsap 1L", "category": "Drinken", "prices": {"ah": 2.49, "jumbo": 2.29, "lidl": 1.99, "aldi": 1.89}, "tags": ["vers"], "substitute": "Appelsap"},
+    {"id": 15, "name": "Tomaten 500g", "category": "Groente & Fruit", "prices": {"ah": 2.19, "jumbo": 2.09, "lidl": 1.79, "aldi": 1.69}, "tags": ["vers"], "substitute": "Cherry tomaat"}
 ]
-
-DATA_FILE = "grocery_data.json"
-
-if os.path.exists(DATA_FILE):
-    try:
-        with open(DATA_FILE, "r") as f:
-            PRODUCTS = json.load(f)
-    except Exception:
-        pass
 
 
 def get_cheapest_store(product: Dict):
@@ -108,21 +51,12 @@ def get_cheapest_store(product: Dict):
 
 
 def build_basket(items: List[Dict]):
-    if not items:
-        return {
-            "perStoreTotals": [],
-            "singleStoreBest": None,
-            "splitPlan": [],
-            "splitTotal": 0,
-            "savingsVsSingleStore": 0,
-        }
-
     per_store_totals = []
     for store in STORES:
         total = sum(item["prices"][store["id"]] for item in items)
         per_store_totals.append({**store, "total": round(total, 2)})
 
-    single_store_best = min(per_store_totals, key=lambda x: x["total"])
+    single_store_best = min(per_store_totals, key=lambda x: x["total"]) if per_store_totals else None
 
     split_plan = []
     for item in items:
@@ -137,7 +71,7 @@ def build_basket(items: List[Dict]):
         )
 
     split_total = round(sum(row["price"] for row in split_plan), 2)
-    savings = round(single_store_best["total"] - split_total, 2)
+    savings = round((single_store_best["total"] - split_total), 2) if single_store_best else 0
 
     return {
         "perStoreTotals": per_store_totals,
@@ -156,23 +90,23 @@ def ai_deal_insights(items: List[Dict]):
         ]
 
     basket = build_basket(items)
-    dairy_count = len([i for i in items if i["category"] == "Dairy"])
-    pantry_count = len([i for i in items if i["category"] == "Pantry"])
+    dairy_count = len([i for i in items if i["category"] == "Zuivel"])
+    pantry_count = len([i for i in items if i["category"] == "Houdbaar"])
 
     insights = [
-        f"Best one-store option: {basket['singleStoreBest']['name']} at €{basket['singleStoreBest']['total']:.2f}.",
-        f"Split shopping across stores drops the total to €{basket['splitTotal']:.2f}, saving €{basket['savingsVsSingleStore']:.2f}.",
+        f"Beste supermarkt voor alles samen: {basket['singleStoreBest']['name']} voor €{basket['singleStoreBest']['total']:.2f}.",
+        f"Als je slim splitst tussen winkels betaal je €{basket['splitTotal']:.2f}, en bespaar je €{basket['savingsVsSingleStore']:.2f}.",
     ]
 
     if dairy_count >= 2:
-        insights.append("Your basket is dairy-heavy. Consider enabling coupon alerts for milk, eggs, and yogurt.")
+        insights.append("Je mandje bevat veel zuivel. Let op bonusacties voor melk, eieren, yoghurt en kaas.")
 
     if pantry_count >= 2:
-        insights.append("Pantry items are good candidates for bulk-buy recommendations when prices dip.")
+        insights.append("Houdbare producten zijn slim om in bulk te kopen als ze in de aanbieding zijn.")
 
     expensive = sorted(items, key=lambda i: get_cheapest_store(i)["price"], reverse=True)[0]
     insights.append(
-        f"{expensive['name']} is your highest-cost item. AI substitute suggestion: {expensive['substitute']}."
+        f"{expensive['name']} is je duurste product. Slim alternatief: {expensive['substitute']}."
     )
 
     return insights
@@ -256,9 +190,9 @@ def ai_recommend(request: AIRequest):
 def alert_suggestions():
     return {
         "suggestions": [
-            "Track eggs, milk, and olive oil and alert when price drops by 10%.",
-            "Notify users when pantry staples hit their lowest 30-day price.",
-            "Recommend bulk-buy opportunities for dairy and pantry items.",
+            "Track eieren, melk en olijfolie en stuur een alert bij 10% prijsdaling.",
+            "Geef een melding wanneer houdbare basisproducten hun laagste prijs bereiken.",
+            "Aanbevelingen voor bulkinkopen bij bonusacties.",
         ]
     }
 
@@ -275,7 +209,7 @@ def ai_chat(request: AIChatRequest):
 
     if not OPENAI_API_KEY:
         return {
-            "reply": "AI not configured. Add OPENAI_API_KEY to enable smart assistant.",
+            "reply": "AI is nog niet gekoppeld. Voeg OPENAI_API_KEY toe om slimme supermarkt-assistent te activeren.",
             "fallback": ai_deal_insights(items)
         }
 
@@ -283,7 +217,7 @@ def ai_chat(request: AIChatRequest):
     history = CHAT_MEMORY.get(session_id, [])[-8:]
 
     system_prompt = """
-You are a grocery savings assistant.
+You are a grocery savings assistant for Dutch supermarkets.
 You help users save money on groceries.
 Always be practical, concise, and useful.
 Prefer specific savings suggestions, substitutions, and shopping strategies.
@@ -337,10 +271,57 @@ Respond with:
 
     except Exception as e:
         return {
-            "reply": "AI request failed. Falling back to built-in grocery tips.",
+            "reply": "AI-aanvraag mislukt. Ik val terug op ingebouwde bespaartips.",
             "error": str(e),
             "fallback": ai_deal_insights(items)
         }
+
+
+DATA_FILE = "grocery_data.json"
+
+if os.path.exists(DATA_FILE):
+    with open(DATA_FILE, "r") as f:
+        PRODUCTS = json.load(f)
+
+
+@app.post("/data/upload")
+def upload_data(file: UploadFile = File(...)):
+    content = file.file.read().decode("utf-8")
+
+    try:
+        data = json.loads(content)
+    except Exception:
+        import csv
+        reader = csv.DictReader(content.splitlines())
+        data = []
+        for i, row in enumerate(reader):
+            data.append({
+                "id": i + 1,
+                "name": row.get("name"),
+                "category": row.get("category", "Overig"),
+                "prices": {
+                    "ah": float(row.get("ah", 0) or 0),
+                    "jumbo": float(row.get("jumbo", 0) or 0),
+                    "lidl": float(row.get("lidl", 0) or 0),
+                    "aldi": float(row.get("aldi", 0) or 0),
+                },
+                "tags": ["imported"],
+                "substitute": row.get("substitute", "Goedkoper alternatief"),
+            })
+
+    if not isinstance(data, list):
+        raise HTTPException(status_code=400, detail="Uploaded data must be a JSON array or valid CSV.")
+
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f)
+
+    global PRODUCTS
+    PRODUCTS = data
+
+    return {
+        "status": "uploaded",
+        "count": len(PRODUCTS)
+    }
 
 
 @app.get("/data/status")
