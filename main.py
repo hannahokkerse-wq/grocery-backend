@@ -24,13 +24,13 @@ STORES = [
 ]
 PRODUCTS = [
     {
-        "id": 1,
-        "name": "Milk 1L",
-        "category": "Dairy",
-        "prices": {"freshmart": 1.89, "valuefoods": 1.59, "greenbasket": 1.79},
-        "tags": ["weekly deal"],
-        "substitute": "Store Brand Milk 1L",
-    },
+    "id": 1,
+    "name": "Halfvolle melk 1L",
+    "category": "Zuivel",
+    "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.55, "aldi": 1.49},
+    "tags": ["bonus"],
+    "substitute": "Huismerk halfvolle melk 1L",
+},
     {
         "id": 2,
         "name": "Eggs 12 pack",
