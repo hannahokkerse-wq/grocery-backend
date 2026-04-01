@@ -1,42 +1,12 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException
 import os
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
-from sqlmodel import SQLModel, Field, Session, create_engine, select
-from contextlib import asynccontextmanager
+import json
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./grocery_discount.db")
-engine = create_engine(DATABASE_URL, echo=False)
-
-
-class User(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    email: str
-
-
-class ShoppingList(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    user_id: int
-    name: str
-    product_ids: str
-
-
-class PriceAlert(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    user_id: int
-    product_id: int
-    target_price: float
-
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    SQLModel.metadata.create_all(engine)
-    yield
-
-
-app = FastAPI(title="Grocery Discount API", lifespan=lifespan)
+app = FastAPI(title="Grocery Discount API")
 
 app.add_middleware(
     CORSMiddleware,
@@ -119,6 +89,15 @@ PRODUCTS = [
     },
 ]
 
+DATA_FILE = "grocery_data.json"
+
+if os.path.exists(DATA_FILE):
+    try:
+        with open(DATA_FILE, "r") as f:
+            PRODUCTS = json.load(f)
+    except Exception:
+        pass
+
 
 def get_cheapest_store(product: Dict):
     cheapest_store_id = min(product["prices"], key=product["prices"].get)
@@ -129,6 +108,15 @@ def get_cheapest_store(product: Dict):
 
 
 def build_basket(items: List[Dict]):
+    if not items:
+        return {
+            "perStoreTotals": [],
+            "singleStoreBest": None,
+            "splitPlan": [],
+            "splitTotal": 0,
+            "savingsVsSingleStore": 0,
+        }
+
     per_store_totals = []
     for store in STORES:
         total = sum(item["prices"][store["id"]] for item in items)
@@ -201,6 +189,12 @@ class AIRequest(BaseModel):
     location: Optional[str] = "Amsterdam"
 
 
+class AIChatRequest(BaseModel):
+    session_id: Optional[str] = "default"
+    message: str
+    product_ids: Optional[List[int]] = []
+
+
 @app.get("/")
 def root():
     return {"message": "Grocery Discount API is running"}
@@ -269,19 +263,8 @@ def alert_suggestions():
     }
 
 
-# -------- REAL AI INTEGRATION --------
-# Uses OpenAI-compatible API (can swap provider easily)
-
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_URL = "https://api.openai.com/v1/chat/completions"
-
-
-class AIChatRequest(BaseModel):
-    session_id: Optional[str] = "default"
-    message: str
-    product_ids: Optional[List[int]] = []
-
-
 CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
 
 
@@ -359,206 +342,6 @@ Respond with:
             "fallback": ai_deal_insights(items)
         }
 
-
-# -------- USER ACCOUNTS + SAVED LISTS (DB VERSION) --------
-
-class UserCreate(BaseModel):
-    email: str
-
-class ShoppingListCreate(BaseModel):
-    user_id: int
-    name: str
-    product_ids: List[int]
-
-@app.post("/users/create")
-def create_user(request: UserCreate):
-    with Session(engine) as session:
-        existing = session.exec(select(User).where(User.email == request.email)).first()
-        if existing:
-            return existing
-
-        user = User(email=request.email)
-        session.add(user)
-        session.commit()
-        session.refresh(user)
-        return user
-
-@app.get("/users/{user_id}")
-def get_user(user_id: int):
-    with Session(engine) as session:
-        user = session.get(User, user_id)
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-        return user
-
-@app.post("/lists/create")
-def create_list(request: ShoppingListCreate):
-    with Session(engine) as session:
-        user = session.get(User, request.user_id)
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-
-        shopping_list = ShoppingList(
-            user_id=request.user_id,
-            name=request.name,
-            product_ids=",".join(map(str, request.product_ids))
-        )
-        session.add(shopping_list)
-        session.commit()
-        session.refresh(shopping_list)
-        return shopping_list
-
-@app.get("/lists/{user_id}")
-def get_lists(user_id: int):
-    with Session(engine) as session:
-        lists = session.exec(select(ShoppingList).where(ShoppingList.user_id == user_id)).all()
-        enriched = []
-        for shopping_list in lists:
-            product_ids = [int(pid) for pid in shopping_list.product_ids.split(",") if pid]
-            products = [p for p in PRODUCTS if p["id"] in product_ids]
-            enriched.append({
-                "id": shopping_list.id,
-                "user_id": shopping_list.user_id,
-                "name": shopping_list.name,
-                "product_ids": product_ids,
-                "products": products,
-            })
-        return enriched
-
-@app.delete("/lists/{user_id}/{list_id}")
-def delete_list(user_id: int, list_id: int):
-    with Session(engine) as session:
-        shopping_list = session.get(ShoppingList, list_id)
-        if not shopping_list or shopping_list.user_id != user_id:
-            raise HTTPException(status_code=404, detail="List not found")
-        session.delete(shopping_list)
-        session.commit()
-        return {"status": "deleted"}
-
-
-# -------- PRICE ALERT SYSTEM (DB VERSION) --------
-
-class PriceAlertCreate(BaseModel):
-    user_id: int
-    product_id: int
-    target_price: float
-
-@app.post("/alerts/create")
-def create_price_alert(request: PriceAlertCreate):
-    with Session(engine) as session:
-        user = session.get(User, request.user_id)
-        if not user:
-            raise HTTPException(status_code=404, detail="User not found")
-
-        product = next((p for p in PRODUCTS if p["id"] == request.product_id), None)
-        if not product:
-            raise HTTPException(status_code=404, detail="Product not found")
-
-        alert = PriceAlert(
-            user_id=request.user_id,
-            product_id=request.product_id,
-            target_price=request.target_price,
-        )
-        session.add(alert)
-        session.commit()
-        session.refresh(alert)
-
-        return {
-            "id": alert.id,
-            "user_id": alert.user_id,
-            "product_id": alert.product_id,
-            "product_name": product["name"],
-            "target_price": alert.target_price,
-            "current_lowest_price": get_cheapest_store(product)["price"],
-            "triggered": get_cheapest_store(product)["price"] <= alert.target_price,
-        }
-
-@app.get("/alerts/{user_id}")
-def get_user_alerts(user_id: int):
-    with Session(engine) as session:
-        alerts = session.exec(select(PriceAlert).where(PriceAlert.user_id == user_id)).all()
-        response = []
-        for alert in alerts:
-            product = next((p for p in PRODUCTS if p["id"] == alert.product_id), None)
-            if not product:
-                continue
-            current_price = get_cheapest_store(product)["price"]
-            response.append({
-                "id": alert.id,
-                "user_id": alert.user_id,
-                "product_id": alert.product_id,
-                "product_name": product["name"],
-                "target_price": alert.target_price,
-                "current_lowest_price": current_price,
-                "triggered": current_price <= alert.target_price,
-            })
-        return response
-
-@app.get("/alerts/check/{user_id}")
-def check_alerts(user_id: int):
-    alerts = get_user_alerts(user_id)
-    triggered = [a for a in alerts if a["triggered"]]
-    return {"alerts": alerts, "triggered": triggered}
-
-@app.delete("/alerts/{alert_id}")
-def delete_alert(alert_id: int):
-    with Session(engine) as session:
-        alert = session.get(PriceAlert, alert_id)
-        if not alert:
-            raise HTTPException(status_code=404, detail="Alert not found")
-        session.delete(alert)
-        session.commit()
-        return {"status": "deleted"}
-
-
-# -------- REAL DATA INGESTION (CSV/JSON) --------
-
-import json
-
-DATA_FILE = "grocery_data.json"
-
-# Load data if exists
-if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
-        PRODUCTS = json.load(f)
-
-@app.post("/data/upload")
-def upload_data(file: UploadFile = File(...)):
-    content = file.file.read().decode("utf-8")
-
-    try:
-        data = json.loads(content)
-    except Exception:
-        import csv
-        reader = csv.DictReader(content.splitlines())
-        data = []
-        for i, row in enumerate(reader):
-            data.append({
-                "id": i + 1,
-                "name": row.get("name"),
-                "category": row.get("category", "Other"),
-                "prices": {
-                    "freshmart": float(row.get("freshmart", 0) or 0),
-                    "valuefoods": float(row.get("valuefoods", 0) or 0),
-                    "greenbasket": float(row.get("greenbasket", 0) or 0),
-                },
-                "tags": ["imported"],
-                "substitute": row.get("substitute", "Generic alternative"),
-            })
-
-    if not isinstance(data, list):
-        raise HTTPException(status_code=400, detail="Uploaded data must be a JSON array or valid CSV.")
-
-    with open(DATA_FILE, "w") as f:
-        json.dump(data, f)
-
-    global PRODUCTS
-    PRODUCTS = data
-
-    return {
-        "status": "uploaded",
-        "count": len(PRODUCTS)
-    }
 
 @app.get("/data/status")
 def data_status():
