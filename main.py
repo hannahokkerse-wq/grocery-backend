@@ -17,11 +17,11 @@ app.add_middleware(
 )
 
 STORES = [
-    {"id": "freshmart", "name": "FreshMart", "distanceKm": 1.2},
-    {"id": "valuefoods", "name": "ValueFoods", "distanceKm": 2.4},
-    {"id": "greenbasket", "name": "GreenBasket", "distanceKm": 3.1},
+    {"id": "ah", "name": "Albert Heijn", "distanceKm": 1.2},
+    {"id": "jumbo", "name": "Jumbo", "distanceKm": 2.1},
+    {"id": "lidl", "name": "Lidl", "distanceKm": 3.0},
+    {"id": "aldi", "name": "Aldi", "distanceKm": 3.5},
 ]
-
 PRODUCTS = [
     {
         "id": 1,
