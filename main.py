@@ -4,9 +4,40 @@ import requests
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
+from sqlmodel import SQLModel, Field, Session, create_engine, select
+from contextlib import asynccontextmanager
 import json
 
-app = FastAPI(title="Grocery Discount API")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./grocery_discount.db")
+engine = create_engine(DATABASE_URL, echo=False)
+
+
+class User(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    email: str
+
+
+class ShoppingList(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int
+    name: str
+    product_ids: str
+
+
+class PriceAlert(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    user_id: int
+    product_id: int
+    target_price: float
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    SQLModel.metadata.create_all(engine)
+    yield
+
+
+app = FastAPI(title="Grocery Discount API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,22 +55,193 @@ STORES = [
 ]
 
 PRODUCTS = [
-    {"id": 1, "name": "Halfvolle melk 1L", "category": "Zuivel", "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.55, "aldi": 1.49}, "tags": ["bonus"], "substitute": "Huismerk melk 1L"},
-    {"id": 2, "name": "Eieren 12 stuks", "category": "Zuivel", "prices": {"ah": 3.49, "jumbo": 3.19, "lidl": 2.89, "aldi": 2.79}, "tags": ["actie"], "substitute": "Eieren 10 stuks"},
-    {"id": 3, "name": "Kipfilet 500g", "category": "Vlees", "prices": {"ah": 5.99, "jumbo": 5.79, "lidl": 5.49, "aldi": 5.29}, "tags": ["populair"], "substitute": "Kippendijfilet 500g"},
-    {"id": 4, "name": "Bananen 1kg", "category": "Groente & Fruit", "prices": {"ah": 1.99, "jumbo": 1.89, "lidl": 1.69, "aldi": 1.59}, "tags": ["vers"], "substitute": "Losse bananen"},
-    {"id": 5, "name": "Witte rijst 1kg", "category": "Houdbaar", "prices": {"ah": 2.79, "jumbo": 2.59, "lidl": 2.29, "aldi": 2.19}, "tags": ["basis"], "substitute": "Zilvervliesrijst"},
-    {"id": 6, "name": "Griekse yoghurt 500g", "category": "Zuivel", "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.39, "aldi": 3.29}, "tags": ["gezond"], "substitute": "Magere yoghurt"},
-    {"id": 7, "name": "Pasta 500g", "category": "Houdbaar", "prices": {"ah": 1.49, "jumbo": 1.39, "lidl": 1.19, "aldi": 1.09}, "tags": ["bonus"], "substitute": "Volkoren pasta"},
-    {"id": 8, "name": "Olijfolie 1L", "category": "Houdbaar", "prices": {"ah": 9.99, "jumbo": 9.49, "lidl": 8.99, "aldi": 8.79}, "tags": ["actie"], "substitute": "Zonnebloemolie"},
-    {"id": 9, "name": "Brood volkoren", "category": "Brood", "prices": {"ah": 2.49, "jumbo": 2.39, "lidl": 1.99, "aldi": 1.89}, "tags": ["dagelijks"], "substitute": "Wit brood"},
-    {"id": 10, "name": "Appels 1kg", "category": "Groente & Fruit", "prices": {"ah": 2.99, "jumbo": 2.79, "lidl": 2.49, "aldi": 2.39}, "tags": ["vers"], "substitute": "Peren 1kg"},
-    {"id": 11, "name": "Aardappelen 2kg", "category": "Groente & Fruit", "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.49, "aldi": 3.29}, "tags": ["basis"], "substitute": "Zoete aardappel"},
-    {"id": 12, "name": "Kaas jong belegen 400g", "category": "Zuivel", "prices": {"ah": 4.99, "jumbo": 4.79, "lidl": 4.29, "aldi": 4.19}, "tags": ["bonus"], "substitute": "30+ kaas"},
-    {"id": 13, "name": "Frisdrank cola 1.5L", "category": "Drinken", "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.49, "aldi": 1.39}, "tags": ["actie"], "substitute": "Cola zero"},
-    {"id": 14, "name": "Sinaasappelsap 1L", "category": "Drinken", "prices": {"ah": 2.49, "jumbo": 2.29, "lidl": 1.99, "aldi": 1.89}, "tags": ["vers"], "substitute": "Appelsap"},
-    {"id": 15, "name": "Tomaten 500g", "category": "Groente & Fruit", "prices": {"ah": 2.19, "jumbo": 2.09, "lidl": 1.79, "aldi": 1.69}, "tags": ["vers"], "substitute": "Cherry tomaat"}
+    {
+        "id": 1,
+        "name": "Halfvolle melk 1L",
+        "category": "Zuivel",
+        "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.55, "aldi": 1.49},
+        "tags": ["bonus"],
+        "substitute": "Huismerk melk 1L",
+        "qualityScore": 7.8,
+        "valueScore": 8.9,
+        "brandType": "huismerk",
+        "reviewLabel": "goede prijs-kwaliteit",
+    },
+    {
+        "id": 2,
+        "name": "Eieren 12 stuks",
+        "category": "Zuivel",
+        "prices": {"ah": 3.49, "jumbo": 3.19, "lidl": 2.89, "aldi": 2.79},
+        "tags": ["actie"],
+        "substitute": "Eieren 10 stuks",
+        "qualityScore": 8.2,
+        "valueScore": 8.7,
+        "brandType": "huismerk",
+        "reviewLabel": "betrouwbare basiskeuze",
+    },
+    {
+        "id": 3,
+        "name": "Kipfilet 500g",
+        "category": "Vlees",
+        "prices": {"ah": 5.99, "jumbo": 5.79, "lidl": 5.49, "aldi": 5.29},
+        "tags": ["populair"],
+        "substitute": "Kippendijfilet 500g",
+        "qualityScore": 7.2,
+        "valueScore": 8.1,
+        "brandType": "huismerk",
+        "reviewLabel": "prima voor dagelijkse maaltijden",
+    },
+    {
+        "id": 4,
+        "name": "Bananen 1kg",
+        "category": "Groente & Fruit",
+        "prices": {"ah": 1.99, "jumbo": 1.89, "lidl": 1.69, "aldi": 1.59},
+        "tags": ["vers"],
+        "substitute": "Losse bananen",
+        "qualityScore": 8.4,
+        "valueScore": 9.0,
+        "brandType": "vers",
+        "reviewLabel": "sterke prijs-kwaliteit",
+    },
+    {
+        "id": 5,
+        "name": "Witte rijst 1kg",
+        "category": "Houdbaar",
+        "prices": {"ah": 2.79, "jumbo": 2.59, "lidl": 2.29, "aldi": 2.19},
+        "tags": ["basis"],
+        "substitute": "Houdbaar huismerk rijst",
+        "qualityScore": 7.5,
+        "valueScore": 8.8,
+        "brandType": "huismerk",
+        "reviewLabel": "betaalbare voorraadkeuze",
+    },
+    {
+        "id": 6,
+        "name": "Griekse yoghurt 500g",
+        "category": "Zuivel",
+        "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.39, "aldi": 3.29},
+        "tags": ["gezond"],
+        "substitute": "Magere yoghurt",
+        "qualityScore": 8.6,
+        "valueScore": 8.7,
+        "brandType": "huismerk",
+        "reviewLabel": "goede smaak en structuur",
+    },
+    {
+        "id": 7,
+        "name": "Pasta 500g",
+        "category": "Houdbaar",
+        "prices": {"ah": 1.49, "jumbo": 1.39, "lidl": 1.19, "aldi": 1.09},
+        "tags": ["bonus"],
+        "substitute": "Volkoren pasta",
+        "qualityScore": 7.0,
+        "valueScore": 9.2,
+        "brandType": "huismerk",
+        "reviewLabel": "zeer goedkoop en prima",
+    },
+    {
+        "id": 8,
+        "name": "Olijfolie 1L",
+        "category": "Houdbaar",
+        "prices": {"ah": 9.99, "jumbo": 9.49, "lidl": 8.99, "aldi": 8.79},
+        "tags": ["actie"],
+        "substitute": "Zonnebloemolie",
+        "qualityScore": 8.8,
+        "valueScore": 7.9,
+        "brandType": "A-merk alternatief",
+        "reviewLabel": "hogere kwaliteit, minder goedkoop",
+    },
+    {
+        "id": 9,
+        "name": "Brood volkoren",
+        "category": "Brood",
+        "prices": {"ah": 2.49, "jumbo": 2.39, "lidl": 1.99, "aldi": 1.89},
+        "tags": ["dagelijks"],
+        "substitute": "Wit brood",
+        "qualityScore": 7.7,
+        "valueScore": 8.8,
+        "brandType": "huismerk",
+        "reviewLabel": "prima basisbrood",
+    },
+    {
+        "id": 10,
+        "name": "Appels 1kg",
+        "category": "Groente & Fruit",
+        "prices": {"ah": 2.99, "jumbo": 2.79, "lidl": 2.49, "aldi": 2.39},
+        "tags": ["vers"],
+        "substitute": "Peren 1kg",
+        "qualityScore": 8.5,
+        "valueScore": 8.9,
+        "brandType": "vers",
+        "reviewLabel": "fris en goede kwaliteit",
+    },
+    {
+        "id": 11,
+        "name": "Aardappelen 2kg",
+        "category": "Groente & Fruit",
+        "prices": {"ah": 3.99, "jumbo": 3.79, "lidl": 3.49, "aldi": 3.29},
+        "tags": ["basis"],
+        "substitute": "Zoete aardappel",
+        "qualityScore": 7.9,
+        "valueScore": 8.8,
+        "brandType": "vers",
+        "reviewLabel": "goede budgetkeuze",
+    },
+    {
+        "id": 12,
+        "name": "Kaas jong belegen 400g",
+        "category": "Zuivel",
+        "prices": {"ah": 4.99, "jumbo": 4.79, "lidl": 4.29, "aldi": 4.19},
+        "tags": ["bonus"],
+        "substitute": "30+ kaas",
+        "qualityScore": 8.3,
+        "valueScore": 8.5,
+        "brandType": "huismerk",
+        "reviewLabel": "goede balans tussen smaak en prijs",
+    },
+    {
+        "id": 13,
+        "name": "Frisdrank cola 1.5L",
+        "category": "Drinken",
+        "prices": {"ah": 1.89, "jumbo": 1.79, "lidl": 1.49, "aldi": 1.39},
+        "tags": ["actie"],
+        "substitute": "Cola zero",
+        "qualityScore": 6.8,
+        "valueScore": 8.6,
+        "brandType": "huismerk",
+        "reviewLabel": "goedkoop maar smaak is wisselend",
+    },
+    {
+        "id": 14,
+        "name": "Sinaasappelsap 1L",
+        "category": "Drinken",
+        "prices": {"ah": 2.49, "jumbo": 2.29, "lidl": 1.99, "aldi": 1.89},
+        "tags": ["vers"],
+        "substitute": "Appelsap",
+        "qualityScore": 7.9,
+        "valueScore": 8.4,
+        "brandType": "huismerk",
+        "reviewLabel": "frisse smaak, nette prijs",
+    },
+    {
+        "id": 15,
+        "name": "Tomaten 500g",
+        "category": "Groente & Fruit",
+        "prices": {"ah": 2.19, "jumbo": 2.09, "lidl": 1.79, "aldi": 1.69},
+        "tags": ["vers"],
+        "substitute": "Cherry tomaat",
+        "qualityScore": 8.1,
+        "valueScore": 8.8,
+        "brandType": "vers",
+        "reviewLabel": "mooie prijs-kwaliteit voor salade en koken",
+    },
 ]
+
+DATA_FILE = "grocery_data.json"
+
+if os.path.exists(DATA_FILE):
+    with open(DATA_FILE, "r") as f:
+        PRODUCTS = json.load(f)
 
 
 def get_cheapest_store(product: Dict):
@@ -47,6 +249,39 @@ def get_cheapest_store(product: Dict):
     return {
         "storeId": cheapest_store_id,
         "price": product["prices"][cheapest_store_id],
+        "storeName": next((s["name"] for s in STORES if s["id"] == cheapest_store_id), cheapest_store_id),
+    }
+
+
+def get_best_quality_store(product: Dict):
+    # Voor MVP nemen we kwaliteit als productkwaliteit zelf; winkel blijft informatief
+    cheapest = get_cheapest_store(product)
+    return {
+        "storeId": cheapest["storeId"],
+        "storeName": cheapest["storeName"],
+        "qualityScore": product.get("qualityScore", 0),
+    }
+
+
+def get_best_value_store(product: Dict):
+    cheapest = get_cheapest_store(product)
+    return {
+        "storeId": cheapest["storeId"],
+        "storeName": cheapest["storeName"],
+        "valueScore": product.get("valueScore", 0),
+    }
+
+
+def enrich_product(product: Dict):
+    cheapest = get_cheapest_store(product)
+    best_quality = get_best_quality_store(product)
+    best_value = get_best_value_store(product)
+
+    return {
+        **product,
+        "cheapestOption": cheapest,
+        "bestQualityOption": best_quality,
+        "bestValueOption": best_value,
     }
 
 
@@ -65,13 +300,24 @@ def build_basket(items: List[Dict]):
             {
                 "item": item["name"],
                 "storeId": cheapest["storeId"],
+                "storeName": cheapest["storeName"],
                 "price": cheapest["price"],
                 "substitute": item["substitute"],
+                "qualityScore": item.get("qualityScore"),
+                "valueScore": item.get("valueScore"),
             }
         )
 
-    split_total = round(sum(row["price"] for row in split_plan), 2)
-    savings = round((single_store_best["total"] - split_total), 2) if single_store_best else 0
+    split_total = round(sum(row["price"] for row in split_plan), 2) if split_plan else 0
+    savings = round(single_store_best["total"] - split_total, 2) if single_store_best else 0
+
+    avg_quality = round(
+        sum(item.get("qualityScore", 0) for item in items) / len(items), 1
+    ) if items else 0
+
+    avg_value = round(
+        sum(item.get("valueScore", 0) for item in items) / len(items), 1
+    ) if items else 0
 
     return {
         "perStoreTotals": per_store_totals,
@@ -79,35 +325,44 @@ def build_basket(items: List[Dict]):
         "splitPlan": split_plan,
         "splitTotal": split_total,
         "savingsVsSingleStore": savings,
+        "averageQualityScore": avg_quality,
+        "averageValueScore": avg_value,
     }
 
 
 def ai_deal_insights(items: List[Dict]):
     if not items:
         return [
-            "Add a few grocery items and the AI assistant will suggest the cheapest basket.",
-            "You can use this prototype to test savings recommendations before connecting real store data.",
+            "Voeg producten toe en de AI laat zien waar je het goedkoopst én slimst uit bent.",
+            "Deze versie vergelijkt nu niet alleen prijs, maar ook kwaliteit en prijs-kwaliteit.",
         ]
 
     basket = build_basket(items)
-    dairy_count = len([i for i in items if i["category"] == "Zuivel"])
-    pantry_count = len([i for i in items if i["category"] == "Houdbaar"])
 
     insights = [
-        f"Beste supermarkt voor alles samen: {basket['singleStoreBest']['name']} voor €{basket['singleStoreBest']['total']:.2f}.",
-        f"Als je slim splitst tussen winkels betaal je €{basket['splitTotal']:.2f}, en bespaar je €{basket['savingsVsSingleStore']:.2f}.",
+        f"Goedkoopste totaaloptie: €{basket['splitTotal']:.2f}.",
+        f"Gemiddelde kwaliteit van je mandje: {basket['averageQualityScore']}/10.",
+        f"Gemiddelde prijs-kwaliteit van je mandje: {basket['averageValueScore']}/10.",
     ]
 
-    if dairy_count >= 2:
-        insights.append("Je mandje bevat veel zuivel. Let op bonusacties voor melk, eieren, yoghurt en kaas.")
+    best_quality_item = max(items, key=lambda i: i.get("qualityScore", 0))
+    best_value_item = max(items, key=lambda i: i.get("valueScore", 0))
+    weakest_item = min(items, key=lambda i: i.get("qualityScore", 0))
 
-    if pantry_count >= 2:
-        insights.append("Houdbare producten zijn slim om in bulk te kopen als ze in de aanbieding zijn.")
-
-    expensive = sorted(items, key=lambda i: get_cheapest_store(i)["price"], reverse=True)[0]
     insights.append(
-        f"{expensive['name']} is je duurste product. Slim alternatief: {expensive['substitute']}."
+        f"Beste kwaliteit in je mandje: {best_quality_item['name']} ({best_quality_item.get('qualityScore', 0)}/10)."
     )
+    insights.append(
+        f"Beste prijs-kwaliteit: {best_value_item['name']} ({best_value_item.get('valueScore', 0)}/10)."
+    )
+    insights.append(
+        f"Laagste kwaliteitsscore: {weakest_item['name']} ({weakest_item.get('qualityScore', 0)}/10). Let hier extra op."
+    )
+
+    if basket["savingsVsSingleStore"] > 0:
+        insights.append(
+            f"Door slim te splitsen tussen winkels bespaar je €{basket['savingsVsSingleStore']:.2f}."
+        )
 
     return insights
 
@@ -123,12 +378,6 @@ class AIRequest(BaseModel):
     location: Optional[str] = "Amsterdam"
 
 
-class AIChatRequest(BaseModel):
-    session_id: Optional[str] = "default"
-    message: str
-    product_ids: Optional[List[int]] = []
-
-
 @app.get("/")
 def root():
     return {"message": "Grocery Discount API is running"}
@@ -141,22 +390,26 @@ def get_stores():
 
 @app.get("/products")
 def get_products(q: Optional[str] = None):
+    products = [enrich_product(p) for p in PRODUCTS]
+
     if not q:
-        return {"products": PRODUCTS}
+        return {"products": products}
 
     query = q.lower().strip()
     filtered = [
-        p for p in PRODUCTS
+        p for p in products
         if query in p["name"].lower()
         or query in p["category"].lower()
         or any(query in tag.lower() for tag in p["tags"])
+        or query in p.get("reviewLabel", "").lower()
+        or query in p.get("brandType", "").lower()
     ]
     return {"products": filtered}
 
 
 @app.post("/basket/optimize")
 def optimize_basket(request: BasketRequest):
-    items = [p for p in PRODUCTS if p["id"] in request.product_ids]
+    items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
     return {
         "location": request.location,
         "selectedItems": items,
@@ -166,7 +419,7 @@ def optimize_basket(request: BasketRequest):
 
 @app.post("/ai/recommend")
 def ai_recommend(request: AIRequest):
-    items = [p for p in PRODUCTS if p["id"] in request.product_ids]
+    items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
     basket = build_basket(items)
     insights = ai_deal_insights(items)
 
@@ -190,26 +443,34 @@ def ai_recommend(request: AIRequest):
 def alert_suggestions():
     return {
         "suggestions": [
-            "Track eieren, melk en olijfolie en stuur een alert bij 10% prijsdaling.",
-            "Geef een melding wanneer houdbare basisproducten hun laagste prijs bereiken.",
-            "Aanbevelingen voor bulkinkopen bij bonusacties.",
+            "Track eieren, melk en olijfolie en meld wanneer prijs daalt.",
+            "Waarschuw voor prijsdalingen bij basisproducten met hoge prijs-kwaliteit.",
+            "Highlight producten met lage kwaliteit maar lage prijs, zodat gebruikers bewust kiezen.",
         ]
     }
 
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_URL = "https://api.openai.com/v1/chat/completions"
+
+
+class AIChatRequest(BaseModel):
+    session_id: Optional[str] = "default"
+    message: str
+    product_ids: Optional[List[int]] = []
+
+
 CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
 
 
 @app.post("/ai/chat")
 def ai_chat(request: AIChatRequest):
-    items = [p for p in PRODUCTS if p["id"] in request.product_ids]
+    items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
     basket = build_basket(items) if items else None
 
     if not OPENAI_API_KEY:
         return {
-            "reply": "AI is nog niet gekoppeld. Voeg OPENAI_API_KEY toe om slimme supermarkt-assistent te activeren.",
+            "reply": "AI niet geconfigureerd. Voeg OPENAI_API_KEY toe om slimme assistentie in te schakelen.",
             "fallback": ai_deal_insights(items)
         }
 
@@ -217,22 +478,21 @@ def ai_chat(request: AIChatRequest):
     history = CHAT_MEMORY.get(session_id, [])[-8:]
 
     system_prompt = """
-You are a grocery savings assistant for Dutch supermarkets.
-You help users save money on groceries.
-Always be practical, concise, and useful.
-Prefer specific savings suggestions, substitutions, and shopping strategies.
+Je bent een boodschappen-assistent.
+Je helpt gebruikers besparen op prijs, maar let ook op kwaliteit en prijs-kwaliteit.
+Wees praktisch, concreet en kort.
 """
 
     user_context = f"""
-User request: {request.message}
-Selected items: {items}
-Basket summary: {basket}
+Gebruikersvraag: {request.message}
+Geselecteerde producten: {items}
+Mandje samenvatting: {basket}
 
-Respond with:
-- savings advice
-- cheaper substitutions
-- best store strategy
-- optional meal or budget tips
+Reageer met:
+- bespaaradvies
+- kwaliteitsadvies
+- prijs-kwaliteit advies
+- mogelijke alternatieven
 """
 
     messages = [{"role": "system", "content": system_prompt}] + history + [
@@ -271,17 +531,169 @@ Respond with:
 
     except Exception as e:
         return {
-            "reply": "AI-aanvraag mislukt. Ik val terug op ingebouwde bespaartips.",
+            "reply": "AI request mislukt. Fallback naar ingebouwde tips.",
             "error": str(e),
             "fallback": ai_deal_insights(items)
         }
 
 
-DATA_FILE = "grocery_data.json"
+class UserCreate(BaseModel):
+    email: str
 
-if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
-        PRODUCTS = json.load(f)
+
+class ShoppingListCreate(BaseModel):
+    user_id: int
+    name: str
+    product_ids: List[int]
+
+
+@app.post("/users/create")
+def create_user(request: UserCreate):
+    with Session(engine) as session:
+        existing = session.exec(select(User).where(User.email == request.email)).first()
+        if existing:
+            return existing
+
+        user = User(email=request.email)
+        session.add(user)
+        session.commit()
+        session.refresh(user)
+        return user
+
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    with Session(engine) as session:
+        user = session.get(User, user_id)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        return user
+
+
+@app.post("/lists/create")
+def create_list(request: ShoppingListCreate):
+    with Session(engine) as session:
+        user = session.get(User, request.user_id)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+
+        shopping_list = ShoppingList(
+            user_id=request.user_id,
+            name=request.name,
+            product_ids=",".join(map(str, request.product_ids))
+        )
+        session.add(shopping_list)
+        session.commit()
+        session.refresh(shopping_list)
+        return shopping_list
+
+
+@app.get("/lists/{user_id}")
+def get_lists(user_id: int):
+    with Session(engine) as session:
+        lists = session.exec(select(ShoppingList).where(ShoppingList.user_id == user_id)).all()
+        enriched = []
+        for shopping_list in lists:
+            product_ids = [int(pid) for pid in shopping_list.product_ids.split(",") if pid]
+            products = [enrich_product(p) for p in PRODUCTS if p["id"] in product_ids]
+            enriched.append({
+                "id": shopping_list.id,
+                "user_id": shopping_list.user_id,
+                "name": shopping_list.name,
+                "product_ids": product_ids,
+                "products": products,
+            })
+        return enriched
+
+
+@app.delete("/lists/{user_id}/{list_id}")
+def delete_list(user_id: int, list_id: int):
+    with Session(engine) as session:
+        shopping_list = session.get(ShoppingList, list_id)
+        if not shopping_list or shopping_list.user_id != user_id:
+            raise HTTPException(status_code=404, detail="List not found")
+        session.delete(shopping_list)
+        session.commit()
+        return {"status": "deleted"}
+
+
+class PriceAlertCreate(BaseModel):
+    user_id: int
+    product_id: int
+    target_price: float
+
+
+@app.post("/alerts/create")
+def create_price_alert(request: PriceAlertCreate):
+    with Session(engine) as session:
+        user = session.get(User, request.user_id)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+
+        product = next((p for p in PRODUCTS if p["id"] == request.product_id), None)
+        if not product:
+            raise HTTPException(status_code=404, detail="Product not found")
+
+        alert = PriceAlert(
+            user_id=request.user_id,
+            product_id=request.product_id,
+            target_price=request.target_price,
+        )
+        session.add(alert)
+        session.commit()
+        session.refresh(alert)
+
+        cheapest = get_cheapest_store(product)
+
+        return {
+            "id": alert.id,
+            "user_id": alert.user_id,
+            "product_id": alert.product_id,
+            "product_name": product["name"],
+            "target_price": alert.target_price,
+            "current_lowest_price": cheapest["price"],
+            "triggered": cheapest["price"] <= alert.target_price,
+        }
+
+
+@app.get("/alerts/{user_id}")
+def get_user_alerts(user_id: int):
+    with Session(engine) as session:
+        alerts = session.exec(select(PriceAlert).where(PriceAlert.user_id == user_id)).all()
+        response = []
+        for alert in alerts:
+            product = next((p for p in PRODUCTS if p["id"] == alert.product_id), None)
+            if not product:
+                continue
+            current_price = get_cheapest_store(product)["price"]
+            response.append({
+                "id": alert.id,
+                "user_id": alert.user_id,
+                "product_id": alert.product_id,
+                "product_name": product["name"],
+                "target_price": alert.target_price,
+                "current_lowest_price": current_price,
+                "triggered": current_price <= alert.target_price,
+            })
+        return response
+
+
+@app.get("/alerts/check/{user_id}")
+def check_alerts(user_id: int):
+    alerts = get_user_alerts(user_id)
+    triggered = [a for a in alerts if a["triggered"]]
+    return {"alerts": alerts, "triggered": triggered}
+
+
+@app.delete("/alerts/{alert_id}")
+def delete_alert(alert_id: int):
+    with Session(engine) as session:
+        alert = session.get(PriceAlert, alert_id)
+        if not alert:
+            raise HTTPException(status_code=404, detail="Alert not found")
+        session.delete(alert)
+        session.commit()
+        return {"status": "deleted"}
 
 
 @app.post("/data/upload")
@@ -298,7 +710,7 @@ def upload_data(file: UploadFile = File(...)):
             data.append({
                 "id": i + 1,
                 "name": row.get("name"),
-                "category": row.get("category", "Overig"),
+                "category": row.get("category", "Other"),
                 "prices": {
                     "ah": float(row.get("ah", 0) or 0),
                     "jumbo": float(row.get("jumbo", 0) or 0),
@@ -306,7 +718,11 @@ def upload_data(file: UploadFile = File(...)):
                     "aldi": float(row.get("aldi", 0) or 0),
                 },
                 "tags": ["imported"],
-                "substitute": row.get("substitute", "Goedkoper alternatief"),
+                "substitute": row.get("substitute", "Generic alternative"),
+                "qualityScore": float(row.get("qualityScore", 7.0) or 7.0),
+                "valueScore": float(row.get("valueScore", 7.0) or 7.0),
+                "brandType": row.get("brandType", "huismerk"),
+                "reviewLabel": row.get("reviewLabel", "geen reviewlabel"),
             })
 
     if not isinstance(data, list):
