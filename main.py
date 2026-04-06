@@ -240,7 +240,7 @@ PRODUCTS = [
 DATA_FILE = "grocery_data.json"
 
 if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
         PRODUCTS = json.load(f)
 
 
@@ -253,8 +253,7 @@ def get_cheapest_store(product: Dict):
     }
 
 
-def get_best_quality_store(product: Dict):
-    # Voor MVP nemen we kwaliteit als productkwaliteit zelf; winkel blijft informatief
+def get_best_quality_option(product: Dict):
     cheapest = get_cheapest_store(product)
     return {
         "storeId": cheapest["storeId"],
@@ -263,7 +262,7 @@ def get_best_quality_store(product: Dict):
     }
 
 
-def get_best_value_store(product: Dict):
+def get_best_value_option(product: Dict):
     cheapest = get_cheapest_store(product)
     return {
         "storeId": cheapest["storeId"],
@@ -273,15 +272,11 @@ def get_best_value_store(product: Dict):
 
 
 def enrich_product(product: Dict):
-    cheapest = get_cheapest_store(product)
-    best_quality = get_best_quality_store(product)
-    best_value = get_best_value_store(product)
-
     return {
         **product,
-        "cheapestOption": cheapest,
-        "bestQualityOption": best_quality,
-        "bestValueOption": best_value,
+        "cheapestOption": get_cheapest_store(product),
+        "bestQualityOption": get_best_quality_option(product),
+        "bestValueOption": get_best_value_option(product),
     }
 
 
@@ -311,13 +306,8 @@ def build_basket(items: List[Dict]):
     split_total = round(sum(row["price"] for row in split_plan), 2) if split_plan else 0
     savings = round(single_store_best["total"] - split_total, 2) if single_store_best else 0
 
-    avg_quality = round(
-        sum(item.get("qualityScore", 0) for item in items) / len(items), 1
-    ) if items else 0
-
-    avg_value = round(
-        sum(item.get("valueScore", 0) for item in items) / len(items), 1
-    ) if items else 0
+    avg_quality = round(sum(item.get("qualityScore", 0) for item in items) / len(items), 1) if items else 0
+    avg_value = round(sum(item.get("valueScore", 0) for item in items) / len(items), 1) if items else 0
 
     return {
         "perStoreTotals": per_store_totals,
@@ -333,8 +323,8 @@ def build_basket(items: List[Dict]):
 def ai_deal_insights(items: List[Dict]):
     if not items:
         return [
-            "Voeg producten toe en de AI laat zien waar je het goedkoopst én slimst uit bent.",
-            "Deze versie vergelijkt nu niet alleen prijs, maar ook kwaliteit en prijs-kwaliteit.",
+            "Voeg producten toe en de AI laat zien wat goedkoop én slim is.",
+            "Deze versie vergelijkt nu prijs, kwaliteit en prijs-kwaliteit.",
         ]
 
     basket = build_basket(items)
@@ -376,6 +366,34 @@ class AIRequest(BaseModel):
     product_ids: List[int]
     budget: Optional[float] = None
     location: Optional[str] = "Amsterdam"
+
+
+class AIChatRequest(BaseModel):
+    session_id: Optional[str] = "default"
+    message: str
+    product_ids: Optional[List[int]] = []
+
+
+class UserCreate(BaseModel):
+    email: str
+
+
+class ShoppingListCreate(BaseModel):
+    user_id: int
+    name: str
+    product_ids: List[int]
+
+
+class PriceAlertCreate(BaseModel):
+    user_id: int
+    product_id: int
+    target_price: float
+
+
+CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
 
 @app.get("/")
@@ -448,19 +466,6 @@ def alert_suggestions():
             "Highlight producten met lage kwaliteit maar lage prijs, zodat gebruikers bewust kiezen.",
         ]
     }
-
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_URL = "https://api.openai.com/v1/chat/completions"
-
-
-class AIChatRequest(BaseModel):
-    session_id: Optional[str] = "default"
-    message: str
-    product_ids: Optional[List[int]] = []
-
-
-CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
 
 
 @app.post("/ai/chat")
@@ -537,16 +542,6 @@ Reageer met:
         }
 
 
-class UserCreate(BaseModel):
-    email: str
-
-
-class ShoppingListCreate(BaseModel):
-    user_id: int
-    name: str
-    product_ids: List[int]
-
-
 @app.post("/users/create")
 def create_user(request: UserCreate):
     with Session(engine) as session:
@@ -615,12 +610,6 @@ def delete_list(user_id: int, list_id: int):
         session.delete(shopping_list)
         session.commit()
         return {"status": "deleted"}
-
-
-class PriceAlertCreate(BaseModel):
-    user_id: int
-    product_id: int
-    target_price: float
 
 
 @app.post("/alerts/create")
@@ -728,8 +717,8 @@ def upload_data(file: UploadFile = File(...)):
     if not isinstance(data, list):
         raise HTTPException(status_code=400, detail="Uploaded data must be a JSON array or valid CSV.")
 
-    with open(DATA_FILE, "w") as f:
-        json.dump(data, f)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False)
 
     global PRODUCTS
     PRODUCTS = data
