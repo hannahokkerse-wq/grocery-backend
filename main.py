@@ -782,4 +782,3 @@ def data_status():
     return {
         "total_products": len(PRODUCTS),
         "source": "file" if os.path.exists(DATA_FILE) else "default",
-    }
