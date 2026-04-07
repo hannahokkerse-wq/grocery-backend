@@ -410,10 +410,6 @@ class PriceAlertCreate(BaseModel):
 
 CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_URL = "https://api.openai.com/v1/chat/completions"
-
-
 @app.get("/")
 def root():
     return {"message": "Grocery Discount API is running"}
