@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 import os
-import requests
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
@@ -341,8 +340,8 @@ def build_basket(items: List[Dict]):
 def ai_deal_insights(items: List[Dict]):
     if not items:
         return [
-            "Voeg producten toe en de AI laat zien wat goedkoop én slim is.",
-            "Deze versie vergelijkt nu prijs, kwaliteit en prijs-kwaliteit.",
+            "Voeg producten toe en de assistent laat zien wat goedkoop én slim is.",
+            "Deze versie vergelijkt prijs, kwaliteit en prijs-kwaliteit.",
         ]
 
     basket = build_basket(items)
@@ -373,6 +372,81 @@ def ai_deal_insights(items: List[Dict]):
         )
 
     return insights
+
+
+def smart_chat_reply(message: str, items: List[Dict], basket: Optional[Dict] = None):
+    msg = message.lower().strip()
+
+    if not items:
+        return (
+            "Selecteer eerst een paar producten. Dan kan ik advies geven over prijs, "
+            "kwaliteit en prijs-kwaliteit."
+        )
+
+    best_value_item = max(items, key=lambda i: i.get("valueScore", 0))
+    best_quality_item = max(items, key=lambda i: i.get("qualityScore", 0))
+    cheapest_item = min(items, key=lambda i: get_cheapest_store(i)["price"])
+    weakest_item = min(items, key=lambda i: i.get("qualityScore", 0))
+
+    if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
+        return (
+            f"De goedkoopste keuze in je selectie is {cheapest_item['name']} "
+            f"voor €{get_cheapest_store(cheapest_item)['price']:.2f}. "
+            f"Voor je hele mandje is {basket['singleStoreBest']['name']} nu de beste winkel "
+            f"met een totaal van €{basket['singleStoreBest']['total']:.2f}."
+        )
+
+    if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
+        return (
+            f"De hoogste kwaliteit in je selectie is {best_quality_item['name']} "
+            f"met een score van {best_quality_item.get('qualityScore', 0)}/10. "
+            f"De laagste kwaliteitsscore is nu {weakest_item['name']} "
+            f"met {weakest_item.get('qualityScore', 0)}/10."
+        )
+
+    if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
+        return (
+            f"De beste prijs-kwaliteit in je selectie is {best_value_item['name']} "
+            f"met een waarde-score van {best_value_item.get('valueScore', 0)}/10. "
+            f"Dat is nu de slimste combinatie van prijs en kwaliteit."
+        )
+
+    if any(word in msg for word in ["aanbieding", "bonus", "actie"]):
+        promo_items = [
+            item
+            for item in items
+            if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))
+        ]
+        if promo_items:
+            names = ", ".join(item["name"] for item in promo_items[:4])
+            return f"Producten met aanbieding of actie in je selectie zijn: {names}."
+        return "In je huidige selectie zie ik geen duidelijke bonus- of actieproducten."
+
+    if any(word in msg for word in ["gezond", "gezondere", "gezondst"]):
+        healthy_items = [
+            item
+            for item in items
+            if "gezond" in [tag.lower() for tag in item.get("tags", [])]
+            or item.get("category") in ["Groente & Fruit", "Zuivel"]
+        ]
+        if healthy_items:
+            names = ", ".join(item["name"] for item in healthy_items[:4])
+            return f"Gezondere keuzes in je selectie zijn bijvoorbeeld: {names}."
+        return "Ik zie in je huidige selectie niet direct veel gezonde keuzes."
+
+    if any(word in msg for word in ["mandje", "basket", "totaal"]):
+        return (
+            f"Je mandje heeft nu een goedkoopste totaal van €{basket['splitTotal']:.2f}. "
+            f"De gemiddelde kwaliteit is {basket['averageQualityScore']}/10 en "
+            f"de gemiddelde prijs-kwaliteit is {basket['averageValueScore']}/10."
+        )
+
+    return (
+        f"Mijn advies: kies vooral {best_value_item['name']} voor prijs-kwaliteit, "
+        f"let op {best_quality_item['name']} voor kwaliteit, en vermijd alleen blind de "
+        f"laagste prijs als kwaliteit belangrijk is. "
+        f"Voor dit mandje is {basket['singleStoreBest']['name']} nu de beste totaalwinkel."
+    )
 
 
 class BasketRequest(BaseModel):
@@ -409,6 +483,7 @@ class PriceAlertCreate(BaseModel):
 
 
 CHAT_MEMORY: Dict[str, List[Dict[str, str]]] = {}
+
 
 @app.get("/")
 def root():
@@ -488,89 +563,22 @@ def ai_chat(request: AIChatRequest):
     items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
     basket = build_basket(items) if items else None
 
-    if not OPENAI_API_KEY:
-        return {
-            "reply": "AI niet geconfigureerd. Voeg OPENAI_API_KEY toe om slimme assistentie in te schakelen.",
-            "fallback": ai_deal_insights(items),
-            "debug": "OPENAI_API_KEY ontbreekt",
-        }
-
     session_id = request.session_id or "default"
     history = CHAT_MEMORY.get(session_id, [])[-8:]
 
-    system_prompt = """
-Je bent een slimme boodschappen-assistent voor Nederlandse supermarktgebruikers.
-Je helpt gebruikers besparen op prijs, maar let ook op kwaliteit en prijs-kwaliteit.
-Geef korte, praktische, concrete antwoorden in het Nederlands.
-Gebruik de geselecteerde producten en het mandje als context als die aanwezig zijn.
-"""
+    reply = smart_chat_reply(request.message, items, basket)
 
-    user_context = f"""
-Gebruikersvraag: {request.message}
-Geselecteerde producten: {items}
-Mandje samenvatting: {basket}
-
-Geef:
-- bespaaradvies
-- kwaliteitsadvies
-- prijs-kwaliteit advies
-- mogelijke alternatieven
-"""
-
-    messages = [{"role": "system", "content": system_prompt}] + history + [
-        {"role": "user", "content": user_context}
+    CHAT_MEMORY[session_id] = history + [
+        {"role": "user", "content": request.message},
+        {"role": "assistant", "content": reply},
     ]
 
-    try:
-        response = requests.post(
-            OPENAI_URL,
-            headers={
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": "gpt-4o-mini",
-                "messages": messages,
-                "temperature": 0.7,
-            },
-            timeout=30,
-        )
-
-        print("OPENAI STATUS:", response.status_code)
-        print("OPENAI RESPONSE:", response.text)
-
-        response.raise_for_status()
-
-        data = response.json()
-        reply = data["choices"][0]["message"]["content"]
-
-        CHAT_MEMORY[session_id] = history + [
-            {"role": "user", "content": request.message},
-            {"role": "assistant", "content": reply},
-        ]
-
-        return {
-            "reply": reply,
-            "basket": basket,
-            "session_id": session_id,
-            "source": "openai",
-        }
-
-    except requests.exceptions.HTTPError:
-        return {
-            "reply": "AI request mislukt. Fallback naar ingebouwde tips.",
-            "error": response.text,
-            "fallback": ai_deal_insights(items),
-            "source": "fallback",
-        }
-
-    except Exception as e:
-        return {
-            "reply": "AI request mislukt. Fallback naar ingebouwde tips.",
-            "error": str(e),
-            "fallback": ai_deal_insights(items),
-            "source": "fallback",
-        }
+    return {
+        "reply": reply,
+        "basket": basket,
+        "session_id": session_id,
+        "source": "local-smart-ai",
+    }
 
 
 @app.post("/users/create")
