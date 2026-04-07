@@ -249,7 +249,10 @@ def get_cheapest_store(product: Dict):
     return {
         "storeId": cheapest_store_id,
         "price": product["prices"][cheapest_store_id],
-        "storeName": next((s["name"] for s in STORES if s["id"] == cheapest_store_id), cheapest_store_id),
+        "storeName": next(
+            (s["name"] for s in STORES if s["id"] == cheapest_store_id),
+            cheapest_store_id,
+        ),
     }
 
 
@@ -286,7 +289,9 @@ def build_basket(items: List[Dict]):
         total = sum(item["prices"][store["id"]] for item in items)
         per_store_totals.append({**store, "total": round(total, 2)})
 
-    single_store_best = min(per_store_totals, key=lambda x: x["total"]) if per_store_totals else None
+    single_store_best = (
+        min(per_store_totals, key=lambda x: x["total"]) if per_store_totals else None
+    )
 
     split_plan = []
     for item in items:
@@ -304,10 +309,23 @@ def build_basket(items: List[Dict]):
         )
 
     split_total = round(sum(row["price"] for row in split_plan), 2) if split_plan else 0
-    savings = round(single_store_best["total"] - split_total, 2) if single_store_best else 0
+    savings = (
+        round(single_store_best["total"] - split_total, 2)
+        if single_store_best
+        else 0
+    )
 
-    avg_quality = round(sum(item.get("qualityScore", 0) for item in items) / len(items), 1) if items else 0
-    avg_value = round(sum(item.get("valueScore", 0) for item in items) / len(items), 1) if items else 0
+    avg_quality = (
+        round(sum(item.get("qualityScore", 0) for item in items) / len(items), 1)
+        if items
+        else 0
+    )
+
+    avg_value = (
+        round(sum(item.get("valueScore", 0) for item in items) / len(items), 1)
+        if items
+        else 0
+    )
 
     return {
         "perStoreTotals": per_store_totals,
@@ -415,7 +433,8 @@ def get_products(q: Optional[str] = None):
 
     query = q.lower().strip()
     filtered = [
-        p for p in products
+        p
+        for p in products
         if query in p["name"].lower()
         or query in p["category"].lower()
         or any(query in tag.lower() for tag in p["tags"])
@@ -476,16 +495,18 @@ def ai_chat(request: AIChatRequest):
     if not OPENAI_API_KEY:
         return {
             "reply": "AI niet geconfigureerd. Voeg OPENAI_API_KEY toe om slimme assistentie in te schakelen.",
-            "fallback": ai_deal_insights(items)
+            "fallback": ai_deal_insights(items),
+            "debug": "OPENAI_API_KEY ontbreekt",
         }
 
     session_id = request.session_id or "default"
     history = CHAT_MEMORY.get(session_id, [])[-8:]
 
     system_prompt = """
-Je bent een boodschappen-assistent.
+Je bent een slimme boodschappen-assistent voor Nederlandse supermarktgebruikers.
 Je helpt gebruikers besparen op prijs, maar let ook op kwaliteit en prijs-kwaliteit.
-Wees praktisch, concreet en kort.
+Geef korte, praktische, concrete antwoorden in het Nederlands.
+Gebruik de geselecteerde producten en het mandje als context als die aanwezig zijn.
 """
 
     user_context = f"""
@@ -493,7 +514,7 @@ Gebruikersvraag: {request.message}
 Geselecteerde producten: {items}
 Mandje samenvatting: {basket}
 
-Reageer met:
+Geef:
 - bespaaradvies
 - kwaliteitsadvies
 - prijs-kwaliteit advies
@@ -518,6 +539,10 @@ Reageer met:
             },
             timeout=30,
         )
+
+        print("OPENAI STATUS:", response.status_code)
+        print("OPENAI RESPONSE:", response.text)
+
         response.raise_for_status()
 
         data = response.json()
@@ -531,14 +556,24 @@ Reageer met:
         return {
             "reply": reply,
             "basket": basket,
-            "session_id": session_id
+            "session_id": session_id,
+            "source": "openai",
+        }
+
+    except requests.exceptions.HTTPError:
+        return {
+            "reply": "AI request mislukt. Fallback naar ingebouwde tips.",
+            "error": response.text,
+            "fallback": ai_deal_insights(items),
+            "source": "fallback",
         }
 
     except Exception as e:
         return {
             "reply": "AI request mislukt. Fallback naar ingebouwde tips.",
             "error": str(e),
-            "fallback": ai_deal_insights(items)
+            "fallback": ai_deal_insights(items),
+            "source": "fallback",
         }
 
 
@@ -575,7 +610,7 @@ def create_list(request: ShoppingListCreate):
         shopping_list = ShoppingList(
             user_id=request.user_id,
             name=request.name,
-            product_ids=",".join(map(str, request.product_ids))
+            product_ids=",".join(map(str, request.product_ids)),
         )
         session.add(shopping_list)
         session.commit()
@@ -586,18 +621,24 @@ def create_list(request: ShoppingListCreate):
 @app.get("/lists/{user_id}")
 def get_lists(user_id: int):
     with Session(engine) as session:
-        lists = session.exec(select(ShoppingList).where(ShoppingList.user_id == user_id)).all()
+        lists = session.exec(
+            select(ShoppingList).where(ShoppingList.user_id == user_id)
+        ).all()
         enriched = []
         for shopping_list in lists:
-            product_ids = [int(pid) for pid in shopping_list.product_ids.split(",") if pid]
+            product_ids = [
+                int(pid) for pid in shopping_list.product_ids.split(",") if pid
+            ]
             products = [enrich_product(p) for p in PRODUCTS if p["id"] in product_ids]
-            enriched.append({
-                "id": shopping_list.id,
-                "user_id": shopping_list.user_id,
-                "name": shopping_list.name,
-                "product_ids": product_ids,
-                "products": products,
-            })
+            enriched.append(
+                {
+                    "id": shopping_list.id,
+                    "user_id": shopping_list.user_id,
+                    "name": shopping_list.name,
+                    "product_ids": product_ids,
+                    "products": products,
+                }
+            )
         return enriched
 
 
@@ -648,22 +689,26 @@ def create_price_alert(request: PriceAlertCreate):
 @app.get("/alerts/{user_id}")
 def get_user_alerts(user_id: int):
     with Session(engine) as session:
-        alerts = session.exec(select(PriceAlert).where(PriceAlert.user_id == user_id)).all()
+        alerts = session.exec(
+            select(PriceAlert).where(PriceAlert.user_id == user_id)
+        ).all()
         response = []
         for alert in alerts:
             product = next((p for p in PRODUCTS if p["id"] == alert.product_id), None)
             if not product:
                 continue
             current_price = get_cheapest_store(product)["price"]
-            response.append({
-                "id": alert.id,
-                "user_id": alert.user_id,
-                "product_id": alert.product_id,
-                "product_name": product["name"],
-                "target_price": alert.target_price,
-                "current_lowest_price": current_price,
-                "triggered": current_price <= alert.target_price,
-            })
+            response.append(
+                {
+                    "id": alert.id,
+                    "user_id": alert.user_id,
+                    "product_id": alert.product_id,
+                    "product_name": product["name"],
+                    "target_price": alert.target_price,
+                    "current_lowest_price": current_price,
+                    "triggered": current_price <= alert.target_price,
+                }
+            )
         return response
 
 
@@ -693,29 +738,35 @@ def upload_data(file: UploadFile = File(...)):
         data = json.loads(content)
     except Exception:
         import csv
+
         reader = csv.DictReader(content.splitlines())
         data = []
         for i, row in enumerate(reader):
-            data.append({
-                "id": i + 1,
-                "name": row.get("name"),
-                "category": row.get("category", "Other"),
-                "prices": {
-                    "ah": float(row.get("ah", 0) or 0),
-                    "jumbo": float(row.get("jumbo", 0) or 0),
-                    "lidl": float(row.get("lidl", 0) or 0),
-                    "aldi": float(row.get("aldi", 0) or 0),
-                },
-                "tags": ["imported"],
-                "substitute": row.get("substitute", "Generic alternative"),
-                "qualityScore": float(row.get("qualityScore", 7.0) or 7.0),
-                "valueScore": float(row.get("valueScore", 7.0) or 7.0),
-                "brandType": row.get("brandType", "huismerk"),
-                "reviewLabel": row.get("reviewLabel", "geen reviewlabel"),
-            })
+            data.append(
+                {
+                    "id": i + 1,
+                    "name": row.get("name"),
+                    "category": row.get("category", "Other"),
+                    "prices": {
+                        "ah": float(row.get("ah", 0) or 0),
+                        "jumbo": float(row.get("jumbo", 0) or 0),
+                        "lidl": float(row.get("lidl", 0) or 0),
+                        "aldi": float(row.get("aldi", 0) or 0),
+                    },
+                    "tags": ["imported"],
+                    "substitute": row.get("substitute", "Generic alternative"),
+                    "qualityScore": float(row.get("qualityScore", 7.0) or 7.0),
+                    "valueScore": float(row.get("valueScore", 7.0) or 7.0),
+                    "brandType": row.get("brandType", "huismerk"),
+                    "reviewLabel": row.get("reviewLabel", "geen reviewlabel"),
+                }
+            )
 
     if not isinstance(data, list):
-        raise HTTPException(status_code=400, detail="Uploaded data must be a JSON array or valid CSV.")
+        raise HTTPException(
+            status_code=400,
+            detail="Uploaded data must be a JSON array or valid CSV.",
+        )
 
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False)
@@ -723,15 +774,12 @@ def upload_data(file: UploadFile = File(...)):
     global PRODUCTS
     PRODUCTS = data
 
-    return {
-        "status": "uploaded",
-        "count": len(PRODUCTS)
-    }
+    return {"status": "uploaded", "count": len(PRODUCTS)}
 
 
 @app.get("/data/status")
 def data_status():
     return {
         "total_products": len(PRODUCTS),
-        "source": "file" if os.path.exists(DATA_FILE) else "default"
+        "source": "file" if os.path.exists(DATA_FILE) else "default",
     }
