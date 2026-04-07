@@ -374,78 +374,110 @@ def ai_deal_insights(items: List[Dict]):
     return insights
 
 
+def format_product_list(items: List[Dict], max_items: int = 4):
+    return ", ".join(item["name"] for item in items[:max_items])
+
+
 def smart_chat_reply(message: str, items: List[Dict], basket: Optional[Dict] = None):
     msg = message.lower().strip()
 
-    if not items:
-        return (
-            "Selecteer eerst een paar producten. Dan kan ik advies geven over prijs, "
-            "kwaliteit en prijs-kwaliteit."
-        )
+    # Als er geen selectie is, gebruik alle producten
+    scope_items = items if items else [enrich_product(p) for p in PRODUCTS]
+    scope_basket = basket if basket else build_basket(scope_items)
 
-    best_value_item = max(items, key=lambda i: i.get("valueScore", 0))
-    best_quality_item = max(items, key=lambda i: i.get("qualityScore", 0))
-    cheapest_item = min(items, key=lambda i: get_cheapest_store(i)["price"])
-    weakest_item = min(items, key=lambda i: i.get("qualityScore", 0))
+    best_value_item = max(scope_items, key=lambda i: i.get("valueScore", 0))
+    best_quality_item = max(scope_items, key=lambda i: i.get("qualityScore", 0))
+    cheapest_item = min(scope_items, key=lambda i: get_cheapest_store(i)["price"])
+    weakest_item = min(scope_items, key=lambda i: i.get("qualityScore", 0))
+
+    cheapest_sorted = sorted(scope_items, key=lambda i: get_cheapest_store(i)["price"])
+    best_value_sorted = sorted(
+        scope_items, key=lambda i: i.get("valueScore", 0), reverse=True
+    )
+    best_quality_sorted = sorted(
+        scope_items, key=lambda i: i.get("qualityScore", 0), reverse=True
+    )
 
     if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
         return (
-            f"De goedkoopste keuze in je selectie is {cheapest_item['name']} "
-            f"voor €{get_cheapest_store(cheapest_item)['price']:.2f}. "
-            f"Voor je hele mandje is {basket['singleStoreBest']['name']} nu de beste winkel "
-            f"met een totaal van €{basket['singleStoreBest']['total']:.2f}."
-        )
-
-    if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
-        return (
-            f"De hoogste kwaliteit in je selectie is {best_quality_item['name']} "
-            f"met een score van {best_quality_item.get('qualityScore', 0)}/10. "
-            f"De laagste kwaliteitsscore is nu {weakest_item['name']} "
-            f"met {weakest_item.get('qualityScore', 0)}/10."
+            f"De goedkoopste producten zijn nu bijvoorbeeld {format_product_list(cheapest_sorted)}. "
+            f"De allergoedkoopste keuze is {cheapest_item['name']} voor "
+            f"€{get_cheapest_store(cheapest_item)['price']:.2f}. "
+            f"Voor het totale overzicht is {scope_basket['singleStoreBest']['name']} "
+            f"de voordeligste winkel met een totaal van €{scope_basket['singleStoreBest']['total']:.2f}."
         )
 
     if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
         return (
-            f"De beste prijs-kwaliteit in je selectie is {best_value_item['name']} "
-            f"met een waarde-score van {best_value_item.get('valueScore', 0)}/10. "
-            f"Dat is nu de slimste combinatie van prijs en kwaliteit."
+            f"De beste prijs-kwaliteit producten zijn nu bijvoorbeeld {format_product_list(best_value_sorted)}. "
+            f"De sterkste keuze is {best_value_item['name']} met een waarde-score van "
+            f"{best_value_item.get('valueScore', 0)}/10."
+        )
+
+    if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
+        return (
+            f"De hoogste kwaliteit vind je nu bij {format_product_list(best_quality_sorted)}. "
+            f"De beste kwaliteitsscore is {best_quality_item['name']} met "
+            f"{best_quality_item.get('qualityScore', 0)}/10. "
+            f"De laagste kwaliteitsscore is {weakest_item['name']} met "
+            f"{weakest_item.get('qualityScore', 0)}/10."
         )
 
     if any(word in msg for word in ["aanbieding", "bonus", "actie"]):
         promo_items = [
             item
-            for item in items
+            for item in scope_items
             if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))
         ]
         if promo_items:
-            names = ", ".join(item["name"] for item in promo_items[:4])
-            return f"Producten met aanbieding of actie in je selectie zijn: {names}."
-        return "In je huidige selectie zie ik geen duidelijke bonus- of actieproducten."
+            return (
+                f"Producten met een aanbieding of actie zijn bijvoorbeeld "
+                f"{format_product_list(promo_items)}."
+            )
+        return "Ik zie op dit moment geen duidelijke bonus- of actieproducten."
 
     if any(word in msg for word in ["gezond", "gezondere", "gezondst"]):
         healthy_items = [
             item
-            for item in items
+            for item in scope_items
             if "gezond" in [tag.lower() for tag in item.get("tags", [])]
             or item.get("category") in ["Groente & Fruit", "Zuivel"]
         ]
-        if healthy_items:
-            names = ", ".join(item["name"] for item in healthy_items[:4])
-            return f"Gezondere keuzes in je selectie zijn bijvoorbeeld: {names}."
-        return "Ik zie in je huidige selectie niet direct veel gezonde keuzes."
+        healthy_sorted = sorted(
+            healthy_items, key=lambda i: i.get("qualityScore", 0), reverse=True
+        )
+        if healthy_sorted:
+            return (
+                f"Gezondere keuzes zijn bijvoorbeeld {format_product_list(healthy_sorted)}. "
+                f"De sterkste gezonde keuze is {healthy_sorted[0]['name']} "
+                f"met een kwaliteitsscore van {healthy_sorted[0].get('qualityScore', 0)}/10."
+            )
+        return "Ik zie in de huidige dataset niet direct veel gezonde keuzes."
 
     if any(word in msg for word in ["mandje", "basket", "totaal"]):
+        if items:
+            return (
+                f"Je geselecteerde mandje heeft nu een goedkoopste totaalprijs van "
+                f"€{scope_basket['splitTotal']:.2f}. "
+                f"De gemiddelde kwaliteit is {scope_basket['averageQualityScore']}/10 "
+                f"en de gemiddelde prijs-kwaliteit is {scope_basket['averageValueScore']}/10."
+            )
         return (
-            f"Je mandje heeft nu een goedkoopste totaal van €{basket['splitTotal']:.2f}. "
-            f"De gemiddelde kwaliteit is {basket['averageQualityScore']}/10 en "
-            f"de gemiddelde prijs-kwaliteit is {basket['averageValueScore']}/10."
+            f"Over alle producten bekeken is {scope_basket['singleStoreBest']['name']} "
+            f"de goedkoopste winkel. Binnen een selectie kan ik je mandje nog specifieker analyseren."
+        )
+
+    if any(word in msg for word in ["winkel", "supermarkt", "beste winkel"]):
+        return (
+            f"Op basis van de huidige data is {scope_basket['singleStoreBest']['name']} "
+            f"de voordeligste supermarkt. Voor sommige losse producten kunnen andere winkels "
+            f"nog steeds beter scoren."
         )
 
     return (
-        f"Mijn advies: kies vooral {best_value_item['name']} voor prijs-kwaliteit, "
-        f"let op {best_quality_item['name']} voor kwaliteit, en vermijd alleen blind de "
-        f"laagste prijs als kwaliteit belangrijk is. "
-        f"Voor dit mandje is {basket['singleStoreBest']['name']} nu de beste totaalwinkel."
+        f"Mijn advies: kijk vooral naar {best_value_item['name']} voor prijs-kwaliteit, "
+        f"{best_quality_item['name']} voor kwaliteit en {cheapest_item['name']} voor de laagste prijs. "
+        f"Op totaalniveau is {scope_basket['singleStoreBest']['name']} momenteel de beste supermarkt."
     )
 
 
