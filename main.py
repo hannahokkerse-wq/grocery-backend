@@ -1,11 +1,10 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi import FastAPI, HTTPException
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 from contextlib import asynccontextmanager
-import json
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./grocery_discount.db")
 engine = create_engine(DATABASE_URL, echo=False)
@@ -237,12 +236,6 @@ PRODUCTS = [
         "reviewLabel": "mooie prijs-kwaliteit voor salade en koken",
     },
 ]
-
-DATA_FILE = "grocery_data.json"
-
-if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        PRODUCTS = json.load(f)
 
 
 def get_cheapest_store(product: Dict):
@@ -663,9 +656,7 @@ def ai_chat(request: AIChatRequest):
         {"role": "assistant", "content": reply},
     ]
 
-    SESSION_CONTEXT[session_id] = {
-        "last_products": remembered_products
-    }
+    SESSION_CONTEXT[session_id] = {"last_products": remembered_products}
 
     return {
         "reply": reply,
@@ -826,58 +817,3 @@ def delete_alert(alert_id: int):
         session.delete(alert)
         session.commit()
         return {"status": "deleted"}
-
-
-@app.post("/data/upload")
-def upload_data(file: UploadFile = File(...)):
-    content = file.file.read().decode("utf-8")
-
-    try:
-        data = json.loads(content)
-    except Exception:
-        import csv
-
-        reader = csv.DictReader(content.splitlines())
-        data = []
-        for i, row in enumerate(reader):
-            data.append(
-                {
-                    "id": i + 1,
-                    "name": row.get("name"),
-                    "category": row.get("category", "Other"),
-                    "prices": {
-                        "ah": float(row.get("ah", 0) or 0),
-                        "jumbo": float(row.get("jumbo", 0) or 0),
-                        "lidl": float(row.get("lidl", 0) or 0),
-                        "aldi": float(row.get("aldi", 0) or 0),
-                    },
-                    "tags": ["imported"],
-                    "substitute": row.get("substitute", "Generic alternative"),
-                    "qualityScore": float(row.get("qualityScore", 7.0) or 7.0),
-                    "valueScore": float(row.get("valueScore", 7.0) or 7.0),
-                    "brandType": row.get("brandType", "huismerk"),
-                    "reviewLabel": row.get("reviewLabel", "geen reviewlabel"),
-                }
-            )
-
-    if not isinstance(data, list):
-        raise HTTPException(
-            status_code=400,
-            detail="Uploaded data must be a JSON array or valid CSV.",
-        )
-
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False)
-
-    global PRODUCTS
-    PRODUCTS = data
-
-    return {"status": "uploaded", "count": len(PRODUCTS)}
-
-
-@app.get("/data/status")
-def data_status():
-    return {
-        "total_products": len(PRODUCTS),
-        "source": "file" if os.path.exists(DATA_FILE) else "default",
-    }
