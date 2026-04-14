@@ -1,10 +1,11 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 from contextlib import asynccontextmanager
+import json
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./grocery_discount.db")
 engine = create_engine(DATABASE_URL, echo=False)
@@ -237,6 +238,12 @@ PRODUCTS = [
     },
 ]
 
+DATA_FILE = "grocery_data.json"
+
+if os.path.exists(DATA_FILE):
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        PRODUCTS = json.load(f)
+
 
 def get_cheapest_store(product: Dict):
     cheapest_store_id = min(product["prices"], key=product["prices"].get)
@@ -394,40 +401,6 @@ def make_store_answer(products: List[Dict]) -> str:
     return " ".join(lines)
 
 
-def get_visible_scope_summary(
-    visible_items: List[Dict],
-    active_store: str,
-    active_category: str,
-    sort_mode: str,
-    search_query: str,
-) -> str:
-    parts = []
-
-    if active_store and active_store != "all":
-        parts.append(f"winkel: {STORE_NAME_MAP.get(active_store, active_store)}")
-
-    if active_category and active_category != "Alle":
-        parts.append(f"categorie: {active_category}")
-
-    if sort_mode:
-        sort_map = {
-            "price-asc": "goedkoopste eerst",
-            "price-desc": "duurste eerst",
-            "name-asc": "naam A-Z",
-            "favorites": "favorieten eerst",
-            "quality-desc": "beste kwaliteit",
-            "value-desc": "beste prijs-kwaliteit",
-        }
-        parts.append(f"sortering: {sort_map.get(sort_mode, sort_mode)}")
-
-    if search_query:
-        parts.append(f"zoekterm: '{search_query}'")
-
-    if visible_items:
-        parts.append(f"{len(visible_items)} zichtbare producten")
-
-    return ", ".join(parts)
-
 
 def smart_chat_reply(
     message: str,
@@ -500,7 +473,6 @@ def smart_chat_reply(
         word in msg
         for word in ["winkel", "winkels", "supermarkt", "supermarkten", "beschikbaar"]
     ):
-        intro = ""
         if visible_items and not items and not use_remembered:
             intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) geldt: "
             return intro + make_store_answer(scope_items[:4]), scope_items[:4]
@@ -513,26 +485,27 @@ def smart_chat_reply(
             if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))
         ]
         if promo_items:
-            prefix = ""
             if visible_items and not items and not use_remembered:
-                prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de producten in de aanbieding: "
+                intro = (
+                    f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de producten in de aanbieding: "
+                )
+            elif items:
+                intro = "Binnen je huidige selectie zijn de producten in de aanbieding: "
             else:
-                prefix = "De producten in de aanbieding zijn: "
-            return (
-                f"{prefix}{format_product_list(promo_items)}.",
-                promo_items[:4],
-            )
+                intro = "De producten in de aanbieding zijn: "
+            return f"{intro}{format_product_list(promo_items)}.", promo_items[:4]
         return "Ik zie op dit moment geen producten in de aanbieding binnen deze selectie.", []
 
     if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
-        prefix = ""
         if visible_items and not items and not use_remembered:
-            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+            intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de goedkoopste producten: "
         elif items:
-            prefix = "Binnen je huidige selectie "
+            intro = "Binnen je huidige selectie zijn de goedkoopste producten: "
+        else:
+            intro = "De goedkoopste producten zijn: "
 
         return (
-            f"{prefix}zijn de goedkoopste producten: {format_product_list(cheapest_sorted)}. "
+            f"{intro}{format_product_list(cheapest_sorted)}. "
             f"De allergoedkoopste keuze is {cheapest_item['name']} voor "
             f"€{get_cheapest_store(cheapest_item)['price']:.2f}. "
             f"De voordeligste supermarkt voor deze scope is "
@@ -541,28 +514,30 @@ def smart_chat_reply(
         )
 
     if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
-        prefix = ""
         if visible_items and not items and not use_remembered:
-            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+            intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de beste prijs-kwaliteit producten: "
         elif items:
-            prefix = "Binnen je huidige selectie "
+            intro = "Binnen je huidige selectie zijn de beste prijs-kwaliteit producten: "
+        else:
+            intro = "De beste prijs-kwaliteit producten zijn: "
 
         return (
-            f"{prefix}zijn de beste prijs-kwaliteit producten: {format_product_list(best_value_sorted)}. "
+            f"{intro}{format_product_list(best_value_sorted)}. "
             f"De sterkste keuze is {best_value_item['name']} met een waarde-score van "
             f"{best_value_item.get('valueScore', 0)}/10.",
             best_value_sorted[:4],
         )
 
     if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
-        prefix = ""
         if visible_items and not items and not use_remembered:
-            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+            intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de producten met de hoogste kwaliteit: "
         elif items:
-            prefix = "Binnen je huidige selectie "
+            intro = "Binnen je huidige selectie zijn de producten met de hoogste kwaliteit: "
+        else:
+            intro = "De producten met de hoogste kwaliteit zijn: "
 
         return (
-            f"{prefix}zijn de producten met de hoogste kwaliteit: {format_product_list(best_quality_sorted)}. "
+            f"{intro}{format_product_list(best_quality_sorted)}. "
             f"De hoogste kwaliteitsscore is {best_quality_item['name']} met "
             f"{best_quality_item.get('qualityScore', 0)}/10. "
             f"De laagste kwaliteitsscore is {weakest_item['name']} met "
@@ -581,11 +556,15 @@ def smart_chat_reply(
             healthy_items, key=lambda i: i.get("qualityScore", 0), reverse=True
         )
         if healthy_sorted:
-            prefix = ""
             if visible_items and not items and not use_remembered:
-                prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+                intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de gezondste keuzes: "
+            elif items:
+                intro = "Binnen je huidige selectie zijn de gezondste keuzes: "
+            else:
+                intro = "De gezondste keuzes zijn: "
+
             return (
-                f"{prefix}zijn de gezondste keuzes: {format_product_list(healthy_sorted)}. "
+                f"{intro}{format_product_list(healthy_sorted)}. "
                 f"De beste gezonde keuze is {healthy_sorted[0]['name']} "
                 f"met een kwaliteitsscore van {healthy_sorted[0].get('qualityScore', 0)}/10.",
                 healthy_sorted[:4],
@@ -650,11 +629,6 @@ class AIChatRequest(BaseModel):
     session_id: Optional[str] = "default"
     message: str
     product_ids: Optional[List[int]] = []
-    visible_product_ids: Optional[List[int]] = []
-    active_store: Optional[str] = "all"
-    active_category: Optional[str] = "Alle"
-    sort_mode: Optional[str] = "price-asc"
-    search_query: Optional[str] = ""
 
 
 class UserCreate(BaseModel):
@@ -753,10 +727,6 @@ def alert_suggestions():
 @app.post("/ai/chat")
 def ai_chat(request: AIChatRequest):
     items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
-    visible_items = [
-        enrich_product(p) for p in PRODUCTS if p["id"] in request.visible_product_ids
-    ]
-
     basket = build_basket(items) if items else None
 
     session_id = request.session_id or "default"
@@ -764,15 +734,7 @@ def ai_chat(request: AIChatRequest):
     context = SESSION_CONTEXT.get(session_id, {"last_products": []})
 
     reply, remembered_products = smart_chat_reply(
-        request.message,
-        items,
-        basket,
-        context,
-        visible_items=visible_items,
-        active_store=request.active_store,
-        active_category=request.active_category,
-        sort_mode=request.sort_mode,
-        search_query=request.search_query,
+        request.message, items, basket, context
     )
 
     CHAT_MEMORY[session_id] = history + [
@@ -780,15 +742,15 @@ def ai_chat(request: AIChatRequest):
         {"role": "assistant", "content": reply},
     ]
 
-    SESSION_CONTEXT[session_id] = {"last_products": remembered_products}
+    SESSION_CONTEXT[session_id] = {
+        "last_products": remembered_products
+    }
 
     return {
         "reply": reply,
         "basket": basket,
         "session_id": session_id,
-        "source": "local-smart-ai-v3",
-        "used_visible_products": len(visible_items),
-        "used_selected_products": len(items),
+        "source": "local-smart-ai-v2",
     }
 
 
@@ -943,3 +905,58 @@ def delete_alert(alert_id: int):
         session.delete(alert)
         session.commit()
         return {"status": "deleted"}
+
+
+@app.post("/data/upload")
+def upload_data(file: UploadFile = File(...)):
+    content = file.file.read().decode("utf-8")
+
+    try:
+        data = json.loads(content)
+    except Exception:
+        import csv
+
+        reader = csv.DictReader(content.splitlines())
+        data = []
+        for i, row in enumerate(reader):
+            data.append(
+                {
+                    "id": i + 1,
+                    "name": row.get("name"),
+                    "category": row.get("category", "Other"),
+                    "prices": {
+                        "ah": float(row.get("ah", 0) or 0),
+                        "jumbo": float(row.get("jumbo", 0) or 0),
+                        "lidl": float(row.get("lidl", 0) or 0),
+                        "aldi": float(row.get("aldi", 0) or 0),
+                    },
+                    "tags": ["imported"],
+                    "substitute": row.get("substitute", "Generic alternative"),
+                    "qualityScore": float(row.get("qualityScore", 7.0) or 7.0),
+                    "valueScore": float(row.get("valueScore", 7.0) or 7.0),
+                    "brandType": row.get("brandType", "huismerk"),
+                    "reviewLabel": row.get("reviewLabel", "geen reviewlabel"),
+                }
+            )
+
+    if not isinstance(data, list):
+        raise HTTPException(
+            status_code=400,
+            detail="Uploaded data must be a JSON array or valid CSV.",
+        )
+
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False)
+
+    global PRODUCTS
+    PRODUCTS = data
+
+    return {"status": "uploaded", "count": len(PRODUCTS)}
+
+
+@app.get("/data/status")
+def data_status():
+    return {
+        "total_products": len(PRODUCTS),
+        "source": "file" if os.path.exists(DATA_FILE) else "default",
+    }
