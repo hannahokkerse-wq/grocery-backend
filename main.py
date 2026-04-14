@@ -394,17 +394,60 @@ def make_store_answer(products: List[Dict]) -> str:
     return " ".join(lines)
 
 
+def get_visible_scope_summary(
+    visible_items: List[Dict],
+    active_store: str,
+    active_category: str,
+    sort_mode: str,
+    search_query: str,
+) -> str:
+    parts = []
+
+    if active_store and active_store != "all":
+        parts.append(f"winkel: {STORE_NAME_MAP.get(active_store, active_store)}")
+
+    if active_category and active_category != "Alle":
+        parts.append(f"categorie: {active_category}")
+
+    if sort_mode:
+        sort_map = {
+            "price-asc": "goedkoopste eerst",
+            "price-desc": "duurste eerst",
+            "name-asc": "naam A-Z",
+            "favorites": "favorieten eerst",
+            "quality-desc": "beste kwaliteit",
+            "value-desc": "beste prijs-kwaliteit",
+        }
+        parts.append(f"sortering: {sort_map.get(sort_mode, sort_mode)}")
+
+    if search_query:
+        parts.append(f"zoekterm: '{search_query}'")
+
+    if visible_items:
+        parts.append(f"{len(visible_items)} zichtbare producten")
+
+    return ", ".join(parts)
+
+
 def smart_chat_reply(
     message: str,
     items: List[Dict],
     basket: Optional[Dict] = None,
     session_context: Optional[Dict] = None,
+    visible_items: Optional[List[Dict]] = None,
+    active_store: Optional[str] = "all",
+    active_category: Optional[str] = "Alle",
+    sort_mode: Optional[str] = "price-asc",
+    search_query: Optional[str] = "",
 ):
     msg = message.lower().strip()
 
     remembered_products = []
     if session_context:
         remembered_products = session_context.get("last_products", [])
+
+    visible_items = visible_items or []
+    all_items = [enrich_product(p) for p in PRODUCTS]
 
     reference_words = [
         "deze producten",
@@ -413,14 +456,21 @@ def smart_chat_reply(
         "die",
         "deze keuzes",
         "die keuzes",
+        "deze lijst",
+        "wat ik nu zie",
+        "wat nu zichtbaar is",
     ]
 
     use_remembered = any(term in msg for term in reference_words)
 
     if use_remembered and remembered_products:
         scope_items = remembered_products
+    elif items:
+        scope_items = items
+    elif visible_items:
+        scope_items = visible_items
     else:
-        scope_items = items if items else [enrich_product(p) for p in PRODUCTS]
+        scope_items = all_items
 
     scope_basket = basket if items and not use_remembered else build_basket(scope_items)
 
@@ -438,11 +488,22 @@ def smart_chat_reply(
     )
 
     response_products = scope_items[:4]
+    visible_summary = get_visible_scope_summary(
+        visible_items=visible_items,
+        active_store=active_store,
+        active_category=active_category,
+        sort_mode=sort_mode,
+        search_query=search_query or "",
+    )
 
     if any(
         word in msg
         for word in ["winkel", "winkels", "supermarkt", "supermarkten", "beschikbaar"]
     ):
+        intro = ""
+        if visible_items and not items and not use_remembered:
+            intro = f"Op basis van wat nu zichtbaar is ({visible_summary}) geldt: "
+            return intro + make_store_answer(scope_items[:4]), scope_items[:4]
         return make_store_answer(response_products), response_products
 
     if any(word in msg for word in ["aanbieding", "bonus", "actie"]):
@@ -452,33 +513,56 @@ def smart_chat_reply(
             if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))
         ]
         if promo_items:
+            prefix = ""
+            if visible_items and not items and not use_remembered:
+                prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) zijn de producten in de aanbieding: "
+            else:
+                prefix = "De producten in de aanbieding zijn: "
             return (
-                f"De producten in de aanbieding zijn: {format_product_list(promo_items)}.",
+                f"{prefix}{format_product_list(promo_items)}.",
                 promo_items[:4],
             )
-        return "Ik zie op dit moment geen producten in de aanbieding.", []
+        return "Ik zie op dit moment geen producten in de aanbieding binnen deze selectie.", []
 
     if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
+        prefix = ""
+        if visible_items and not items and not use_remembered:
+            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+        elif items:
+            prefix = "Binnen je huidige selectie "
+
         return (
-            f"De goedkoopste producten zijn: {format_product_list(cheapest_sorted)}. "
+            f"{prefix}zijn de goedkoopste producten: {format_product_list(cheapest_sorted)}. "
             f"De allergoedkoopste keuze is {cheapest_item['name']} voor "
             f"€{get_cheapest_store(cheapest_item)['price']:.2f}. "
-            f"Als je vooral wilt besparen, is {scope_basket['singleStoreBest']['name']} "
-            f"nu de voordeligste supermarkt.",
+            f"De voordeligste supermarkt voor deze scope is "
+            f"{scope_basket['singleStoreBest']['name']}.",
             cheapest_sorted[:4],
         )
 
     if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
+        prefix = ""
+        if visible_items and not items and not use_remembered:
+            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+        elif items:
+            prefix = "Binnen je huidige selectie "
+
         return (
-            f"De beste prijs-kwaliteit producten zijn: {format_product_list(best_value_sorted)}. "
+            f"{prefix}zijn de beste prijs-kwaliteit producten: {format_product_list(best_value_sorted)}. "
             f"De sterkste keuze is {best_value_item['name']} met een waarde-score van "
             f"{best_value_item.get('valueScore', 0)}/10.",
             best_value_sorted[:4],
         )
 
     if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
+        prefix = ""
+        if visible_items and not items and not use_remembered:
+            prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
+        elif items:
+            prefix = "Binnen je huidige selectie "
+
         return (
-            f"De producten met de hoogste kwaliteit zijn: {format_product_list(best_quality_sorted)}. "
+            f"{prefix}zijn de producten met de hoogste kwaliteit: {format_product_list(best_quality_sorted)}. "
             f"De hoogste kwaliteitsscore is {best_quality_item['name']} met "
             f"{best_quality_item.get('qualityScore', 0)}/10. "
             f"De laagste kwaliteitsscore is {weakest_item['name']} met "
@@ -497,13 +581,16 @@ def smart_chat_reply(
             healthy_items, key=lambda i: i.get("qualityScore", 0), reverse=True
         )
         if healthy_sorted:
+            prefix = ""
+            if visible_items and not items and not use_remembered:
+                prefix = f"Op basis van wat nu zichtbaar is ({visible_summary}) "
             return (
-                f"De gezondste keuzes zijn: {format_product_list(healthy_sorted)}. "
+                f"{prefix}zijn de gezondste keuzes: {format_product_list(healthy_sorted)}. "
                 f"De beste gezonde keuze is {healthy_sorted[0]['name']} "
                 f"met een kwaliteitsscore van {healthy_sorted[0].get('qualityScore', 0)}/10.",
                 healthy_sorted[:4],
             )
-        return "Ik zie in de huidige dataset niet direct gezonde keuzes.", []
+        return "Ik zie in de huidige scope niet direct gezonde keuzes.", []
 
     if any(word in msg for word in ["mandje", "basket", "totaal"]):
         if items:
@@ -514,16 +601,36 @@ def smart_chat_reply(
                 f"en de gemiddelde prijs-kwaliteit is {scope_basket['averageValueScore']}/10.",
                 items[:4],
             )
+
+        if visible_items:
+            return (
+                f"Voor wat nu zichtbaar is ({visible_summary}) is de voordeligste supermarkt "
+                f"{scope_basket['singleStoreBest']['name']} met een totaal van "
+                f"€{scope_basket['singleStoreBest']['total']:.2f}. "
+                f"Als je producten selecteert, kan ik je mandje nog specifieker analyseren.",
+                visible_items[:4],
+            )
+
         return (
             f"Over alle producten bekeken is {scope_basket['singleStoreBest']['name']} "
             f"de goedkoopste supermarkt. Als je producten selecteert, kan ik je mandje specifieker analyseren.",
             [],
         )
 
+    if any(word in msg for word in ["wat zie ik", "wat staat er", "wat is zichtbaar"]):
+        if visible_items:
+            return (
+                f"Je ziet nu {len(visible_items)} producten in beeld met deze context: {visible_summary}. "
+                f"De goedkoopste zichtbare keuze is {cheapest_item['name']} en de beste prijs-kwaliteit keuze is "
+                f"{best_value_item['name']}.",
+                visible_items[:4],
+            )
+        return "Ik heb op dit moment geen zichtbare productcontext ontvangen.", []
+
     return (
-        f"Mijn advies is om vooral te kijken naar {best_value_item['name']} voor prijs-kwaliteit, "
+        f"Op basis van de huidige context raad ik {best_value_item['name']} aan voor prijs-kwaliteit, "
         f"{best_quality_item['name']} voor kwaliteit en {cheapest_item['name']} als goedkoopste keuze. "
-        f"Op totaalniveau is {scope_basket['singleStoreBest']['name']} momenteel de voordeligste supermarkt.",
+        f"De voordeligste supermarkt voor deze scope is {scope_basket['singleStoreBest']['name']}.",
         response_products,
     )
 
@@ -543,6 +650,11 @@ class AIChatRequest(BaseModel):
     session_id: Optional[str] = "default"
     message: str
     product_ids: Optional[List[int]] = []
+    visible_product_ids: Optional[List[int]] = []
+    active_store: Optional[str] = "all"
+    active_category: Optional[str] = "Alle"
+    sort_mode: Optional[str] = "price-asc"
+    search_query: Optional[str] = ""
 
 
 class UserCreate(BaseModel):
@@ -641,6 +753,10 @@ def alert_suggestions():
 @app.post("/ai/chat")
 def ai_chat(request: AIChatRequest):
     items = [enrich_product(p) for p in PRODUCTS if p["id"] in request.product_ids]
+    visible_items = [
+        enrich_product(p) for p in PRODUCTS if p["id"] in request.visible_product_ids
+    ]
+
     basket = build_basket(items) if items else None
 
     session_id = request.session_id or "default"
@@ -648,7 +764,15 @@ def ai_chat(request: AIChatRequest):
     context = SESSION_CONTEXT.get(session_id, {"last_products": []})
 
     reply, remembered_products = smart_chat_reply(
-        request.message, items, basket, context
+        request.message,
+        items,
+        basket,
+        context,
+        visible_items=visible_items,
+        active_store=request.active_store,
+        active_category=request.active_category,
+        sort_mode=request.sort_mode,
+        search_query=request.search_query,
     )
 
     CHAT_MEMORY[session_id] = history + [
@@ -662,7 +786,9 @@ def ai_chat(request: AIChatRequest):
         "reply": reply,
         "basket": basket,
         "session_id": session_id,
-        "source": "local-smart-ai-v2",
+        "source": "local-smart-ai-v3",
+        "used_visible_products": len(visible_items),
+        "used_selected_products": len(items),
     }
 
 
