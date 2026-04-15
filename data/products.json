@@ -1,38 +1,302 @@
 [
   {
-    "name": "Pasta 500g",
-    "category": "Houdbaar",
-    "quality_score": 7.0,
-    "value_score": 9.2,
-    "stores": {
-      "ah": 1.49,
-      "jumbo": 1.39,
-      "lidl": 1.19,
-      "aldi": 1.09
-    }
-  },
-  {
+    "id": 1,
     "name": "Halfvolle melk 1L",
     "category": "Zuivel",
-    "quality_score": 7.8,
-    "value_score": 8.9,
-    "stores": {
+    "prices": {
       "ah": 1.89,
       "jumbo": 1.79,
       "lidl": 1.55,
       "aldi": 1.49
-    }
+    },
+    "tags": [
+      "bonus"
+    ],
+    "substitute": "Huismerk melk 1L",
+    "qualityScore": 7.8,
+    "valueScore": 8.9,
+    "brandType": "huismerk",
+    "reviewLabel": "goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-08"
   },
   {
+    "id": 2,
+    "name": "Eieren 12 stuks",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 3.49,
+      "jumbo": 3.19,
+      "lidl": 2.89,
+      "aldi": 2.79
+    },
+    "tags": [
+      "actie"
+    ],
+    "substitute": "Eieren 10 stuks",
+    "qualityScore": 8.2,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "betrouwbare basiskeuze",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 3,
+    "name": "Kipfilet 500g",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.99,
+      "jumbo": 5.79,
+      "lidl": 5.49,
+      "aldi": 5.29
+    },
+    "tags": [
+      "populair"
+    ],
+    "substitute": "Kippendijfilet 500g",
+    "qualityScore": 7.2,
+    "valueScore": 8.1,
+    "brandType": "huismerk",
+    "reviewLabel": "prima voor dagelijkse maaltijden",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 4,
     "name": "Bananen 1kg",
     "category": "Groente & Fruit",
-    "quality_score": 8.4,
-    "value_score": 8.1,
-    "stores": {
+    "prices": {
       "ah": 1.99,
       "jumbo": 1.89,
       "lidl": 1.69,
       "aldi": 1.59
-    }
+    },
+    "tags": [
+      "vers"
+    ],
+    "substitute": "Losse bananen",
+    "qualityScore": 8.4,
+    "valueScore": 9.0,
+    "brandType": "vers",
+    "reviewLabel": "sterke prijs-kwaliteit",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 5,
+    "name": "Witte rijst 1kg",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.59,
+      "lidl": 2.29,
+      "aldi": 2.19
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "Houdbaar huismerk rijst",
+    "qualityScore": 7.5,
+    "valueScore": 8.8,
+    "brandType": "huismerk",
+    "reviewLabel": "betaalbare voorraadkeuze",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 6,
+    "name": "Griekse yoghurt 500g",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 3.99,
+      "jumbo": 3.79,
+      "lidl": 3.39,
+      "aldi": 3.29
+    },
+    "tags": [
+      "gezond"
+    ],
+    "substitute": "Magere yoghurt",
+    "qualityScore": 8.6,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "goede smaak en structuur",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 7,
+    "name": "Pasta 500g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.49,
+      "jumbo": 1.39,
+      "lidl": 1.19,
+      "aldi": 1.09
+    },
+    "tags": [
+      "bonus"
+    ],
+    "substitute": "Volkoren pasta",
+    "qualityScore": 7.0,
+    "valueScore": 9.2,
+    "brandType": "huismerk",
+    "reviewLabel": "zeer goedkoop en prima",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 8,
+    "name": "Olijfolie 1L",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 9.99,
+      "jumbo": 9.49,
+      "lidl": 8.99,
+      "aldi": 8.79
+    },
+    "tags": [
+      "actie"
+    ],
+    "substitute": "Zonnebloemolie",
+    "qualityScore": 8.8,
+    "valueScore": 7.9,
+    "brandType": "A-merk alternatief",
+    "reviewLabel": "hogere kwaliteit, minder goedkoop",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 9,
+    "name": "Brood volkoren",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.49,
+      "jumbo": 2.39,
+      "lidl": 1.99,
+      "aldi": 1.89
+    },
+    "tags": [
+      "dagelijks"
+    ],
+    "substitute": "Wit brood",
+    "qualityScore": 7.7,
+    "valueScore": 8.8,
+    "brandType": "huismerk",
+    "reviewLabel": "prima basisbrood",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 10,
+    "name": "Appels 1kg",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.99,
+      "jumbo": 2.79,
+      "lidl": 2.49,
+      "aldi": 2.39
+    },
+    "tags": [
+      "vers"
+    ],
+    "substitute": "Peren 1kg",
+    "qualityScore": 8.5,
+    "valueScore": 8.9,
+    "brandType": "vers",
+    "reviewLabel": "fris en goede kwaliteit",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 11,
+    "name": "Aardappelen 2kg",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 3.99,
+      "jumbo": 3.79,
+      "lidl": 3.49,
+      "aldi": 3.29
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "Zoete aardappel",
+    "qualityScore": 7.9,
+    "valueScore": 8.8,
+    "brandType": "vers",
+    "reviewLabel": "goede budgetkeuze",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 12,
+    "name": "Kaas jong belegen 400g",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 4.99,
+      "jumbo": 4.79,
+      "lidl": 4.29,
+      "aldi": 4.19
+    },
+    "tags": [
+      "bonus"
+    ],
+    "substitute": "30+ kaas",
+    "qualityScore": 8.3,
+    "valueScore": 8.5,
+    "brandType": "huismerk",
+    "reviewLabel": "goede balans tussen smaak en prijs",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 13,
+    "name": "Frisdrank cola 1.5L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.89,
+      "jumbo": 1.79,
+      "lidl": 1.49,
+      "aldi": 1.39
+    },
+    "tags": [
+      "actie"
+    ],
+    "substitute": "Cola zero",
+    "qualityScore": 6.8,
+    "valueScore": 8.6,
+    "brandType": "huismerk",
+    "reviewLabel": "goedkoop maar smaak is wisselend",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 14,
+    "name": "Sinaasappelsap 1L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 2.49,
+      "jumbo": 2.29,
+      "lidl": 1.99,
+      "aldi": 1.89
+    },
+    "tags": [
+      "vers"
+    ],
+    "substitute": "Appelsap",
+    "qualityScore": 7.9,
+    "valueScore": 8.4,
+    "brandType": "huismerk",
+    "reviewLabel": "frisse smaak, nette prijs",
+    "lastUpdated": "2026-04-08"
+  },
+  {
+    "id": 15,
+    "name": "Tomaten 500g",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.69
+    },
+    "tags": [
+      "vers"
+    ],
+    "substitute": "Cherry tomaat",
+    "qualityScore": 8.1,
+    "valueScore": 8.8,
+    "brandType": "vers",
+    "reviewLabel": "mooie prijs-kwaliteit voor salade en koken",
+    "lastUpdated": "2026-04-08"
   }
 ]
