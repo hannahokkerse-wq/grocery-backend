@@ -1,223 +1,128 @@
 import json
-import re
-import shutil
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Optional
+from datetime import date
+import csv
+import argparse
 
-import requests
-from bs4 import BeautifulSoup
-
-DATA_FILE = Path("grocery_data.json")
-BACKUP_DIR = Path("backups")
-USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/124.0 Safari/537.36"
-)
-TIMEOUT = 20
-
-# Per store kun je hier selectors of regex verbeteren als je later echte pagina’s hebt.
-STORE_RULES: Dict[str, Dict[str, Any]] = {
-    "ah": {
-        "selectors": [
-            '[itemprop="price"]',
-            'meta[property="product:price:amount"]',
-            '[data-testhook="price"]',
-            ".price-amount",
-        ],
-        "regexes": [
-            r'"price"\s*:\s*"(\d+[.,]\d{2})"',
-            r'€\s?(\d+[.,]\d{2})',
-        ],
-    },
-    "jumbo": {
-        "selectors": [
-            '[itemprop="price"]',
-            'meta[property="product:price:amount"]',
-            '[data-testid="price"]',
-            ".price",
-        ],
-        "regexes": [
-            r'"price"\s*:\s*"(\d+[.,]\d{2})"',
-            r'€\s?(\d+[.,]\d{2})',
-        ],
-    },
-    "lidl": {
-        "selectors": [
-            '[itemprop="price"]',
-            'meta[property="product:price:amount"]',
-            ".price",
-            ".m-price__price",
-        ],
-        "regexes": [
-            r'"price"\s*:\s*"(\d+[.,]\d{2})"',
-            r'€\s?(\d+[.,]\d{2})',
-        ],
-    },
-    "aldi": {
-        "selectors": [
-            '[itemprop="price"]',
-            'meta[property="product:price:amount"]',
-            ".price",
-        ],
-        "regexes": [
-            r'"price"\s*:\s*"(\d+[.,]\d{2})"',
-            r'€\s?(\d+[.,]\d{2})',
-        ],
-    },
-}
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "products.json"
+UPDATES_JSON_PATH = BASE_DIR / "data" / "price_updates.json"
+UPDATES_CSV_PATH = BASE_DIR / "data" / "price_updates.csv"
 
 
-def load_products() -> list[dict]:
-    if not DATA_FILE.exists():
-        raise FileNotFoundError(f"{DATA_FILE} niet gevonden")
-    with DATA_FILE.open("r", encoding="utf-8") as f:
-        data = json.load(f)
-    if not isinstance(data, list):
-        raise ValueError("grocery_data.json moet een lijst met producten bevatten")
-    return data
+def load_products():
+    with open(DATA_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def save_backup() -> Path:
-    BACKUP_DIR.mkdir(exist_ok=True)
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    backup_path = BACKUP_DIR / f"grocery_data_{ts}.json"
-    shutil.copy2(DATA_FILE, backup_path)
-    return backup_path
-
-
-def save_products(products: list[dict]) -> None:
-    with DATA_FILE.open("w", encoding="utf-8") as f:
+def save_products(products):
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(products, f, ensure_ascii=False, indent=2)
 
 
-def clean_price(raw: str) -> Optional[float]:
-    if not raw:
-        return None
+def apply_json_updates(products, updates_path):
+    if not updates_path.exists():
+        print(f"Geen JSON updates gevonden op: {updates_path}")
+        return products, 0
 
-    value = raw.strip()
-    value = value.replace("\xa0", " ").replace("EUR", "").replace("€", "").strip()
+    with open(updates_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
 
-    # Probeer NL-formaten als 1.234,56 en eenvoudige 12,34 / 12.34
-    if "," in value and "." in value:
-        # aannemen dat . duizendtallen zijn en , decimalen
-        value = value.replace(".", "").replace(",", ".")
-    else:
-        value = value.replace(",", ".")
+    updates = payload.get("updates", [])
+    applied = 0
 
-    match = re.search(r"(\d+(?:\.\d{1,2})?)", value)
-    if not match:
-        return None
+    for update in updates:
+        name = update.get("name")
+        store = update.get("store")
+        price = update.get("price")
 
-    try:
-        return round(float(match.group(1)), 2)
-    except ValueError:
-        return None
-
-
-def extract_price_from_html(html: str, store_id: str) -> Optional[float]:
-    rules = STORE_RULES.get(store_id, {})
-    soup = BeautifulSoup(html, "html.parser")
-
-    for selector in rules.get("selectors", []):
-        el = soup.select_one(selector)
-        if not el:
+        if not name or not store or price is None:
             continue
 
-        # eerst content/value proberen, daarna tekst
-        raw = el.get("content") or el.get("value") or el.get_text(" ", strip=True)
-        price = clean_price(raw)
-        if price is not None:
-            return price
+        for product in products:
+            if product["name"].strip().lower() == name.strip().lower():
+                if "prices" in product and store in product["prices"]:
+                    old_price = product["prices"][store]
+                    product["prices"][store] = float(price)
+                    product["lastUpdated"] = str(date.today())
+                    applied += 1
+                    print(f"[JSON] {name} | {store}: {old_price} -> {price}")
+                break
 
-    for pattern in rules.get("regexes", []):
-        match = re.search(pattern, html, flags=re.IGNORECASE)
-        if match:
-            price = clean_price(match.group(1))
-            if price is not None:
-                return price
-
-    return None
+    return products, applied
 
 
-def fetch_html(url: str) -> str:
-    headers = {"User-Agent": USER_AGENT}
-    response = requests.get(url, headers=headers, timeout=TIMEOUT)
-    response.raise_for_status()
-    return response.text
+def apply_csv_updates(products, updates_path):
+    if not updates_path.exists():
+        print(f"Geen CSV updates gevonden op: {updates_path}")
+        return products, 0
 
+    applied = 0
+    with open(updates_path, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            name = row.get("name")
+            store = row.get("store")
+            price = row.get("price")
 
-def update_product_prices(product: dict) -> dict:
-    source_urls: Dict[str, str] = product.get("sourceUrls", {})
-    prices: Dict[str, float] = dict(product.get("prices", {}))
-    changed = False
-    notes = []
-
-    for store_id, url in source_urls.items():
-        if not url:
-            continue
-
-        try:
-            html = fetch_html(url)
-            new_price = extract_price_from_html(html, store_id)
-
-            if new_price is None:
-                notes.append(f"{store_id}: prijs niet gevonden")
+            if not name or not store or price in [None, ""]:
                 continue
 
-            old_price = prices.get(store_id)
-            prices[store_id] = new_price
+            for product in products:
+                if product["name"].strip().lower() == name.strip().lower():
+                    if "prices" in product and store in product["prices"]:
+                        old_price = product["prices"][store]
+                        product["prices"][store] = float(price)
+                        product["lastUpdated"] = str(date.today())
+                        applied += 1
+                        print(f"[CSV] {name} | {store}: {old_price} -> {price}")
+                    break
 
-            if old_price != new_price:
-                changed = True
-                notes.append(f"{store_id}: {old_price} -> {new_price}")
-            else:
-                notes.append(f"{store_id}: ongewijzigd ({new_price})")
-
-        except Exception as e:
-            notes.append(f"{store_id}: fout ({e})")
-
-    if changed:
-        product["prices"] = prices
-        product["lastUpdated"] = datetime.now(timezone.utc).isoformat()
-
-    product["_updateNotes"] = notes
-    return product
+    return products, applied
 
 
-def main(dry_run: bool = False) -> None:
-    products = load_products()
-
-    updated_products = []
-    changed_count = 0
-
+def recalculate_value_scores(products):
     for product in products:
-        updated = update_product_prices(product)
-        updated_products.append(updated)
+        prices = list(product.get("prices", {}).values())
+        if not prices:
+            continue
+        lowest = min(prices)
+        highest = max(prices)
+        quality = float(product.get("qualityScore", 7.0))
 
-        notes = updated.get("_updateNotes", [])
-        if notes:
-            print(f"\n{updated.get('name', 'Onbekend product')}")
-            for note in notes:
-                print(f" - {note}")
+        if highest == 0:
+            value_score = quality
+        else:
+            price_factor = 10 - ((lowest / highest) * 5)
+            value_score = round(min(10, max(1, quality + (10 - price_factor) - 2)), 1)
 
-        if "lastUpdated" in updated:
-            changed_count += 1
+        product["valueScore"] = value_score
 
-    for product in updated_products:
-        product.pop("_updateNotes", None)
+    return products
 
-    if dry_run:
-        print(f"\nDRY RUN klaar. {changed_count} product(en) zouden zijn bijgewerkt.")
-        return
 
-    backup = save_backup()
-    save_products(updated_products)
-    print(f"\nKlaar. Backup opgeslagen als: {backup}")
-    print(f"{changed_count} product(en) bijgewerkt.")
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", choices=["json", "csv", "both"], default="both")
+    args = parser.parse_args()
+
+    products = load_products()
+    total_applied = 0
+
+    if args.source in ["json", "both"]:
+        products, applied = apply_json_updates(products, UPDATES_JSON_PATH)
+        total_applied += applied
+
+    if args.source in ["csv", "both"]:
+        products, applied = apply_csv_updates(products, UPDATES_CSV_PATH)
+        total_applied += applied
+
+    products = recalculate_value_scores(products)
+    save_products(products)
+
+    print(f"Klaar. {total_applied} prijsupdates toegepast.")
+    print(f"Data opgeslagen in: {DATA_PATH}")
 
 
 if __name__ == "__main__":
-    # Zet op True als je eerst wilt testen zonder weg te schrijven
-    main(dry_run=False)
+    main()
