@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Pasta 500g",
+    "category": "Houdbaar",
+    "quality_score": 7.0,
+    "value_score": 9.2,
+    "stores": {
+      "ah": 1.49,
+      "jumbo": 1.39,
+      "lidl": 1.19,
+      "aldi": 1.09
+    }
+  },
+  {
+    "name": "Halfvolle melk 1L",
+    "category": "Zuivel",
+    "quality_score": 7.8,
+    "value_score": 8.9,
+    "stores": {
+      "ah": 1.89,
+      "jumbo": 1.79,
+      "lidl": 1.55,
+      "aldi": 1.49
+    }
+  },
+  {
+    "name": "Bananen 1kg",
+    "category": "Groente & Fruit",
+    "quality_score": 8.4,
+    "value_score": 8.1,
+    "stores": {
+      "ah": 1.99,
+      "jumbo": 1.89,
+      "lidl": 1.69,
+      "aldi": 1.59
+    }
+  }
+]
