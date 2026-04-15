@@ -495,14 +495,14 @@ def smart_chat_reply(
         ]
         if promo_items:
             return (
-                f"De producten in de aanbieding zijn: {format_product_list(promo_items)}.",
+                f"Binnen de huidige filterselectie zijn de producten in de aanbieding: {format_product_list(promo_items)}.",
                 promo_items[:4],
             )
         return "Ik zie op dit moment geen producten in de aanbieding.", []
 
     if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
         return (
-            f"De goedkoopste producten zijn: {format_product_list(cheapest_sorted)}. "
+            f"Binnen de huidige filterselectie zijn de goedkoopste producten: {format_product_list(cheapest_sorted)}. "
             f"De allergoedkoopste keuze is {cheapest_item['name']} voor "
             f"€{get_cheapest_store(cheapest_item)['price']:.2f}. "
             f"Als je vooral wilt besparen, is {scope_basket['singleStoreBest']['name']} "
@@ -512,7 +512,7 @@ def smart_chat_reply(
 
     if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
         return (
-            f"De beste prijs-kwaliteit producten zijn: {format_product_list(best_value_sorted)}. "
+            f"Binnen de huidige filterselectie zijn de beste prijs-kwaliteit producten: {format_product_list(best_value_sorted)}. "
             f"De sterkste keuze is {best_value_item['name']} met een waarde-score van "
             f"{best_value_item.get('valueScore', 0)}/10.",
             best_value_sorted[:4],
@@ -520,7 +520,7 @@ def smart_chat_reply(
 
     if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
         return (
-            f"De producten met de hoogste kwaliteit zijn: {format_product_list(best_quality_sorted)}. "
+            f"Binnen de huidige filterselectie zijn de producten met de hoogste kwaliteit: {format_product_list(best_quality_sorted)}. "
             f"De hoogste kwaliteitsscore is {best_quality_item['name']} met "
             f"{best_quality_item.get('qualityScore', 0)}/10. "
             f"De laagste kwaliteitsscore is {weakest_item['name']} met "
@@ -540,7 +540,7 @@ def smart_chat_reply(
         )
         if healthy_sorted:
             return (
-                f"De gezondste keuzes zijn: {format_product_list(healthy_sorted)}. "
+                f"Binnen de huidige filterselectie zijn de gezondste keuzes: {format_product_list(healthy_sorted)}. "
                 f"De beste gezonde keuze is {healthy_sorted[0]['name']} "
                 f"met een kwaliteitsscore van {healthy_sorted[0].get('qualityScore', 0)}/10.",
                 healthy_sorted[:4],
@@ -550,7 +550,7 @@ def smart_chat_reply(
     if any(word in msg for word in ["mandje", "basket", "totaal"]):
         if items:
             return (
-                f"Je geselecteerde mandje heeft nu een goedkoopste totaalprijs van "
+                f"Binnen je geselecteerde mandje is de goedkoopste totaalprijs "
                 f"€{scope_basket['splitTotal']:.2f}. "
                 f"De gemiddelde kwaliteit is {scope_basket['averageQualityScore']}/10 "
                 f"en de gemiddelde prijs-kwaliteit is {scope_basket['averageValueScore']}/10.",
