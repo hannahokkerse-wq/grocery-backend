@@ -1,27 +1,41 @@
-Optie C complete files
-
-Inhoud:
-- main.py
-- update_prices.py
-- data/products.json
-- data/price_updates.example.json
+Stap 2: automatische JSON updater per winkel
 
 Wat dit doet:
-- backend leest producten uit data/products.json
-- update_prices.py werkt prijzen bij vanuit:
-  - data/price_updates.json
-  - data/price_updates.csv
-- als er geen updates zijn, blijft bestaande data gewoon staan
+- update_store_prices.py leest data/products.json
+- per winkel zoekt het matches in:
+  - data/store_sources/ah.json
+  - data/store_sources/jumbo.json
+  - data/store_sources/lidl.json
+  - data/store_sources/aldi.json
+- daarna werkt het automatisch prijzen bij
+- het maakt ook een rapport:
+  - data/last_update_report.json
 
-Aanbevolen gebruik:
-1. Zet main.py in je backend root
-2. Maak map data/
-3. Zet products.json in data/products.json
-4. Zet update_prices.py in backend root
-5. Optioneel: maak data/price_updates.json op basis van price_updates.example.json
+Belangrijk:
+Dit is een stabiele tussenstap.
+Je hoeft dus nog niet direct live websites te scrapen.
 
-Run handmatig:
-python update_prices.py
-of:
-python update_prices.py --source json
-python update_prices.py --source csv
+Workflow:
+1. Vul per winkel een JSON bronbestand
+2. Run:
+   python update_store_prices.py
+3. Bekijk:
+   data/last_update_report.json
+
+Bestandsstructuur:
+grocery-backend/
+  update_store_prices.py
+  scrapers/
+    manual_sources.py
+  data/
+    products.json
+    store_sources/
+      ah.json
+      jumbo.json
+      lidl.json
+      aldi.json
+
+Waarom dit handig is:
+- veel minder foutgevoelig dan direct scrapen
+- je kunt per winkel data importeren
+- later kun je per winkel een echte scraper aansluiten

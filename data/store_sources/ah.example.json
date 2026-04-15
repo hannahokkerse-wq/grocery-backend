@@ -1,0 +1,25 @@
+{
+  "store": "ah",
+  "items": [
+    {
+      "name": "Halfvolle melk 1 L",
+      "price": 1.85
+    },
+    {
+      "name": "Eieren 12 stuks",
+      "price": 3.39
+    },
+    {
+      "name": "Bananen 1 kg",
+      "price": 1.95
+    },
+    {
+      "name": "Pasta 500 g",
+      "price": 1.45
+    },
+    {
+      "name": "Tomaten 500 g",
+      "price": 2.09
+    }
+  ]
+}
