@@ -1,302 +1,1102 @@
 [
   {
     "id": 1,
-    "name": "Halfvolle melk 1L",
+    "name": "Product 1",
     "category": "Zuivel",
     "prices": {
-      "ah": 1.89,
-      "jumbo": 1.79,
-      "lidl": 1.55,
-      "aldi": 1.49
+      "ah": 7.5,
+      "jumbo": 6.72,
+      "lidl": 6.99,
+      "aldi": 7.42,
+      "plus": 6.86,
+      "dirk": 7.02
     },
     "tags": [
-      "bonus"
+      "basis"
     ],
-    "substitute": "Huismerk melk 1L",
-    "qualityScore": 7.8,
-    "valueScore": 8.9,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "goede prijs-kwaliteit",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 2,
-    "name": "Eieren 12 stuks",
-    "category": "Zuivel",
+    "name": "Product 2",
+    "category": "Vlees",
     "prices": {
-      "ah": 3.49,
-      "jumbo": 3.19,
-      "lidl": 2.89,
-      "aldi": 2.79
+      "ah": 4.42,
+      "jumbo": 5.31,
+      "lidl": 5.0,
+      "aldi": 4.76,
+      "plus": 5.28,
+      "dirk": 5.06
     },
     "tags": [
-      "actie"
+      "basis"
     ],
-    "substitute": "Eieren 10 stuks",
-    "qualityScore": 8.2,
-    "valueScore": 8.7,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "betrouwbare basiskeuze",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 3,
-    "name": "Kipfilet 500g",
-    "category": "Vlees",
+    "name": "Product 3",
+    "category": "Brood",
     "prices": {
-      "ah": 5.99,
-      "jumbo": 5.79,
-      "lidl": 5.49,
-      "aldi": 5.29
+      "ah": 2.41,
+      "jumbo": 1.95,
+      "lidl": 2.49,
+      "aldi": 2.27,
+      "plus": 2.14,
+      "dirk": 2.8
     },
     "tags": [
-      "populair"
+      "basis"
     ],
-    "substitute": "Kippendijfilet 500g",
-    "qualityScore": 7.2,
-    "valueScore": 8.1,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "prima voor dagelijkse maaltijden",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 4,
-    "name": "Bananen 1kg",
-    "category": "Groente & Fruit",
+    "name": "Product 4",
+    "category": "Houdbaar",
     "prices": {
-      "ah": 1.99,
-      "jumbo": 1.89,
-      "lidl": 1.69,
-      "aldi": 1.59
+      "ah": 5.44,
+      "jumbo": 5.02,
+      "lidl": 5.06,
+      "aldi": 5.01,
+      "plus": 5.18,
+      "dirk": 4.7
     },
     "tags": [
-      "vers"
+      "basis"
     ],
-    "substitute": "Losse bananen",
-    "qualityScore": 8.4,
-    "valueScore": 9.0,
-    "brandType": "vers",
-    "reviewLabel": "sterke prijs-kwaliteit",
-    "lastUpdated": "2026-04-08"
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 5,
-    "name": "Witte rijst 1kg",
-    "category": "Houdbaar",
+    "name": "Product 5",
+    "category": "Drinken",
     "prices": {
-      "ah": 2.79,
-      "jumbo": 2.59,
-      "lidl": 2.29,
-      "aldi": 2.19
+      "ah": 3.87,
+      "jumbo": 3.94,
+      "lidl": 3.78,
+      "aldi": 3.91,
+      "plus": 4.05,
+      "dirk": 3.59
     },
     "tags": [
       "basis"
     ],
-    "substitute": "Houdbaar huismerk rijst",
-    "qualityScore": 7.5,
-    "valueScore": 8.8,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "betaalbare voorraadkeuze",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 6,
-    "name": "Griekse yoghurt 500g",
-    "category": "Zuivel",
+    "name": "Product 6",
+    "category": "Ontbijt",
     "prices": {
-      "ah": 3.99,
-      "jumbo": 3.79,
-      "lidl": 3.39,
-      "aldi": 3.29
-    },
-    "tags": [
-      "gezond"
-    ],
-    "substitute": "Magere yoghurt",
-    "qualityScore": 8.6,
-    "valueScore": 8.7,
-    "brandType": "huismerk",
-    "reviewLabel": "goede smaak en structuur",
-    "lastUpdated": "2026-04-08"
-  },
-  {
-    "id": 7,
-    "name": "Pasta 500g",
-    "category": "Houdbaar",
-    "prices": {
-      "ah": 1.49,
-      "jumbo": 1.39,
-      "lidl": 1.19,
-      "aldi": 1.09
-    },
-    "tags": [
-      "bonus"
-    ],
-    "substitute": "Volkoren pasta",
-    "qualityScore": 7.0,
-    "valueScore": 9.2,
-    "brandType": "huismerk",
-    "reviewLabel": "zeer goedkoop en prima",
-    "lastUpdated": "2026-04-08"
-  },
-  {
-    "id": 8,
-    "name": "Olijfolie 1L",
-    "category": "Houdbaar",
-    "prices": {
-      "ah": 9.99,
-      "jumbo": 9.49,
-      "lidl": 8.99,
-      "aldi": 8.79
-    },
-    "tags": [
-      "actie"
-    ],
-    "substitute": "Zonnebloemolie",
-    "qualityScore": 8.8,
-    "valueScore": 7.9,
-    "brandType": "A-merk alternatief",
-    "reviewLabel": "hogere kwaliteit, minder goedkoop",
-    "lastUpdated": "2026-04-08"
-  },
-  {
-    "id": 9,
-    "name": "Brood volkoren",
-    "category": "Brood",
-    "prices": {
-      "ah": 2.49,
-      "jumbo": 2.39,
-      "lidl": 1.99,
-      "aldi": 1.89
-    },
-    "tags": [
-      "dagelijks"
-    ],
-    "substitute": "Wit brood",
-    "qualityScore": 7.7,
-    "valueScore": 8.8,
-    "brandType": "huismerk",
-    "reviewLabel": "prima basisbrood",
-    "lastUpdated": "2026-04-08"
-  },
-  {
-    "id": 10,
-    "name": "Appels 1kg",
-    "category": "Groente & Fruit",
-    "prices": {
-      "ah": 2.99,
-      "jumbo": 2.79,
-      "lidl": 2.49,
-      "aldi": 2.39
-    },
-    "tags": [
-      "vers"
-    ],
-    "substitute": "Peren 1kg",
-    "qualityScore": 8.5,
-    "valueScore": 8.9,
-    "brandType": "vers",
-    "reviewLabel": "fris en goede kwaliteit",
-    "lastUpdated": "2026-04-08"
-  },
-  {
-    "id": 11,
-    "name": "Aardappelen 2kg",
-    "category": "Groente & Fruit",
-    "prices": {
-      "ah": 3.99,
-      "jumbo": 3.79,
-      "lidl": 3.49,
-      "aldi": 3.29
+      "ah": 7.47,
+      "jumbo": 7.45,
+      "lidl": 7.12,
+      "aldi": 7.62,
+      "plus": 7.49,
+      "dirk": 6.88
     },
     "tags": [
       "basis"
     ],
-    "substitute": "Zoete aardappel",
-    "qualityScore": 7.9,
-    "valueScore": 8.8,
-    "brandType": "vers",
-    "reviewLabel": "goede budgetkeuze",
-    "lastUpdated": "2026-04-08"
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "category": "Snacks",
+    "prices": {
+      "ah": 2.29,
+      "jumbo": 2.47,
+      "lidl": 2.42,
+      "aldi": 2.35,
+      "plus": 2.35,
+      "dirk": 2.38
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 4.99,
+      "jumbo": 4.59,
+      "lidl": 4.43,
+      "aldi": 4.25,
+      "plus": 4.57,
+      "dirk": 4.43
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 9,
+    "name": "Product 9",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 6.47,
+      "jumbo": 6.0,
+      "lidl": 6.24,
+      "aldi": 6.39,
+      "plus": 5.81,
+      "dirk": 5.76
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 10,
+    "name": "Product 10",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 4.87,
+      "jumbo": 5.61,
+      "lidl": 5.53,
+      "aldi": 4.79,
+      "plus": 4.96,
+      "dirk": 5.56
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 11,
+    "name": "Product 11",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 1.98,
+      "jumbo": 2.27,
+      "lidl": 2.37,
+      "aldi": 2.07,
+      "plus": 2.31,
+      "dirk": 2.34
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 12,
-    "name": "Kaas jong belegen 400g",
-    "category": "Zuivel",
+    "name": "Product 12",
+    "category": "Vlees",
     "prices": {
-      "ah": 4.99,
-      "jumbo": 4.79,
-      "lidl": 4.29,
-      "aldi": 4.19
+      "ah": 4.62,
+      "jumbo": 4.52,
+      "lidl": 4.84,
+      "aldi": 4.5,
+      "plus": 4.62,
+      "dirk": 4.69
     },
     "tags": [
-      "bonus"
+      "basis"
     ],
-    "substitute": "30+ kaas",
-    "qualityScore": 8.3,
-    "valueScore": 8.5,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "goede balans tussen smaak en prijs",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 13,
-    "name": "Frisdrank cola 1.5L",
-    "category": "Drinken",
+    "name": "Product 13",
+    "category": "Brood",
     "prices": {
-      "ah": 1.89,
-      "jumbo": 1.79,
-      "lidl": 1.49,
-      "aldi": 1.39
+      "ah": 4.33,
+      "jumbo": 4.53,
+      "lidl": 3.97,
+      "aldi": 4.31,
+      "plus": 4.55,
+      "dirk": 3.62
     },
     "tags": [
-      "actie"
+      "basis"
     ],
-    "substitute": "Cola zero",
-    "qualityScore": 6.8,
-    "valueScore": 8.6,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "goedkoop maar smaak is wisselend",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 14,
-    "name": "Sinaasappelsap 1L",
-    "category": "Drinken",
+    "name": "Product 14",
+    "category": "Houdbaar",
     "prices": {
-      "ah": 2.49,
-      "jumbo": 2.29,
-      "lidl": 1.99,
-      "aldi": 1.89
+      "ah": 4.39,
+      "jumbo": 4.57,
+      "lidl": 3.96,
+      "aldi": 4.57,
+      "plus": 4.17,
+      "dirk": 4.45
     },
     "tags": [
-      "vers"
+      "basis"
     ],
-    "substitute": "Appelsap",
-    "qualityScore": 7.9,
-    "valueScore": 8.4,
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "frisse smaak, nette prijs",
-    "lastUpdated": "2026-04-08"
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   },
   {
     "id": 15,
-    "name": "Tomaten 500g",
-    "category": "Groente & Fruit",
+    "name": "Product 15",
+    "category": "Drinken",
     "prices": {
-      "ah": 2.19,
-      "jumbo": 2.09,
-      "lidl": 1.79,
-      "aldi": 1.69
+      "ah": 2.5,
+      "jumbo": 2.34,
+      "lidl": 2.03,
+      "aldi": 1.75,
+      "plus": 2.15,
+      "dirk": 1.7
     },
     "tags": [
-      "vers"
+      "basis"
     ],
-    "substitute": "Cherry tomaat",
-    "qualityScore": 8.1,
-    "valueScore": 8.8,
-    "brandType": "vers",
-    "reviewLabel": "mooie prijs-kwaliteit voor salade en koken",
-    "lastUpdated": "2026-04-08"
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 16,
+    "name": "Product 16",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 4.28,
+      "jumbo": 3.84,
+      "lidl": 4.69,
+      "aldi": 4.04,
+      "plus": 3.99,
+      "dirk": 4.06
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 17,
+    "name": "Product 17",
+    "category": "Snacks",
+    "prices": {
+      "ah": 5.27,
+      "jumbo": 4.84,
+      "lidl": 4.3,
+      "aldi": 4.29,
+      "plus": 5.16,
+      "dirk": 5.2
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 18,
+    "name": "Product 18",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 0.98,
+      "jumbo": 1.43,
+      "lidl": 1.47,
+      "aldi": 1.17,
+      "plus": 1.09,
+      "dirk": 1.06
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 19,
+    "name": "Product 19",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 3.56,
+      "jumbo": 3.9,
+      "lidl": 3.2,
+      "aldi": 3.4,
+      "plus": 3.65,
+      "dirk": 3.03
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 20,
+    "name": "Product 20",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 7.81,
+      "jumbo": 7.74,
+      "lidl": 7.88,
+      "aldi": 7.38,
+      "plus": 8.17,
+      "dirk": 7.31
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 21,
+    "name": "Product 21",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 1.18,
+      "jumbo": 1.82,
+      "lidl": 1.58,
+      "aldi": 2.02,
+      "plus": 1.58,
+      "dirk": 1.7
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 22,
+    "name": "Product 22",
+    "category": "Vlees",
+    "prices": {
+      "ah": 2.13,
+      "jumbo": 3.0,
+      "lidl": 3.05,
+      "aldi": 2.12,
+      "plus": 2.61,
+      "dirk": 2.79
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 23,
+    "name": "Product 23",
+    "category": "Brood",
+    "prices": {
+      "ah": 7.79,
+      "jumbo": 7.44,
+      "lidl": 7.25,
+      "aldi": 7.71,
+      "plus": 7.71,
+      "dirk": 7.04
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 24,
+    "name": "Product 24",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 4.61,
+      "jumbo": 5.31,
+      "lidl": 4.99,
+      "aldi": 5.15,
+      "plus": 4.93,
+      "dirk": 4.71
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 25,
+    "name": "Product 25",
+    "category": "Drinken",
+    "prices": {
+      "ah": 5.19,
+      "jumbo": 4.73,
+      "lidl": 5.15,
+      "aldi": 4.45,
+      "plus": 4.76,
+      "dirk": 5.15
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 26,
+    "name": "Product 26",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 1.4,
+      "jumbo": 1.02,
+      "lidl": 1.94,
+      "aldi": 1.1,
+      "plus": 1.64,
+      "dirk": 1.42
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 27,
+    "name": "Product 27",
+    "category": "Snacks",
+    "prices": {
+      "ah": 5.76,
+      "jumbo": 5.68,
+      "lidl": 5.46,
+      "aldi": 5.28,
+      "plus": 4.96,
+      "dirk": 5.12
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 28,
+    "name": "Product 28",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 2.8,
+      "jumbo": 3.19,
+      "lidl": 2.66,
+      "aldi": 2.65,
+      "plus": 3.36,
+      "dirk": 2.51
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 29,
+    "name": "Product 29",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 5.27,
+      "jumbo": 5.17,
+      "lidl": 4.47,
+      "aldi": 5.0,
+      "plus": 5.17,
+      "dirk": 5.3
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 30,
+    "name": "Product 30",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 5.93,
+      "jumbo": 6.22,
+      "lidl": 6.14,
+      "aldi": 6.79,
+      "plus": 6.19,
+      "dirk": 6.41
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 31,
+    "name": "Product 31",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 6.66,
+      "jumbo": 6.72,
+      "lidl": 6.55,
+      "aldi": 5.98,
+      "plus": 6.3,
+      "dirk": 6.42
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 32,
+    "name": "Product 32",
+    "category": "Vlees",
+    "prices": {
+      "ah": 6.88,
+      "jumbo": 7.01,
+      "lidl": 6.94,
+      "aldi": 6.9,
+      "plus": 7.62,
+      "dirk": 7.64
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 33,
+    "name": "Product 33",
+    "category": "Brood",
+    "prices": {
+      "ah": 7.1,
+      "jumbo": 7.71,
+      "lidl": 7.8,
+      "aldi": 7.44,
+      "plus": 7.71,
+      "dirk": 7.44
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 34,
+    "name": "Product 34",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 3.5,
+      "jumbo": 3.77,
+      "lidl": 3.01,
+      "aldi": 3.51,
+      "plus": 3.65,
+      "dirk": 3.33
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 35,
+    "name": "Product 35",
+    "category": "Drinken",
+    "prices": {
+      "ah": 6.24,
+      "jumbo": 6.0,
+      "lidl": 6.6,
+      "aldi": 5.68,
+      "plus": 6.57,
+      "dirk": 6.25
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 36,
+    "name": "Product 36",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 4.55,
+      "jumbo": 4.35,
+      "lidl": 5.23,
+      "aldi": 4.27,
+      "plus": 5.16,
+      "dirk": 4.92
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 37,
+    "name": "Product 37",
+    "category": "Snacks",
+    "prices": {
+      "ah": 2.14,
+      "jumbo": 1.57,
+      "lidl": 1.47,
+      "aldi": 1.46,
+      "plus": 1.58,
+      "dirk": 1.55
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 38,
+    "name": "Product 38",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 3.86,
+      "jumbo": 2.9,
+      "lidl": 3.71,
+      "aldi": 3.88,
+      "plus": 2.99,
+      "dirk": 3.23
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 39,
+    "name": "Product 39",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 6.44,
+      "jumbo": 6.36,
+      "lidl": 7.02,
+      "aldi": 6.99,
+      "plus": 6.61,
+      "dirk": 6.4
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 40,
+    "name": "Product 40",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.02,
+      "jumbo": 1.95,
+      "lidl": 0.98,
+      "aldi": 1.45,
+      "plus": 1.74,
+      "dirk": 1.91
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 41,
+    "name": "Product 41",
+    "category": "Zuivel",
+    "prices": {
+      "ah": 1.14,
+      "jumbo": 0.87,
+      "lidl": 0.77,
+      "aldi": 1.46,
+      "plus": 1.21,
+      "dirk": 1.13
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 42,
+    "name": "Product 42",
+    "category": "Vlees",
+    "prices": {
+      "ah": 7.74,
+      "jumbo": 7.6,
+      "lidl": 7.09,
+      "aldi": 7.27,
+      "plus": 7.37,
+      "dirk": 7.36
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 43,
+    "name": "Product 43",
+    "category": "Brood",
+    "prices": {
+      "ah": 5.76,
+      "jumbo": 5.65,
+      "lidl": 5.1,
+      "aldi": 5.24,
+      "plus": 5.52,
+      "dirk": 5.94
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 44,
+    "name": "Product 44",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 4.3,
+      "jumbo": 4.51,
+      "lidl": 4.54,
+      "aldi": 4.95,
+      "plus": 5.15,
+      "dirk": 4.65
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 45,
+    "name": "Product 45",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.08,
+      "jumbo": 1.62,
+      "lidl": 1.27,
+      "aldi": 1.35,
+      "plus": 1.88,
+      "dirk": 1.57
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 46,
+    "name": "Product 46",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 6.69,
+      "jumbo": 7.12,
+      "lidl": 7.18,
+      "aldi": 7.1,
+      "plus": 7.29,
+      "dirk": 6.67
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 47,
+    "name": "Product 47",
+    "category": "Snacks",
+    "prices": {
+      "ah": 6.67,
+      "jumbo": 5.73,
+      "lidl": 6.43,
+      "aldi": 6.46,
+      "plus": 6.34,
+      "dirk": 5.99
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 48,
+    "name": "Product 48",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 8.19,
+      "jumbo": 8.09,
+      "lidl": 7.43,
+      "aldi": 8.36,
+      "plus": 7.37,
+      "dirk": 8.08
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 49,
+    "name": "Product 49",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.01,
+      "jumbo": 0.99,
+      "lidl": 0.78,
+      "aldi": 0.73,
+      "plus": 1.65,
+      "dirk": 1.29
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 50,
+    "name": "Product 50",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 3.06,
+      "jumbo": 2.87,
+      "lidl": 3.04,
+      "aldi": 3.29,
+      "plus": 2.8,
+      "dirk": 3.23
+    },
+    "tags": [
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "goede keuze",
+    "lastUpdated": "2026-04-16"
   }
 ]

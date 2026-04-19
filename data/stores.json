@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ah",
+    "name": "Albert Heijn"
+  },
+  {
+    "id": "jumbo",
+    "name": "Jumbo"
+  },
+  {
+    "id": "lidl",
+    "name": "Lidl"
+  },
+  {
+    "id": "aldi",
+    "name": "Aldi"
+  },
+  {
+    "id": "plus",
+    "name": "Plus"
+  },
+  {
+    "id": "dirk",
+    "name": "Dirk"
+  }
+]
