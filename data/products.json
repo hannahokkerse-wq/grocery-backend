@@ -1,1102 +1,4602 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "Halfvolle melk 1L",
     "category": "Zuivel",
     "prices": {
-      "ah": 7.5,
-      "jumbo": 6.72,
-      "lidl": 6.99,
-      "aldi": 7.42,
-      "plus": 6.86,
-      "dirk": 7.02
+      "ah": 1.72,
+      "jumbo": 1.74,
+      "lidl": 1.53,
+      "aldi": 1.52,
+      "plus": 1.64,
+      "dirk": 1.46
     },
     "tags": [
-      "basis"
+      "populair",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 9.1,
+    "valueScore": 9.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "category": "Vlees",
+    "name": "Halfvolle melk 1L huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.42,
-      "jumbo": 5.31,
-      "lidl": 5.0,
-      "aldi": 4.76,
-      "plus": 5.28,
-      "dirk": 5.06
+      "ah": 1.85,
+      "jumbo": 1.62,
+      "lidl": 1.64,
+      "aldi": 1.52,
+      "plus": 1.65,
+      "dirk": 1.42
     },
     "tags": [
-      "basis"
+      "gezond",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.4,
+    "valueScore": 9.1,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "category": "Brood",
+    "name": "Halfvolle melk 1L voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 2.41,
-      "jumbo": 1.95,
-      "lidl": 2.49,
-      "aldi": 2.27,
-      "plus": 2.14,
-      "dirk": 2.8
+      "ah": 1.87,
+      "jumbo": 1.7,
+      "lidl": 1.54,
+      "aldi": 1.53,
+      "plus": 1.66,
+      "dirk": 1.65
     },
     "tags": [
-      "basis"
+      "bonus",
+      "dagelijks"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.9,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 4,
-    "name": "Product 4",
-    "category": "Houdbaar",
+    "name": "Volle melk 1L",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.44,
-      "jumbo": 5.02,
-      "lidl": 5.06,
-      "aldi": 5.01,
-      "plus": 5.18,
-      "dirk": 4.7
+      "ah": 1.99,
+      "jumbo": 1.75,
+      "lidl": 1.58,
+      "aldi": 1.61,
+      "plus": 1.95,
+      "dirk": 1.66
     },
     "tags": [
+      "bonus",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.8,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 5,
-    "name": "Product 5",
-    "category": "Drinken",
+    "name": "Volle melk 1L huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 3.87,
-      "jumbo": 3.94,
-      "lidl": 3.78,
-      "aldi": 3.91,
-      "plus": 4.05,
-      "dirk": 3.59
+      "ah": 1.91,
+      "jumbo": 1.77,
+      "lidl": 1.58,
+      "aldi": 1.62,
+      "plus": 1.85,
+      "dirk": 1.68
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.6,
+    "valueScore": 8.1,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 6,
-    "name": "Product 6",
-    "category": "Ontbijt",
+    "name": "Volle melk 1L voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 7.47,
-      "jumbo": 7.45,
-      "lidl": 7.12,
-      "aldi": 7.62,
-      "plus": 7.49,
-      "dirk": 6.88
+      "ah": 1.77,
+      "jumbo": 1.75,
+      "lidl": 1.59,
+      "aldi": 1.55,
+      "plus": 1.95,
+      "dirk": 1.56
     },
     "tags": [
-      "basis"
+      "basis",
+      "actie"
     ],
     "substitute": "",
     "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 7,
-    "name": "Product 7",
-    "category": "Snacks",
+    "name": "Magere melk 1L",
+    "category": "Zuivel",
     "prices": {
-      "ah": 2.29,
-      "jumbo": 2.47,
-      "lidl": 2.42,
-      "aldi": 2.35,
-      "plus": 2.35,
-      "dirk": 2.38
+      "ah": 1.69,
+      "jumbo": 1.61,
+      "lidl": 1.48,
+      "aldi": 1.34,
+      "plus": 1.67,
+      "dirk": 1.39
     },
     "tags": [
-      "basis"
+      "basis",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.0,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 8,
-    "name": "Product 8",
-    "category": "Diepvries",
+    "name": "Magere melk 1L huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.99,
-      "jumbo": 4.59,
-      "lidl": 4.43,
-      "aldi": 4.25,
-      "plus": 4.57,
-      "dirk": 4.43
+      "ah": 1.7,
+      "jumbo": 1.71,
+      "lidl": 1.47,
+      "aldi": 1.36,
+      "plus": 1.69,
+      "dirk": 1.39
     },
     "tags": [
-      "basis"
+      "actie",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.2,
+    "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 9,
-    "name": "Product 9",
-    "category": "Huishouden",
+    "name": "Magere melk 1L voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 6.47,
-      "jumbo": 6.0,
-      "lidl": 6.24,
-      "aldi": 6.39,
-      "plus": 5.81,
-      "dirk": 5.76
+      "ah": 1.72,
+      "jumbo": 1.61,
+      "lidl": 1.51,
+      "aldi": 1.49,
+      "plus": 1.77,
+      "dirk": 1.53
     },
     "tags": [
-      "basis"
+      "gezond",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.4,
+    "valueScore": 8.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 10,
-    "name": "Product 10",
-    "category": "Groente & Fruit",
+    "name": "Havermelk 1L",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.87,
-      "jumbo": 5.61,
-      "lidl": 5.53,
-      "aldi": 4.79,
-      "plus": 4.96,
-      "dirk": 5.56
+      "ah": 2.33,
+      "jumbo": 2.18,
+      "lidl": 2.03,
+      "aldi": 1.94,
+      "plus": 2.26,
+      "dirk": 1.84
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "populair"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.9,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 11,
-    "name": "Product 11",
+    "name": "Havermelk 1L huismerk",
     "category": "Zuivel",
     "prices": {
-      "ah": 1.98,
-      "jumbo": 2.27,
-      "lidl": 2.37,
-      "aldi": 2.07,
-      "plus": 2.31,
-      "dirk": 2.34
+      "ah": 2.32,
+      "jumbo": 2.15,
+      "lidl": 2.07,
+      "aldi": 1.82,
+      "plus": 2.1,
+      "dirk": 1.92
     },
     "tags": [
-      "basis"
+      "populair",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
+    "qualityScore": 7.6,
     "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 12,
-    "name": "Product 12",
-    "category": "Vlees",
+    "name": "Havermelk 1L voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.62,
-      "jumbo": 4.52,
-      "lidl": 4.84,
-      "aldi": 4.5,
-      "plus": 4.62,
-      "dirk": 4.69
+      "ah": 2.3,
+      "jumbo": 2.14,
+      "lidl": 1.92,
+      "aldi": 1.97,
+      "plus": 2.21,
+      "dirk": 1.91
     },
     "tags": [
+      "populair",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 13,
-    "name": "Product 13",
-    "category": "Brood",
+    "name": "Griekse yoghurt 500g",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.33,
-      "jumbo": 4.53,
-      "lidl": 3.97,
-      "aldi": 4.31,
-      "plus": 4.55,
-      "dirk": 3.62
+      "ah": 3.55,
+      "jumbo": 3.43,
+      "lidl": 3.05,
+      "aldi": 2.93,
+      "plus": 3.44,
+      "dirk": 3.15
     },
     "tags": [
+      "populair",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.6,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 14,
-    "name": "Product 14",
-    "category": "Houdbaar",
+    "name": "Griekse yoghurt 500g huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.39,
-      "jumbo": 4.57,
-      "lidl": 3.96,
-      "aldi": 4.57,
-      "plus": 4.17,
-      "dirk": 4.45
+      "ah": 3.6,
+      "jumbo": 3.52,
+      "lidl": 3.17,
+      "aldi": 2.86,
+      "plus": 3.57,
+      "dirk": 3.18
     },
     "tags": [
-      "basis"
+      "vers",
+      "populair"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.5,
+    "valueScore": 9.1,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 15,
-    "name": "Product 15",
-    "category": "Drinken",
+    "name": "Griekse yoghurt 500g voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 2.5,
-      "jumbo": 2.34,
-      "lidl": 2.03,
-      "aldi": 1.75,
-      "plus": 2.15,
-      "dirk": 1.7
+      "ah": 3.63,
+      "jumbo": 3.37,
+      "lidl": 2.98,
+      "aldi": 2.94,
+      "plus": 3.39,
+      "dirk": 3.01
     },
     "tags": [
-      "basis"
+      "populair",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 6.6,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 16,
-    "name": "Product 16",
-    "category": "Ontbijt",
+    "name": "Magere kwark 500g",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.28,
-      "jumbo": 3.84,
-      "lidl": 4.69,
-      "aldi": 4.04,
-      "plus": 3.99,
-      "dirk": 4.06
+      "ah": 2.04,
+      "jumbo": 1.94,
+      "lidl": 1.57,
+      "aldi": 1.55,
+      "plus": 1.97,
+      "dirk": 1.67
     },
     "tags": [
+      "bonus",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 6.9,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 17,
-    "name": "Product 17",
-    "category": "Snacks",
+    "name": "Magere kwark 500g huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.27,
-      "jumbo": 4.84,
-      "lidl": 4.3,
-      "aldi": 4.29,
-      "plus": 5.16,
-      "dirk": 5.2
+      "ah": 1.94,
+      "jumbo": 1.97,
+      "lidl": 1.75,
+      "aldi": 1.61,
+      "plus": 2.01,
+      "dirk": 1.55
     },
     "tags": [
+      "dagelijks",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.6,
+    "valueScore": 9.3,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 18,
-    "name": "Product 18",
-    "category": "Diepvries",
+    "name": "Magere kwark 500g voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 0.98,
-      "jumbo": 1.43,
-      "lidl": 1.47,
-      "aldi": 1.17,
-      "plus": 1.09,
-      "dirk": 1.06
+      "ah": 1.84,
+      "jumbo": 1.98,
+      "lidl": 1.72,
+      "aldi": 1.59,
+      "plus": 1.83,
+      "dirk": 1.64
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.4,
+    "valueScore": 8.0,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 19,
-    "name": "Product 19",
-    "category": "Huishouden",
+    "name": "Roomboter 250g",
+    "category": "Zuivel",
     "prices": {
-      "ah": 3.56,
-      "jumbo": 3.9,
-      "lidl": 3.2,
-      "aldi": 3.4,
-      "plus": 3.65,
-      "dirk": 3.03
+      "ah": 3.21,
+      "jumbo": 3.23,
+      "lidl": 2.89,
+      "aldi": 2.77,
+      "plus": 3.12,
+      "dirk": 2.78
     },
     "tags": [
-      "basis"
+      "actie",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.8,
+    "valueScore": 9.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 20,
-    "name": "Product 20",
-    "category": "Groente & Fruit",
+    "name": "Roomboter 250g huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 7.81,
-      "jumbo": 7.74,
-      "lidl": 7.88,
-      "aldi": 7.38,
-      "plus": 8.17,
-      "dirk": 7.31
+      "ah": 3.13,
+      "jumbo": 3.19,
+      "lidl": 2.9,
+      "aldi": 2.64,
+      "plus": 3.1,
+      "dirk": 2.74
     },
     "tags": [
-      "basis"
+      "populair",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.8,
+    "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 21,
-    "name": "Product 21",
+    "name": "Roomboter 250g voordeel",
     "category": "Zuivel",
     "prices": {
-      "ah": 1.18,
-      "jumbo": 1.82,
-      "lidl": 1.58,
-      "aldi": 2.02,
-      "plus": 1.58,
-      "dirk": 1.7
+      "ah": 3.29,
+      "jumbo": 3.02,
+      "lidl": 2.84,
+      "aldi": 2.67,
+      "plus": 3.24,
+      "dirk": 2.79
     },
     "tags": [
-      "basis"
+      "populair",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 6.7,
+    "valueScore": 7.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 22,
-    "name": "Product 22",
-    "category": "Vlees",
+    "name": "Jonge kaas plakken 400g",
+    "category": "Zuivel",
     "prices": {
-      "ah": 2.13,
-      "jumbo": 3.0,
-      "lidl": 3.05,
-      "aldi": 2.12,
-      "plus": 2.61,
-      "dirk": 2.79
+      "ah": 4.81,
+      "jumbo": 4.55,
+      "lidl": 4.32,
+      "aldi": 3.94,
+      "plus": 4.74,
+      "dirk": 4.22
     },
     "tags": [
-      "basis"
+      "vers",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.7,
+    "valueScore": 9.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 23,
-    "name": "Product 23",
-    "category": "Brood",
+    "name": "Jonge kaas plakken 400g huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 7.79,
-      "jumbo": 7.44,
-      "lidl": 7.25,
-      "aldi": 7.71,
-      "plus": 7.71,
-      "dirk": 7.04
+      "ah": 4.79,
+      "jumbo": 4.56,
+      "lidl": 4.33,
+      "aldi": 3.97,
+      "plus": 4.82,
+      "dirk": 4.23
     },
     "tags": [
-      "basis"
+      "vers",
+      "populair"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.5,
+    "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 24,
-    "name": "Product 24",
-    "category": "Houdbaar",
+    "name": "Jonge kaas plakken 400g voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 4.61,
-      "jumbo": 5.31,
-      "lidl": 4.99,
-      "aldi": 5.15,
-      "plus": 4.93,
-      "dirk": 4.71
+      "ah": 4.87,
+      "jumbo": 4.65,
+      "lidl": 4.24,
+      "aldi": 3.95,
+      "plus": 4.85,
+      "dirk": 4.16
     },
     "tags": [
+      "bonus",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.0,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 25,
-    "name": "Product 25",
-    "category": "Drinken",
+    "name": "Eieren 6 stuks",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.19,
-      "jumbo": 4.73,
-      "lidl": 5.15,
-      "aldi": 4.45,
-      "plus": 4.76,
-      "dirk": 5.15
+      "ah": 2.08,
+      "jumbo": 2.16,
+      "lidl": 1.79,
+      "aldi": 1.77,
+      "plus": 2.14,
+      "dirk": 1.94
     },
     "tags": [
-      "basis"
+      "actie",
+      "dagelijks"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 6.7,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 26,
-    "name": "Product 26",
-    "category": "Ontbijt",
+    "name": "Eieren 6 stuks huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 1.4,
-      "jumbo": 1.02,
-      "lidl": 1.94,
-      "aldi": 1.1,
-      "plus": 1.64,
-      "dirk": 1.42
+      "ah": 2.22,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.78,
+      "plus": 2.15,
+      "dirk": 1.9
     },
     "tags": [
+      "actie",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.8,
+    "valueScore": 9.4,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 27,
-    "name": "Product 27",
-    "category": "Snacks",
+    "name": "Eieren 6 stuks voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.76,
-      "jumbo": 5.68,
-      "lidl": 5.46,
-      "aldi": 5.28,
-      "plus": 4.96,
-      "dirk": 5.12
+      "ah": 2.14,
+      "jumbo": 2.0,
+      "lidl": 1.78,
+      "aldi": 1.76,
+      "plus": 2.01,
+      "dirk": 1.8
     },
     "tags": [
-      "basis"
+      "populair",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 9.0,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 28,
-    "name": "Product 28",
-    "category": "Diepvries",
+    "name": "Eieren 12 stuks",
+    "category": "Zuivel",
     "prices": {
-      "ah": 2.8,
-      "jumbo": 3.19,
-      "lidl": 2.66,
-      "aldi": 2.65,
-      "plus": 3.36,
-      "dirk": 2.51
+      "ah": 3.56,
+      "jumbo": 3.38,
+      "lidl": 2.92,
+      "aldi": 2.97,
+      "plus": 3.37,
+      "dirk": 3.06
     },
     "tags": [
-      "basis"
+      "vers",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.6,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 29,
-    "name": "Product 29",
-    "category": "Huishouden",
+    "name": "Eieren 12 stuks huismerk",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.27,
-      "jumbo": 5.17,
-      "lidl": 4.47,
-      "aldi": 5.0,
-      "plus": 5.17,
-      "dirk": 5.3
+      "ah": 3.42,
+      "jumbo": 3.38,
+      "lidl": 3.0,
+      "aldi": 2.75,
+      "plus": 3.41,
+      "dirk": 3.06
     },
     "tags": [
-      "basis"
+      "gezond",
+      "populair"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.2,
+    "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 30,
-    "name": "Product 30",
-    "category": "Groente & Fruit",
+    "name": "Eieren 12 stuks voordeel",
+    "category": "Zuivel",
     "prices": {
-      "ah": 5.93,
-      "jumbo": 6.22,
-      "lidl": 6.14,
-      "aldi": 6.79,
-      "plus": 6.19,
-      "dirk": 6.41
+      "ah": 3.56,
+      "jumbo": 3.22,
+      "lidl": 3.09,
+      "aldi": 2.89,
+      "plus": 3.36,
+      "dirk": 2.93
     },
     "tags": [
-      "basis"
+      "actie",
+      "dagelijks"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.1,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 31,
-    "name": "Product 31",
-    "category": "Zuivel",
+    "name": "Bananen 1kg",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.66,
-      "jumbo": 6.72,
-      "lidl": 6.55,
-      "aldi": 5.98,
-      "plus": 6.3,
-      "dirk": 6.42
+      "ah": 2.03,
+      "jumbo": 1.81,
+      "lidl": 1.64,
+      "aldi": 1.66,
+      "plus": 1.88,
+      "dirk": 1.71
     },
     "tags": [
-      "basis"
+      "basis",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.2,
+    "valueScore": 7.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 32,
-    "name": "Product 32",
-    "category": "Vlees",
+    "name": "Bananen 1kg huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.88,
-      "jumbo": 7.01,
-      "lidl": 6.94,
-      "aldi": 6.9,
-      "plus": 7.62,
-      "dirk": 7.64
+      "ah": 1.87,
+      "jumbo": 1.98,
+      "lidl": 1.71,
+      "aldi": 1.54,
+      "plus": 1.86,
+      "dirk": 1.66
     },
     "tags": [
-      "basis"
+      "bonus",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.7,
+    "valueScore": 8.4,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 33,
-    "name": "Product 33",
-    "category": "Brood",
+    "name": "Bananen 1kg voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 7.1,
-      "jumbo": 7.71,
-      "lidl": 7.8,
-      "aldi": 7.44,
-      "plus": 7.71,
-      "dirk": 7.44
+      "ah": 1.88,
+      "jumbo": 1.97,
+      "lidl": 1.59,
+      "aldi": 1.73,
+      "plus": 1.78,
+      "dirk": 1.72
     },
     "tags": [
-      "basis"
+      "gezond",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.9,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 34,
-    "name": "Product 34",
-    "category": "Houdbaar",
+    "name": "Appels 1kg",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 3.5,
-      "jumbo": 3.77,
-      "lidl": 3.01,
-      "aldi": 3.51,
-      "plus": 3.65,
-      "dirk": 3.33
+      "ah": 2.89,
+      "jumbo": 2.75,
+      "lidl": 2.39,
+      "aldi": 2.37,
+      "plus": 2.82,
+      "dirk": 2.33
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.5,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 35,
-    "name": "Product 35",
-    "category": "Drinken",
+    "name": "Appels 1kg huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.24,
-      "jumbo": 6.0,
-      "lidl": 6.6,
-      "aldi": 5.68,
-      "plus": 6.57,
-      "dirk": 6.25
+      "ah": 2.76,
+      "jumbo": 2.69,
+      "lidl": 2.46,
+      "aldi": 2.41,
+      "plus": 2.71,
+      "dirk": 2.44
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.8,
+    "valueScore": 9.2,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 36,
-    "name": "Product 36",
-    "category": "Ontbijt",
+    "name": "Appels 1kg voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 4.55,
-      "jumbo": 4.35,
-      "lidl": 5.23,
-      "aldi": 4.27,
-      "plus": 5.16,
-      "dirk": 4.92
+      "ah": 2.83,
+      "jumbo": 2.79,
+      "lidl": 2.45,
+      "aldi": 2.3,
+      "plus": 2.63,
+      "dirk": 2.42
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.7,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 37,
-    "name": "Product 37",
-    "category": "Snacks",
+    "name": "Peren 1kg",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 2.14,
-      "jumbo": 1.57,
-      "lidl": 1.47,
-      "aldi": 1.46,
-      "plus": 1.58,
-      "dirk": 1.55
+      "ah": 2.97,
+      "jumbo": 3.0,
+      "lidl": 2.66,
+      "aldi": 2.59,
+      "plus": 3.03,
+      "dirk": 2.48
     },
     "tags": [
-      "basis"
+      "basis",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
+    "qualityScore": 7.7,
     "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 38,
-    "name": "Product 38",
-    "category": "Diepvries",
+    "name": "Peren 1kg huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 3.86,
-      "jumbo": 2.9,
-      "lidl": 3.71,
-      "aldi": 3.88,
-      "plus": 2.99,
-      "dirk": 3.23
+      "ah": 2.89,
+      "jumbo": 2.96,
+      "lidl": 2.71,
+      "aldi": 2.51,
+      "plus": 2.97,
+      "dirk": 2.54
     },
     "tags": [
-      "basis"
+      "populair",
+      "gezond"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.5,
+    "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 39,
-    "name": "Product 39",
-    "category": "Huishouden",
+    "name": "Peren 1kg voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.44,
-      "jumbo": 6.36,
-      "lidl": 7.02,
-      "aldi": 6.99,
-      "plus": 6.61,
-      "dirk": 6.4
+      "ah": 3.01,
+      "jumbo": 2.85,
+      "lidl": 2.55,
+      "aldi": 2.63,
+      "plus": 3.07,
+      "dirk": 2.49
     },
     "tags": [
-      "basis"
+      "actie",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.1,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 40,
-    "name": "Product 40",
+    "name": "Sinaasappels 1kg",
     "category": "Groente & Fruit",
     "prices": {
-      "ah": 1.02,
-      "jumbo": 1.95,
-      "lidl": 0.98,
-      "aldi": 1.45,
-      "plus": 1.74,
-      "dirk": 1.91
+      "ah": 2.65,
+      "jumbo": 2.62,
+      "lidl": 2.42,
+      "aldi": 2.32,
+      "plus": 2.75,
+      "dirk": 2.28
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "vers"
     ],
     "substitute": "",
     "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 41,
-    "name": "Product 41",
-    "category": "Zuivel",
+    "name": "Sinaasappels 1kg huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 1.14,
-      "jumbo": 0.87,
-      "lidl": 0.77,
-      "aldi": 1.46,
-      "plus": 1.21,
-      "dirk": 1.13
+      "ah": 2.8,
+      "jumbo": 2.53,
+      "lidl": 2.29,
+      "aldi": 2.26,
+      "plus": 2.73,
+      "dirk": 2.33
     },
     "tags": [
-      "basis"
+      "gezond",
+      "bonus"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.7,
+    "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 42,
-    "name": "Product 42",
-    "category": "Vlees",
+    "name": "Sinaasappels 1kg voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 7.74,
-      "jumbo": 7.6,
-      "lidl": 7.09,
-      "aldi": 7.27,
-      "plus": 7.37,
-      "dirk": 7.36
+      "ah": 2.7,
+      "jumbo": 2.55,
+      "lidl": 2.37,
+      "aldi": 2.31,
+      "plus": 2.68,
+      "dirk": 2.21
     },
     "tags": [
-      "basis"
+      "basis",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
+    "qualityScore": 7.7,
     "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 43,
-    "name": "Product 43",
-    "category": "Brood",
+    "name": "Tomaten 500g",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 5.76,
-      "jumbo": 5.65,
-      "lidl": 5.1,
-      "aldi": 5.24,
-      "plus": 5.52,
-      "dirk": 5.94
+      "ah": 2.08,
+      "jumbo": 1.96,
+      "lidl": 1.86,
+      "aldi": 1.78,
+      "plus": 2.09,
+      "dirk": 1.74
     },
     "tags": [
-      "basis"
+      "basis",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.8,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 44,
-    "name": "Product 44",
-    "category": "Houdbaar",
+    "name": "Tomaten 500g huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 4.3,
-      "jumbo": 4.51,
-      "lidl": 4.54,
-      "aldi": 4.95,
-      "plus": 5.15,
-      "dirk": 4.65
+      "ah": 2.06,
+      "jumbo": 2.0,
+      "lidl": 1.82,
+      "aldi": 1.88,
+      "plus": 2.15,
+      "dirk": 1.88
     },
     "tags": [
+      "vers",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 8.5,
+    "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 45,
-    "name": "Product 45",
-    "category": "Drinken",
+    "name": "Tomaten 500g voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 1.08,
-      "jumbo": 1.62,
-      "lidl": 1.27,
-      "aldi": 1.35,
-      "plus": 1.88,
-      "dirk": 1.57
+      "ah": 2.08,
+      "jumbo": 2.02,
+      "lidl": 1.8,
+      "aldi": 1.87,
+      "plus": 2.17,
+      "dirk": 1.92
     },
     "tags": [
-      "basis"
+      "actie",
+      "vers"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.2,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 46,
-    "name": "Product 46",
-    "category": "Ontbijt",
+    "name": "Komkommer stuk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.69,
-      "jumbo": 7.12,
-      "lidl": 7.18,
-      "aldi": 7.1,
-      "plus": 7.29,
-      "dirk": 6.67
+      "ah": 0.98,
+      "jumbo": 1.14,
+      "lidl": 0.99,
+      "aldi": 0.92,
+      "plus": 1.09,
+      "dirk": 0.9
     },
     "tags": [
-      "basis"
+      "gezond",
+      "populair"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.7,
+    "valueScore": 8.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 47,
-    "name": "Product 47",
-    "category": "Snacks",
+    "name": "Komkommer stuk huismerk",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 6.67,
-      "jumbo": 5.73,
-      "lidl": 6.43,
-      "aldi": 6.46,
-      "plus": 6.34,
-      "dirk": 5.99
+      "ah": 1.19,
+      "jumbo": 1.04,
+      "lidl": 1.04,
+      "aldi": 0.9,
+      "plus": 1.09,
+      "dirk": 1.03
     },
     "tags": [
-      "basis"
+      "dagelijks",
+      "actie"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
+    "qualityScore": 7.3,
+    "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 48,
-    "name": "Product 48",
-    "category": "Diepvries",
+    "name": "Komkommer stuk voordeel",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 8.19,
-      "jumbo": 8.09,
-      "lidl": 7.43,
-      "aldi": 8.36,
-      "plus": 7.37,
-      "dirk": 8.08
+      "ah": 1.12,
+      "jumbo": 1.11,
+      "lidl": 0.95,
+      "aldi": 0.94,
+      "plus": 1.04,
+      "dirk": 1.04
     },
     "tags": [
+      "actie",
       "basis"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 7.8,
+    "valueScore": 8.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 49,
-    "name": "Product 49",
-    "category": "Huishouden",
+    "name": "Paprika mix 3 stuks",
+    "category": "Groente & Fruit",
     "prices": {
-      "ah": 1.01,
-      "jumbo": 0.99,
-      "lidl": 0.78,
-      "aldi": 0.73,
-      "plus": 1.65,
-      "dirk": 1.29
+      "ah": 2.96,
+      "jumbo": 2.84,
+      "lidl": 2.63,
+      "aldi": 2.45,
+      "plus": 2.94,
+      "dirk": 2.56
     },
     "tags": [
-      "basis"
+      "gezond",
+      "dagelijks"
     ],
     "substitute": "",
-    "qualityScore": 8.0,
-    "valueScore": 8.2,
-    "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   },
   {
     "id": 50,
-    "name": "Product 50",
+    "name": "Paprika mix 3 stuks huismerk",
     "category": "Groente & Fruit",
     "prices": {
-      "ah": 3.06,
-      "jumbo": 2.87,
-      "lidl": 3.04,
-      "aldi": 3.29,
-      "plus": 2.8,
-      "dirk": 3.23
+      "ah": 2.79,
+      "jumbo": 2.84,
+      "lidl": 2.52,
+      "aldi": 2.46,
+      "plus": 2.76,
+      "dirk": 2.48
     },
     "tags": [
+      "populair",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 8.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 51,
+    "name": "Paprika mix 3 stuks voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.89,
+      "jumbo": 2.81,
+      "lidl": 2.44,
+      "aldi": 2.33,
+      "plus": 2.87,
+      "dirk": 2.54
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 52,
+    "name": "Uien 1kg",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.53,
+      "jumbo": 1.38,
+      "lidl": 1.36,
+      "aldi": 1.29,
+      "plus": 1.52,
+      "dirk": 1.23
+    },
+    "tags": [
+      "gezond",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 53,
+    "name": "Uien 1kg huismerk",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.6,
+      "jumbo": 1.47,
+      "lidl": 1.4,
+      "aldi": 1.14,
+      "plus": 1.57,
+      "dirk": 1.23
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 54,
+    "name": "Uien 1kg voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.52,
+      "jumbo": 1.5,
+      "lidl": 1.34,
+      "aldi": 1.21,
+      "plus": 1.49,
+      "dirk": 1.18
+    },
+    "tags": [
+      "vers",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.2,
+    "valueScore": 8.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 55,
+    "name": "Aardappelen 2kg",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 3.7,
+      "jumbo": 3.69,
+      "lidl": 3.22,
+      "aldi": 3.03,
+      "plus": 3.65,
+      "dirk": 3.2
+    },
+    "tags": [
+      "gezond",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 8.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 56,
+    "name": "Aardappelen 2kg huismerk",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 3.78,
+      "jumbo": 3.72,
+      "lidl": 3.28,
+      "aldi": 3.19,
+      "plus": 3.7,
+      "dirk": 3.28
+    },
+    "tags": [
+      "populair",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.1,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 57,
+    "name": "Aardappelen 2kg voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 3.73,
+      "jumbo": 3.67,
+      "lidl": 3.35,
+      "aldi": 3.06,
+      "plus": 3.6,
+      "dirk": 3.17
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 58,
+    "name": "Broccoli 500g",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.95,
+      "jumbo": 1.86,
+      "lidl": 1.63,
+      "aldi": 1.57,
+      "plus": 1.97,
+      "dirk": 1.64
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 59,
+    "name": "Broccoli 500g huismerk",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.85,
+      "jumbo": 1.91,
+      "lidl": 1.8,
+      "aldi": 1.5,
+      "plus": 1.82,
+      "dirk": 1.6
+    },
+    "tags": [
+      "actie",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 6.7,
+    "valueScore": 7.3,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 60,
+    "name": "Broccoli 500g voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.94,
+      "jumbo": 1.92,
+      "lidl": 1.59,
+      "aldi": 1.51,
+      "plus": 1.86,
+      "dirk": 1.75
+    },
+    "tags": [
+      "basis",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.2,
+    "valueScore": 7.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 61,
+    "name": "Spinazie 400g",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.3,
+      "jumbo": 2.18,
+      "lidl": 2.08,
+      "aldi": 1.96,
+      "plus": 2.29,
+      "dirk": 2.06
+    },
+    "tags": [
+      "bonus",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 62,
+    "name": "Spinazie 400g huismerk",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.47,
+      "jumbo": 2.37,
+      "lidl": 2.05,
+      "aldi": 1.89,
+      "plus": 2.27,
+      "dirk": 2.01
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 63,
+    "name": "Spinazie 400g voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 2.48,
+      "jumbo": 2.2,
+      "lidl": 1.98,
+      "aldi": 1.94,
+      "plus": 2.29,
+      "dirk": 1.95
+    },
+    "tags": [
+      "basis",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 64,
+    "name": "Wortelen 1kg",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.31,
+      "jumbo": 1.29,
+      "lidl": 1.16,
+      "aldi": 1.16,
+      "plus": 1.47,
+      "dirk": 1.2
+    },
+    "tags": [
+      "vers",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 65,
+    "name": "Wortelen 1kg huismerk",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.48,
+      "jumbo": 1.42,
+      "lidl": 1.23,
+      "aldi": 1.1,
+      "plus": 1.29,
+      "dirk": 1.29
+    },
+    "tags": [
+      "vers",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
+    "valueScore": 8.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 66,
+    "name": "Wortelen 1kg voordeel",
+    "category": "Groente & Fruit",
+    "prices": {
+      "ah": 1.47,
+      "jumbo": 1.41,
+      "lidl": 1.2,
+      "aldi": 1.15,
+      "plus": 1.28,
+      "dirk": 1.2
+    },
+    "tags": [
+      "populair",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 67,
+    "name": "Volkoren brood",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.32,
+      "jumbo": 2.23,
+      "lidl": 2.14,
+      "aldi": 1.97,
+      "plus": 2.32,
+      "dirk": 2.05
+    },
+    "tags": [
+      "basis",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.9,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 68,
+    "name": "Volkoren brood huismerk",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.28,
+      "jumbo": 2.38,
+      "lidl": 1.99,
+      "aldi": 1.94,
+      "plus": 2.29,
+      "dirk": 2.03
+    },
+    "tags": [
+      "gezond",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 69,
+    "name": "Volkoren brood voordeel",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.41,
+      "jumbo": 2.31,
+      "lidl": 2.14,
+      "aldi": 1.97,
+      "plus": 2.28,
+      "dirk": 1.96
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 70,
+    "name": "Wit brood",
+    "category": "Brood",
+    "prices": {
+      "ah": 1.99,
+      "jumbo": 1.98,
+      "lidl": 1.81,
+      "aldi": 1.62,
+      "plus": 2.11,
+      "dirk": 1.69
+    },
+    "tags": [
+      "actie",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.4,
+    "valueScore": 8.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 71,
+    "name": "Wit brood huismerk",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.1,
+      "jumbo": 2.05,
+      "lidl": 1.71,
+      "aldi": 1.79,
+      "plus": 2.08,
+      "dirk": 1.76
+    },
+    "tags": [
+      "basis",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 72,
+    "name": "Wit brood voordeel",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.11,
+      "jumbo": 1.91,
+      "lidl": 1.83,
+      "aldi": 1.79,
+      "plus": 2.12,
+      "dirk": 1.7
+    },
+    "tags": [
+      "vers",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.9,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 73,
+    "name": "Bruin brood",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.23,
+      "jumbo": 2.11,
+      "lidl": 2.01,
+      "aldi": 1.8,
+      "plus": 2.26,
+      "dirk": 2.01
+    },
+    "tags": [
+      "bonus",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 74,
+    "name": "Bruin brood huismerk",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.32,
+      "jumbo": 2.14,
+      "lidl": 1.96,
+      "aldi": 1.86,
+      "plus": 2.12,
+      "dirk": 1.9
+    },
+    "tags": [
+      "actie",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.2,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 75,
+    "name": "Bruin brood voordeel",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.26,
+      "jumbo": 2.26,
+      "lidl": 1.88,
+      "aldi": 2.0,
+      "plus": 2.11,
+      "dirk": 1.83
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 76,
+    "name": "Croissants 4 stuks",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.68,
+      "lidl": 2.41,
+      "aldi": 2.31,
+      "plus": 2.54,
+      "dirk": 2.38
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.2,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 77,
+    "name": "Croissants 4 stuks huismerk",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.73,
+      "jumbo": 2.56,
+      "lidl": 2.36,
+      "aldi": 2.32,
+      "plus": 2.68,
+      "dirk": 2.34
+    },
+    "tags": [
+      "actie",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 78,
+    "name": "Croissants 4 stuks voordeel",
+    "category": "Brood",
+    "prices": {
+      "ah": 2.68,
+      "jumbo": 2.52,
+      "lidl": 2.4,
+      "aldi": 2.32,
+      "plus": 2.54,
+      "dirk": 2.36
+    },
+    "tags": [
+      "dagelijks",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 79,
+    "name": "Pasta 500g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.29,
+      "jumbo": 1.23,
+      "lidl": 1.09,
+      "aldi": 1.06,
+      "plus": 1.18,
+      "dirk": 1.15
+    },
+    "tags": [
+      "actie",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 80,
+    "name": "Pasta 500g huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.4,
+      "jumbo": 1.27,
+      "lidl": 1.17,
+      "aldi": 0.98,
+      "plus": 1.3,
+      "dirk": 1.07
+    },
+    "tags": [
+      "basis",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.9,
+    "valueScore": 8.8,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 81,
+    "name": "Pasta 500g voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.25,
+      "jumbo": 1.14,
+      "lidl": 1.04,
+      "aldi": 1.12,
+      "plus": 1.32,
+      "dirk": 1.19
+    },
+    "tags": [
+      "dagelijks",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 82,
+    "name": "Volkoren pasta 500g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.62,
+      "jumbo": 1.53,
+      "lidl": 1.44,
+      "aldi": 1.29,
+      "plus": 1.53,
+      "dirk": 1.39
+    },
+    "tags": [
+      "populair",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 83,
+    "name": "Volkoren pasta 500g huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.64,
+      "jumbo": 1.62,
+      "lidl": 1.36,
+      "aldi": 1.45,
+      "plus": 1.64,
+      "dirk": 1.32
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 84,
+    "name": "Volkoren pasta 500g voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.7,
+      "jumbo": 1.58,
+      "lidl": 1.51,
+      "aldi": 1.38,
+      "plus": 1.69,
+      "dirk": 1.48
+    },
+    "tags": [
+      "populair",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 85,
+    "name": "Rijst 1kg",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.42,
+      "jumbo": 2.49,
+      "lidl": 2.06,
+      "aldi": 2.0,
+      "plus": 2.41,
+      "dirk": 2.2
+    },
+    "tags": [
+      "dagelijks",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 86,
+    "name": "Rijst 1kg huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.36,
+      "jumbo": 2.49,
+      "lidl": 2.16,
+      "aldi": 2.06,
+      "plus": 2.46,
+      "dirk": 2.24
+    },
+    "tags": [
+      "basis",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.4,
+    "valueScore": 8.9,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 87,
+    "name": "Rijst 1kg voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.48,
+      "jumbo": 2.3,
+      "lidl": 2.05,
+      "aldi": 2.15,
+      "plus": 2.32,
+      "dirk": 2.17
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.4,
+    "valueScore": 7.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 88,
+    "name": "Couscous 500g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.93,
+      "jumbo": 1.94,
+      "lidl": 1.81,
+      "aldi": 1.7,
+      "plus": 2.08,
+      "dirk": 1.87
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.3,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 89,
+    "name": "Couscous 500g huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.03,
+      "jumbo": 2.02,
+      "lidl": 1.74,
+      "aldi": 1.72,
+      "plus": 2.01,
+      "dirk": 1.87
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.2,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 90,
+    "name": "Couscous 500g voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.11,
+      "jumbo": 1.9,
+      "lidl": 1.7,
+      "aldi": 1.81,
+      "plus": 2.04,
+      "dirk": 1.74
+    },
+    "tags": [
+      "actie",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.9,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 91,
+    "name": "Tomatensaus 500g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.7,
+      "jumbo": 1.5,
+      "lidl": 1.35,
+      "aldi": 1.37,
+      "plus": 1.58,
+      "dirk": 1.5
+    },
+    "tags": [
+      "vers",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 92,
+    "name": "Tomatensaus 500g huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.52,
+      "jumbo": 1.5,
+      "lidl": 1.51,
+      "aldi": 1.42,
+      "plus": 1.5,
+      "dirk": 1.32
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 93,
+    "name": "Tomatensaus 500g voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.63,
+      "jumbo": 1.53,
+      "lidl": 1.45,
+      "aldi": 1.22,
+      "plus": 1.47,
+      "dirk": 1.42
+    },
+    "tags": [
+      "populair",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 94,
+    "name": "Pesto groen 190g",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.42,
+      "jumbo": 2.38,
+      "lidl": 2.04,
+      "aldi": 2.08,
+      "plus": 2.37,
+      "dirk": 2.24
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 6.9,
+    "valueScore": 7.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 95,
+    "name": "Pesto groen 190g huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.53,
+      "jumbo": 2.5,
+      "lidl": 2.21,
+      "aldi": 2.0,
+      "plus": 2.37,
+      "dirk": 2.14
+    },
+    "tags": [
+      "vers",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 96,
+    "name": "Pesto groen 190g voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.39,
+      "jumbo": 2.4,
+      "lidl": 2.15,
+      "aldi": 2.0,
+      "plus": 2.52,
+      "dirk": 2.1
+    },
+    "tags": [
+      "bonus",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
+    "valueScore": 8.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 97,
+    "name": "Olijfolie 1L",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 9.72,
+      "jumbo": 9.29,
+      "lidl": 8.52,
+      "aldi": 8.11,
+      "plus": 9.62,
+      "dirk": 8.47
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.7,
+    "valueScore": 9.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 98,
+    "name": "Olijfolie 1L huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 9.74,
+      "jumbo": 9.37,
+      "lidl": 8.46,
+      "aldi": 8.02,
+      "plus": 9.43,
+      "dirk": 8.4
+    },
+    "tags": [
+      "bonus",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.3,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 99,
+    "name": "Olijfolie 1L voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 9.7,
+      "jumbo": 9.46,
+      "lidl": 8.51,
+      "aldi": 8.0,
+      "plus": 9.57,
+      "dirk": 8.43
+    },
+    "tags": [
+      "basis",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 100,
+    "name": "Zonnebloemolie 1L",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.76,
+      "jumbo": 2.68,
+      "lidl": 2.29,
+      "aldi": 2.27,
+      "plus": 2.71,
+      "dirk": 2.41
+    },
+    "tags": [
+      "populair",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.3,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 101,
+    "name": "Zonnebloemolie 1L huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.75,
+      "jumbo": 2.61,
+      "lidl": 2.24,
+      "aldi": 2.33,
+      "plus": 2.66,
+      "dirk": 2.23
+    },
+    "tags": [
+      "actie",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.1,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 102,
+    "name": "Zonnebloemolie 1L voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.65,
+      "jumbo": 2.69,
+      "lidl": 2.41,
+      "aldi": 2.34,
+      "plus": 2.52,
+      "dirk": 2.24
+    },
+    "tags": [
+      "basis",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 103,
+    "name": "Kidneybonen blik",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.14,
+      "jumbo": 0.96,
+      "lidl": 0.99,
+      "aldi": 0.84,
+      "plus": 0.96,
+      "dirk": 0.82
+    },
+    "tags": [
+      "actie",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 104,
+    "name": "Kidneybonen blik huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.08,
+      "jumbo": 0.93,
+      "lidl": 0.9,
+      "aldi": 0.91,
+      "plus": 1.01,
+      "dirk": 0.95
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 7.8,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 105,
+    "name": "Kidneybonen blik voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.12,
+      "jumbo": 1.14,
+      "lidl": 0.98,
+      "aldi": 0.78,
+      "plus": 1.11,
+      "dirk": 0.9
+    },
+    "tags": [
+      "vers",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 106,
+    "name": "Kikkererwten blik",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.06,
+      "jumbo": 0.98,
+      "lidl": 0.81,
+      "aldi": 0.89,
+      "plus": 0.99,
+      "dirk": 0.84
+    },
+    "tags": [
+      "actie",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 9.1,
+    "valueScore": 9.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 107,
+    "name": "Kikkererwten blik huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.09,
+      "jumbo": 1.08,
+      "lidl": 0.88,
+      "aldi": 0.95,
+      "plus": 1.08,
+      "dirk": 0.78
+    },
+    "tags": [
+      "gezond",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 108,
+    "name": "Kikkererwten blik voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.05,
+      "jumbo": 1.1,
+      "lidl": 0.88,
+      "aldi": 0.86,
+      "plus": 0.93,
+      "dirk": 0.96
+    },
+    "tags": [
+      "actie",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 109,
+    "name": "Tonijn blik",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.07,
+      "jumbo": 2.08,
+      "lidl": 1.88,
+      "aldi": 1.75,
+      "plus": 1.89,
+      "dirk": 1.83
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 110,
+    "name": "Tonijn blik huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 2.12,
+      "jumbo": 1.93,
+      "lidl": 1.82,
+      "aldi": 1.82,
+      "plus": 2.01,
+      "dirk": 1.87
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 111,
+    "name": "Tonijn blik voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 1.95,
+      "jumbo": 1.9,
+      "lidl": 1.69,
+      "aldi": 1.67,
+      "plus": 2.07,
+      "dirk": 1.73
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 112,
+    "name": "Mais blik",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 0.89,
+      "jumbo": 0.87,
+      "lidl": 0.93,
+      "aldi": 0.88,
+      "plus": 0.99,
+      "dirk": 0.87
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 113,
+    "name": "Mais blik huismerk",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 0.89,
+      "jumbo": 0.99,
+      "lidl": 0.83,
+      "aldi": 0.74,
+      "plus": 0.86,
+      "dirk": 0.79
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.9,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 114,
+    "name": "Mais blik voordeel",
+    "category": "Houdbaar",
+    "prices": {
+      "ah": 0.99,
+      "jumbo": 1.02,
+      "lidl": 0.87,
+      "aldi": 0.78,
+      "plus": 0.86,
+      "dirk": 0.86
+    },
+    "tags": [
+      "actie",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 115,
+    "name": "Havermout 500g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 1.3,
+      "jumbo": 1.32,
+      "lidl": 1.0,
+      "aldi": 1.12,
+      "plus": 1.38,
+      "dirk": 1.12
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 116,
+    "name": "Havermout 500g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 1.23,
+      "jumbo": 1.19,
+      "lidl": 1.21,
+      "aldi": 1.02,
+      "plus": 1.29,
+      "dirk": 1.08
+    },
+    "tags": [
+      "populair",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.4,
+    "valueScore": 9.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 117,
+    "name": "Havermout 500g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 1.33,
+      "jumbo": 1.21,
+      "lidl": 1.04,
+      "aldi": 1.03,
+      "plus": 1.21,
+      "dirk": 1.18
+    },
+    "tags": [
+      "gezond",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 118,
+    "name": "Muesli 750g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.3,
+      "jumbo": 3.01,
+      "lidl": 2.9,
+      "aldi": 2.75,
+      "plus": 3.06,
+      "dirk": 2.87
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 119,
+    "name": "Muesli 750g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.32,
+      "jumbo": 3.0,
+      "lidl": 2.74,
+      "aldi": 2.62,
+      "plus": 3.25,
+      "dirk": 2.83
+    },
+    "tags": [
+      "gezond",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 6.9,
+    "valueScore": 7.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 120,
+    "name": "Muesli 750g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.35,
+      "jumbo": 3.05,
+      "lidl": 2.78,
+      "aldi": 2.65,
+      "plus": 3.18,
+      "dirk": 2.74
+    },
+    "tags": [
+      "dagelijks",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 6.9,
+    "valueScore": 7.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 121,
+    "name": "Cornflakes 500g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.3,
+      "jumbo": 2.18,
+      "lidl": 1.97,
+      "aldi": 1.98,
+      "plus": 2.44,
+      "dirk": 1.97
+    },
+    "tags": [
+      "basis",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 7.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 122,
+    "name": "Cornflakes 500g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.3,
+      "jumbo": 2.37,
+      "lidl": 1.96,
+      "aldi": 2.02,
+      "plus": 2.36,
+      "dirk": 2.14
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 123,
+    "name": "Cornflakes 500g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.47,
+      "jumbo": 2.23,
+      "lidl": 1.98,
+      "aldi": 2.06,
+      "plus": 2.35,
+      "dirk": 2.05
+    },
+    "tags": [
+      "basis",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.5,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 124,
+    "name": "Pindakaas 350g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.59,
+      "jumbo": 2.67,
+      "lidl": 2.28,
+      "aldi": 2.21,
+      "plus": 2.6,
+      "dirk": 2.27
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 8.3,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 125,
+    "name": "Pindakaas 350g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.63,
+      "jumbo": 2.64,
+      "lidl": 2.27,
+      "aldi": 2.35,
+      "plus": 2.54,
+      "dirk": 2.22
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.5,
+    "valueScore": 9.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 126,
+    "name": "Pindakaas 350g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.68,
+      "jumbo": 2.5,
+      "lidl": 2.46,
+      "aldi": 2.24,
+      "plus": 2.75,
+      "dirk": 2.32
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 127,
+    "name": "Jam aardbei 450g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.03,
+      "jumbo": 2.05,
+      "lidl": 1.69,
+      "aldi": 1.67,
+      "plus": 2.0,
+      "dirk": 1.69
+    },
+    "tags": [
+      "vers",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.7,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 128,
+    "name": "Jam aardbei 450g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 2.02,
+      "jumbo": 2.06,
+      "lidl": 1.73,
+      "aldi": 1.74,
+      "plus": 1.99,
+      "dirk": 1.85
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.2,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 129,
+    "name": "Jam aardbei 450g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 1.94,
+      "jumbo": 2.02,
+      "lidl": 1.86,
+      "aldi": 1.81,
+      "plus": 1.91,
+      "dirk": 1.79
+    },
+    "tags": [
+      "basis",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 7.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 130,
+    "name": "Hagelslag 600g",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.36,
+      "jumbo": 3.35,
+      "lidl": 2.97,
+      "aldi": 2.92,
+      "plus": 3.31,
+      "dirk": 2.89
+    },
+    "tags": [
+      "vers",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 131,
+    "name": "Hagelslag 600g huismerk",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.36,
+      "jumbo": 3.43,
+      "lidl": 3.0,
+      "aldi": 2.98,
+      "plus": 3.33,
+      "dirk": 3.07
+    },
+    "tags": [
+      "dagelijks",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 8.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 132,
+    "name": "Hagelslag 600g voordeel",
+    "category": "Ontbijt",
+    "prices": {
+      "ah": 3.45,
+      "jumbo": 3.35,
+      "lidl": 3.07,
+      "aldi": 2.9,
+      "plus": 3.35,
+      "dirk": 2.91
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 133,
+    "name": "Koffie snelfilter 500g",
+    "category": "Drinken",
+    "prices": {
+      "ah": 6.02,
+      "jumbo": 5.6,
+      "lidl": 5.07,
+      "aldi": 4.95,
+      "plus": 5.91,
+      "dirk": 5.15
+    },
+    "tags": [
+      "bonus",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.0,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 134,
+    "name": "Koffie snelfilter 500g huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 5.93,
+      "jumbo": 5.72,
+      "lidl": 5.14,
+      "aldi": 5.02,
+      "plus": 5.88,
+      "dirk": 5.22
+    },
+    "tags": [
+      "bonus",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 135,
+    "name": "Koffie snelfilter 500g voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 5.9,
+      "jumbo": 5.72,
+      "lidl": 5.23,
+      "aldi": 4.91,
+      "plus": 5.78,
+      "dirk": 5.14
+    },
+    "tags": [
+      "bonus",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 136,
+    "name": "Thee 20 zakjes",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.82,
+      "jumbo": 1.67,
+      "lidl": 1.38,
+      "aldi": 1.51,
+      "plus": 1.68,
+      "dirk": 1.47
+    },
+    "tags": [
+      "basis",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 137,
+    "name": "Thee 20 zakjes huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.69,
+      "jumbo": 1.73,
+      "lidl": 1.43,
+      "aldi": 1.47,
+      "plus": 1.69,
+      "dirk": 1.45
+    },
+    "tags": [
+      "populair",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 8.1,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 138,
+    "name": "Thee 20 zakjes voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.65,
+      "jumbo": 1.65,
+      "lidl": 1.5,
+      "aldi": 1.55,
+      "plus": 1.66,
+      "dirk": 1.43
+    },
+    "tags": [
+      "bonus",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 139,
+    "name": "Cola 1.5L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.81,
+      "jumbo": 1.65,
+      "lidl": 1.68,
+      "aldi": 1.41,
+      "plus": 1.88,
+      "dirk": 1.54
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 140,
+    "name": "Cola 1.5L huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.81,
+      "jumbo": 1.73,
+      "lidl": 1.64,
+      "aldi": 1.48,
+      "plus": 1.82,
+      "dirk": 1.63
+    },
+    "tags": [
+      "populair",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 6.7,
+    "valueScore": 7.3,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 141,
+    "name": "Cola 1.5L voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.93,
+      "jumbo": 1.86,
+      "lidl": 1.65,
+      "aldi": 1.56,
+      "plus": 1.72,
+      "dirk": 1.59
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 142,
+    "name": "Cola zero 1.5L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.82,
+      "jumbo": 1.67,
+      "lidl": 1.63,
+      "aldi": 1.43,
+      "plus": 1.79,
+      "dirk": 1.61
+    },
+    "tags": [
+      "vers",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 143,
+    "name": "Cola zero 1.5L huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.8,
+      "jumbo": 1.82,
+      "lidl": 1.65,
+      "aldi": 1.54,
+      "plus": 1.86,
+      "dirk": 1.55
+    },
+    "tags": [
+      "gezond",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 144,
+    "name": "Cola zero 1.5L voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 1.93,
+      "jumbo": 1.69,
+      "lidl": 1.53,
+      "aldi": 1.44,
+      "plus": 1.89,
+      "dirk": 1.59
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.6,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 145,
+    "name": "Sinaasappelsap 1L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 2.36,
+      "jumbo": 2.22,
+      "lidl": 1.93,
+      "aldi": 1.81,
+      "plus": 2.12,
+      "dirk": 1.95
+    },
+    "tags": [
+      "bonus",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 146,
+    "name": "Sinaasappelsap 1L huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 2.38,
+      "jumbo": 2.06,
+      "lidl": 2.08,
+      "aldi": 1.99,
+      "plus": 2.13,
+      "dirk": 2.04
+    },
+    "tags": [
+      "gezond",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.5,
+    "valueScore": 9.0,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 147,
+    "name": "Sinaasappelsap 1L voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 2.21,
+      "jumbo": 2.25,
+      "lidl": 1.95,
+      "aldi": 1.91,
+      "plus": 2.25,
+      "dirk": 2.04
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 148,
+    "name": "Mineraalwater 1.5L",
+    "category": "Drinken",
+    "prices": {
+      "ah": 0.81,
+      "jumbo": 0.78,
+      "lidl": 0.85,
+      "aldi": 0.77,
+      "plus": 0.92,
+      "dirk": 0.8
+    },
+    "tags": [
+      "basis",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 149,
+    "name": "Mineraalwater 1.5L huismerk",
+    "category": "Drinken",
+    "prices": {
+      "ah": 0.91,
+      "jumbo": 0.76,
+      "lidl": 0.77,
+      "aldi": 0.69,
+      "plus": 0.79,
+      "dirk": 0.62
+    },
+    "tags": [
+      "dagelijks",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.2,
+    "valueScore": 9.2,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 150,
+    "name": "Mineraalwater 1.5L voordeel",
+    "category": "Drinken",
+    "prices": {
+      "ah": 0.9,
+      "jumbo": 0.79,
+      "lidl": 0.83,
+      "aldi": 0.71,
+      "plus": 0.72,
+      "dirk": 0.66
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 151,
+    "name": "Chips naturel 200g",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.63,
+      "jumbo": 1.56,
+      "lidl": 1.43,
+      "aldi": 1.32,
+      "plus": 1.47,
+      "dirk": 1.33
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.2,
+    "valueScore": 7.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 152,
+    "name": "Chips naturel 200g huismerk",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.65,
+      "jumbo": 1.65,
+      "lidl": 1.33,
+      "aldi": 1.37,
+      "plus": 1.6,
+      "dirk": 1.38
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 153,
+    "name": "Chips naturel 200g voordeel",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.64,
+      "jumbo": 1.54,
+      "lidl": 1.48,
+      "aldi": 1.38,
+      "plus": 1.52,
+      "dirk": 1.42
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 154,
+    "name": "Chips paprika 200g",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.72,
+      "jumbo": 1.6,
+      "lidl": 1.29,
+      "aldi": 1.45,
+      "plus": 1.52,
+      "dirk": 1.33
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 155,
+    "name": "Chips paprika 200g huismerk",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.72,
+      "jumbo": 1.59,
+      "lidl": 1.38,
+      "aldi": 1.24,
+      "plus": 1.54,
+      "dirk": 1.28
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.4,
+    "valueScore": 8.2,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 156,
+    "name": "Chips paprika 200g voordeel",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.6,
+      "jumbo": 1.53,
+      "lidl": 1.3,
+      "aldi": 1.27,
+      "plus": 1.49,
+      "dirk": 1.28
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 6.7,
+    "valueScore": 7.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 157,
+    "name": "Notenmix 200g",
+    "category": "Snacks",
+    "prices": {
+      "ah": 3.32,
+      "jumbo": 3.18,
+      "lidl": 2.88,
+      "aldi": 2.78,
+      "plus": 3.22,
+      "dirk": 2.71
+    },
+    "tags": [
+      "vers",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.4,
+    "valueScore": 8.0,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 158,
+    "name": "Notenmix 200g huismerk",
+    "category": "Snacks",
+    "prices": {
+      "ah": 3.2,
+      "jumbo": 3.08,
+      "lidl": 2.89,
+      "aldi": 2.66,
+      "plus": 3.17,
+      "dirk": 2.76
+    },
+    "tags": [
+      "bonus",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 159,
+    "name": "Notenmix 200g voordeel",
+    "category": "Snacks",
+    "prices": {
+      "ah": 3.23,
+      "jumbo": 3.04,
+      "lidl": 2.92,
+      "aldi": 2.64,
+      "plus": 3.11,
+      "dirk": 2.85
+    },
+    "tags": [
+      "actie",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 160,
+    "name": "Chocoladereep 100g",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.47,
+      "jumbo": 1.33,
+      "lidl": 1.18,
+      "aldi": 1.12,
+      "plus": 1.3,
+      "dirk": 1.13
+    },
+    "tags": [
+      "bonus",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 161,
+    "name": "Chocoladereep 100g huismerk",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.36,
+      "jumbo": 1.31,
+      "lidl": 1.29,
+      "aldi": 1.04,
+      "plus": 1.36,
+      "dirk": 1.22
+    },
+    "tags": [
+      "dagelijks",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.8,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 162,
+    "name": "Chocoladereep 100g voordeel",
+    "category": "Snacks",
+    "prices": {
+      "ah": 1.32,
+      "jumbo": 1.33,
+      "lidl": 1.24,
+      "aldi": 1.04,
+      "plus": 1.32,
+      "dirk": 1.1
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 8.0,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 163,
+    "name": "Diepvries pizza margherita",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 2.91,
+      "jumbo": 2.82,
+      "lidl": 2.63,
+      "aldi": 2.51,
+      "plus": 2.98,
+      "dirk": 2.68
+    },
+    "tags": [
+      "dagelijks",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 164,
+    "name": "Diepvries pizza margherita huismerk",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 3.08,
+      "jumbo": 3.01,
+      "lidl": 2.63,
+      "aldi": 2.4,
+      "plus": 3.06,
+      "dirk": 2.65
+    },
+    "tags": [
+      "actie",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 165,
+    "name": "Diepvries pizza margherita voordeel",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 3.06,
+      "jumbo": 2.92,
+      "lidl": 2.63,
+      "aldi": 2.45,
+      "plus": 2.93,
+      "dirk": 2.7
+    },
+    "tags": [
+      "vers",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 166,
+    "name": "Diepvries spinazie 450g",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.55,
+      "jumbo": 1.41,
+      "lidl": 1.29,
+      "aldi": 1.37,
+      "plus": 1.52,
+      "dirk": 1.26
+    },
+    "tags": [
+      "populair",
       "basis"
     ],
     "substitute": "",
     "qualityScore": 8.0,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 167,
+    "name": "Diepvries spinazie 450g huismerk",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.56,
+      "jumbo": 1.56,
+      "lidl": 1.4,
+      "aldi": 1.29,
+      "plus": 1.41,
+      "dirk": 1.21
+    },
+    "tags": [
+      "basis",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 168,
+    "name": "Diepvries spinazie 450g voordeel",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.61,
+      "jumbo": 1.43,
+      "lidl": 1.23,
+      "aldi": 1.2,
+      "plus": 1.42,
+      "dirk": 1.3
+    },
+    "tags": [
+      "vers",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 169,
+    "name": "Diepvries broccoli 450g",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.61,
+      "jumbo": 1.65,
+      "lidl": 1.49,
+      "aldi": 1.5,
+      "plus": 1.57,
+      "dirk": 1.41
+    },
+    "tags": [
+      "populair",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 6.9,
+    "valueScore": 7.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 170,
+    "name": "Diepvries broccoli 450g huismerk",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.83,
+      "jumbo": 1.7,
+      "lidl": 1.48,
+      "aldi": 1.34,
+      "plus": 1.72,
+      "dirk": 1.4
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.8,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 171,
+    "name": "Diepvries broccoli 450g voordeel",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 1.67,
+      "jumbo": 1.74,
+      "lidl": 1.5,
+      "aldi": 1.53,
+      "plus": 1.62,
+      "dirk": 1.41
+    },
+    "tags": [
+      "dagelijks",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 172,
+    "name": "IJs vanille 1L",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.6,
+      "lidl": 2.28,
+      "aldi": 2.16,
+      "plus": 2.6,
+      "dirk": 2.43
+    },
+    "tags": [
+      "populair",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 173,
+    "name": "IJs vanille 1L huismerk",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 2.76,
+      "jumbo": 2.59,
+      "lidl": 2.41,
+      "aldi": 2.18,
+      "plus": 2.72,
+      "dirk": 2.24
+    },
+    "tags": [
+      "vers",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 7.9,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 174,
+    "name": "IJs vanille 1L voordeel",
+    "category": "Diepvries",
+    "prices": {
+      "ah": 2.61,
+      "jumbo": 2.53,
+      "lidl": 2.23,
+      "aldi": 2.18,
+      "plus": 2.58,
+      "dirk": 2.21
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 175,
+    "name": "Kipfilet 500g",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.96,
+      "jumbo": 5.65,
+      "lidl": 5.12,
+      "aldi": 5.05,
+      "plus": 5.76,
+      "dirk": 5.08
+    },
+    "tags": [
+      "vers",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.5,
+    "valueScore": 8.0,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 176,
+    "name": "Kipfilet 500g huismerk",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.89,
+      "jumbo": 5.63,
+      "lidl": 5.08,
+      "aldi": 4.98,
+      "plus": 5.73,
+      "dirk": 5.14
+    },
+    "tags": [
+      "actie",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.8,
+    "valueScore": 8.3,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 177,
+    "name": "Kipfilet 500g voordeel",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.89,
+      "jumbo": 5.71,
+      "lidl": 5.2,
+      "aldi": 4.84,
+      "plus": 5.74,
+      "dirk": 5.04
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.2,
+    "valueScore": 7.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 178,
+    "name": "Kipdijfilet 500g",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.42,
+      "jumbo": 5.14,
+      "lidl": 4.75,
+      "aldi": 4.46,
+      "plus": 5.19,
+      "dirk": 4.69
+    },
+    "tags": [
+      "populair",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.4,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 179,
+    "name": "Kipdijfilet 500g huismerk",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.41,
+      "jumbo": 5.08,
+      "lidl": 4.68,
+      "aldi": 4.57,
+      "plus": 5.28,
+      "dirk": 4.67
+    },
+    "tags": [
+      "actie",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 7.7,
     "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "goede keuze",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 180,
+    "name": "Kipdijfilet 500g voordeel",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.46,
+      "jumbo": 5.31,
+      "lidl": 4.68,
+      "aldi": 4.55,
+      "plus": 5.36,
+      "dirk": 4.76
+    },
+    "tags": [
+      "actie",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 181,
+    "name": "Rundergehakt 500g",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.69,
+      "jumbo": 5.33,
+      "lidl": 4.89,
+      "aldi": 4.73,
+      "plus": 5.47,
+      "dirk": 4.77
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 8.4,
+    "valueScore": 8.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 182,
+    "name": "Rundergehakt 500g huismerk",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.51,
+      "jumbo": 5.33,
+      "lidl": 4.96,
+      "aldi": 4.71,
+      "plus": 5.52,
+      "dirk": 4.84
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 6.8,
+    "valueScore": 7.2,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 183,
+    "name": "Rundergehakt 500g voordeel",
+    "category": "Vlees",
+    "prices": {
+      "ah": 5.51,
+      "jumbo": 5.39,
+      "lidl": 4.77,
+      "aldi": 4.6,
+      "plus": 5.4,
+      "dirk": 4.74
+    },
+    "tags": [
+      "bonus",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.0,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 184,
+    "name": "Spekreepjes 250g",
+    "category": "Vlees",
+    "prices": {
+      "ah": 3.18,
+      "jumbo": 3.18,
+      "lidl": 2.87,
+      "aldi": 2.61,
+      "plus": 3.15,
+      "dirk": 2.69
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.4,
+    "valueScore": 7.9,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 185,
+    "name": "Spekreepjes 250g huismerk",
+    "category": "Vlees",
+    "prices": {
+      "ah": 3.19,
+      "jumbo": 3.17,
+      "lidl": 2.78,
+      "aldi": 2.63,
+      "plus": 3.27,
+      "dirk": 2.82
+    },
+    "tags": [
+      "gezond",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 8.9,
+    "valueScore": 9.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 186,
+    "name": "Spekreepjes 250g voordeel",
+    "category": "Vlees",
+    "prices": {
+      "ah": 3.22,
+      "jumbo": 3.23,
+      "lidl": 2.83,
+      "aldi": 2.8,
+      "plus": 3.16,
+      "dirk": 2.83
+    },
+    "tags": [
+      "gezond",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 9.1,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 187,
+    "name": "Zalmfilet 250g",
+    "category": "Vis",
+    "prices": {
+      "ah": 7.1,
+      "jumbo": 6.73,
+      "lidl": 6.17,
+      "aldi": 5.81,
+      "plus": 6.92,
+      "dirk": 6.15
+    },
+    "tags": [
+      "actie",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 6.7,
+    "valueScore": 7.2,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 188,
+    "name": "Zalmfilet 250g huismerk",
+    "category": "Vis",
+    "prices": {
+      "ah": 6.96,
+      "jumbo": 6.79,
+      "lidl": 6.15,
+      "aldi": 5.9,
+      "plus": 6.81,
+      "dirk": 6.11
+    },
+    "tags": [
+      "gezond",
+      "dagelijks"
+    ],
+    "substitute": "",
+    "qualityScore": 7.1,
+    "valueScore": 7.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 189,
+    "name": "Zalmfilet 250g voordeel",
+    "category": "Vis",
+    "prices": {
+      "ah": 6.92,
+      "jumbo": 6.73,
+      "lidl": 6.03,
+      "aldi": 5.8,
+      "plus": 6.84,
+      "dirk": 5.98
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 8.6,
+    "valueScore": 9.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 190,
+    "name": "Kabeljauw 250g",
+    "category": "Vis",
+    "prices": {
+      "ah": 6.36,
+      "jumbo": 6.32,
+      "lidl": 5.69,
+      "aldi": 5.36,
+      "plus": 6.36,
+      "dirk": 5.55
+    },
+    "tags": [
+      "actie",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 191,
+    "name": "Kabeljauw 250g huismerk",
+    "category": "Vis",
+    "prices": {
+      "ah": 6.36,
+      "jumbo": 6.34,
+      "lidl": 5.74,
+      "aldi": 5.3,
+      "plus": 6.47,
+      "dirk": 5.6
+    },
+    "tags": [
+      "populair",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 192,
+    "name": "Kabeljauw 250g voordeel",
+    "category": "Vis",
+    "prices": {
+      "ah": 6.51,
+      "jumbo": 6.25,
+      "lidl": 5.64,
+      "aldi": 5.36,
+      "plus": 6.37,
+      "dirk": 5.58
+    },
+    "tags": [
+      "basis",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.3,
+    "valueScore": 7.8,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 193,
+    "name": "Garnalen 200g",
+    "category": "Vis",
+    "prices": {
+      "ah": 5.48,
+      "jumbo": 5.1,
+      "lidl": 4.68,
+      "aldi": 4.57,
+      "plus": 5.19,
+      "dirk": 4.54
+    },
+    "tags": [
+      "bonus",
+      "actie"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.5,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 194,
+    "name": "Garnalen 200g huismerk",
+    "category": "Vis",
+    "prices": {
+      "ah": 5.38,
+      "jumbo": 5.16,
+      "lidl": 4.61,
+      "aldi": 4.6,
+      "plus": 5.27,
+      "dirk": 4.58
+    },
+    "tags": [
+      "populair",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 9.0,
+    "valueScore": 9.4,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 195,
+    "name": "Garnalen 200g voordeel",
+    "category": "Vis",
+    "prices": {
+      "ah": 5.42,
+      "jumbo": 5.21,
+      "lidl": 4.73,
+      "aldi": 4.46,
+      "plus": 5.31,
+      "dirk": 4.66
+    },
+    "tags": [
+      "gezond",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 8.8,
+    "valueScore": 9.3,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 196,
+    "name": "Wasmiddel vloeibaar 1L",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 4.93,
+      "jumbo": 4.63,
+      "lidl": 4.21,
+      "aldi": 3.98,
+      "plus": 4.77,
+      "dirk": 4.29
+    },
+    "tags": [
+      "actie",
+      "bonus"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.6,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 197,
+    "name": "Wasmiddel vloeibaar 1L huismerk",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 4.91,
+      "jumbo": 4.59,
+      "lidl": 4.32,
+      "aldi": 4.0,
+      "plus": 4.67,
+      "dirk": 4.27
+    },
+    "tags": [
+      "basis",
+      "vers"
+    ],
+    "substitute": "",
+    "qualityScore": 6.9,
+    "valueScore": 7.5,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 198,
+    "name": "Wasmiddel vloeibaar 1L voordeel",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 4.95,
+      "jumbo": 4.62,
+      "lidl": 4.2,
+      "aldi": 4.03,
+      "plus": 4.87,
+      "dirk": 4.24
+    },
+    "tags": [
+      "bonus",
+      "gezond"
+    ],
+    "substitute": "",
+    "qualityScore": 8.1,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 199,
+    "name": "Afwasmiddel 500ml",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.32,
+      "jumbo": 1.23,
+      "lidl": 1.29,
+      "aldi": 1.26,
+      "plus": 1.45,
+      "dirk": 1.27
+    },
+    "tags": [
+      "gezond",
+      "populair"
+    ],
+    "substitute": "",
+    "qualityScore": 6.6,
+    "valueScore": 7.1,
+    "brandType": "mix",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 200,
+    "name": "Afwasmiddel 500ml huismerk",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.46,
+      "jumbo": 1.35,
+      "lidl": 1.33,
+      "aldi": 1.15,
+      "plus": 1.41,
+      "dirk": 1.22
+    },
+    "tags": [
+      "vers",
+      "basis"
+    ],
+    "substitute": "",
+    "qualityScore": 7.0,
+    "valueScore": 7.6,
+    "brandType": "huismerk",
+    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
     "lastUpdated": "2026-04-16"
   }
 ]
