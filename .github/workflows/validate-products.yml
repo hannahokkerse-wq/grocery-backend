@@ -1,0 +1,41 @@
+name: Validate products data
+
+on:
+  push:
+    paths:
+      - "data/products.json"
+      - "data/products_fallback.json"
+      - "products_schema.py"
+      - "validate_products.py"
+      - ".github/workflows/validate-products.yml"
+  pull_request:
+    paths:
+      - "data/products.json"
+      - "data/products_fallback.json"
+      - "products_schema.py"
+      - "validate_products.py"
+      - ".github/workflows/validate-products.yml"
+
+jobs:
+  validate-products:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pydantic
+
+      - name: Validate primary products.json
+        run: python validate_products.py data/products.json --report data/products_validation_report.json
+
+      - name: Validate fallback products_fallback.json
+        run: python validate_products.py data/products_fallback.json --report data/products_fallback_validation_report.json
