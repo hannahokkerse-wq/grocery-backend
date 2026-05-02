@@ -1,13 +1,13 @@
 from fastapi import FastAPI, HTTPException
 import os
 import json
+import re
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 from contextlib import asynccontextmanager
-from datetime import date
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./grocery_discount.db")
 engine = create_engine(DATABASE_URL, echo=False)
@@ -59,6 +59,8 @@ STORES = [
     {"id": "jumbo", "name": "Jumbo", "distanceKm": 2.1},
     {"id": "lidl", "name": "Lidl", "distanceKm": 3.0},
     {"id": "aldi", "name": "Aldi", "distanceKm": 3.5},
+    {"id": "plus", "name": "Plus", "distanceKm": 2.6},
+    {"id": "dirk", "name": "Dirk", "distanceKm": 2.8},
 ]
 
 STORE_NAME_MAP = {store["id"]: store["name"] for store in STORES}
@@ -76,11 +78,23 @@ def save_products(products: List[Dict]) -> None:
         json.dump(products, f, ensure_ascii=False, indent=2)
 
 
+def valid_prices(product: Dict) -> Dict[str, float]:
+    prices = product.get("prices", {})
+    return {
+        store_id: float(price)
+        for store_id, price in prices.items()
+        if price is not None and store_id in STORE_NAME_MAP
+    }
+
+
 def get_cheapest_store(product: Dict):
-    cheapest_store_id = min(product["prices"], key=product["prices"].get)
+    prices = valid_prices(product)
+    if not prices:
+        return {"storeId": "", "price": 0.0, "storeName": ""}
+    cheapest_store_id = min(prices, key=prices.get)
     return {
         "storeId": cheapest_store_id,
-        "price": product["prices"][cheapest_store_id],
+        "price": prices[cheapest_store_id],
         "storeName": STORE_NAME_MAP.get(cheapest_store_id, cheapest_store_id),
     }
 
@@ -114,13 +128,23 @@ def enrich_product(product: Dict):
 
 def build_basket(items: List[Dict]):
     per_store_totals = []
-    for store in STORES:
-        total = sum(item["prices"][store["id"]] for item in items)
-        per_store_totals.append({**store, "total": round(total, 2)})
 
-    single_store_best = (
-        min(per_store_totals, key=lambda x: x["total"]) if per_store_totals else None
-    )
+    for store in STORES:
+        store_id = store["id"]
+        total = 0.0
+        possible = True
+
+        for item in items:
+            prices = valid_prices(item)
+            if store_id not in prices:
+                possible = False
+                break
+            total += prices[store_id]
+
+        if possible:
+            per_store_totals.append({**store, "total": round(total, 2)})
+
+    single_store_best = min(per_store_totals, key=lambda x: x["total"]) if per_store_totals else None
 
     split_plan = []
     for item in items:
@@ -171,28 +195,18 @@ def ai_deal_insights(items: List[Dict]):
         f"Gemiddelde prijs-kwaliteit van je mandje: {basket['averageValueScore']}/10.",
         f"Beste kwaliteit in je mandje: {best_quality_item['name']} ({best_quality_item.get('qualityScore', 0)}/10).",
         f"Beste prijs-kwaliteit: {best_value_item['name']} ({best_value_item.get('valueScore', 0)}/10).",
-        f"Laagste kwaliteitsscore: {weakest_item['name']} ({weakest_item.get('qualityScore', 0)}/10). Let hier extra op.",
+        f"Laagste kwaliteitsscore: {weakest_item['name']} ({weakest_item.get('qualityScore', 0)}/10).",
     ]
 
     if basket["savingsVsSingleStore"] > 0:
-        insights.append(
-            f"Door slim te splitsen tussen winkels bespaar je €{basket['savingsVsSingleStore']:.2f}."
-        )
+        insights.append(f"Door slim te splitsen tussen winkels bespaar je €{basket['savingsVsSingleStore']:.2f}.")
 
     return insights
 
 
-def format_product_list(items: List[Dict], max_items: int = 4):
-    return ", ".join(item["name"] for item in items[:max_items])
-
-
 def available_stores_for_product(product: Dict) -> List[str]:
-    prices = product.get("prices", {})
-    return [
-        STORE_NAME_MAP[store_id]
-        for store_id, price in prices.items()
-        if price is not None and store_id in STORE_NAME_MAP
-    ]
+    prices = valid_prices(product)
+    return [STORE_NAME_MAP[store_id] for store_id in prices if store_id in STORE_NAME_MAP]
 
 
 def make_store_answer(products: List[Dict]) -> str:
@@ -242,7 +256,192 @@ def get_visible_scope_summary(
     if visible_items:
         parts.append(f"{len(visible_items)} producten")
 
-    return ", ".join(parts)
+    return ", ".join(parts) or "alle producten"
+
+
+# =========================
+# AI V2 HELPER FUNCTIONS
+# =========================
+
+def extract_budget(message: str) -> Optional[float]:
+    msg = message.lower().replace(",", ".")
+    patterns = [
+        r"€\s*(\d+(?:\.\d+)?)",
+        r"(\d+(?:\.\d+)?)\s*euro",
+        r"onder\s*€?\s*(\d+(?:\.\d+)?)",
+        r"max\s*€?\s*(\d+(?:\.\d+)?)",
+        r"budget\s*(?:van)?\s*€?\s*(\d+(?:\.\d+)?)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, msg)
+        if match:
+            try:
+                return float(match.group(1))
+            except ValueError:
+                return None
+    return None
+
+
+def contains_any(message: str, words: List[str]) -> bool:
+    msg = message.lower()
+    return any(word in msg for word in words)
+
+
+def detect_store(message: str) -> Optional[str]:
+    msg = message.lower()
+    mapping = {
+        "albert heijn": "ah",
+        "ah": "ah",
+        "jumbo": "jumbo",
+        "lidl": "lidl",
+        "aldi": "aldi",
+        "plus": "plus",
+        "dirk": "dirk",
+    }
+    for label, store_id in mapping.items():
+        if label in msg:
+            return store_id
+    return None
+
+
+def product_price(product: Dict, preferred_store: Optional[str] = None) -> float:
+    prices = valid_prices(product)
+    if preferred_store and preferred_store in prices:
+        return float(prices[preferred_store])
+    if not prices:
+        return 0.0
+    return float(min(prices.values()))
+
+
+def product_store_name(product: Dict, preferred_store: Optional[str] = None) -> str:
+    if preferred_store:
+        return STORE_NAME_MAP.get(preferred_store, preferred_store)
+    cheapest = get_cheapest_store(product)
+    return cheapest.get("storeName", cheapest.get("storeId", ""))
+
+
+def total_price(products: List[Dict], preferred_store: Optional[str] = None) -> float:
+    return round(sum(product_price(p, preferred_store) for p in products), 2)
+
+
+def rank_by_value(products: List[Dict], preferred_store: Optional[str] = None) -> List[Dict]:
+    def score(product: Dict) -> float:
+        price = max(product_price(product, preferred_store), 0.5)
+        quality = float(product.get("qualityScore", 0))
+        value = float(product.get("valueScore", 0))
+        promo_bonus = 0.6 if any(t.lower() in ["bonus", "actie"] for t in product.get("tags", [])) else 0
+        return ((value * 1.7) + quality + promo_bonus) / price
+
+    return sorted(products, key=score, reverse=True)
+
+
+def rank_healthy(products: List[Dict]) -> List[Dict]:
+    healthy_categories = {"Groente & Fruit", "Zuivel", "Vis", "Ontbijt", "Sportvoeding"}
+    healthy_tags = {"gezond", "vers"}
+
+    def score(product: Dict) -> float:
+        tags = set(t.lower() for t in product.get("tags", []))
+        category_bonus = 1.4 if product.get("category") in healthy_categories else 0
+        tag_bonus = 1.0 if healthy_tags.intersection(tags) else 0
+        quality = float(product.get("qualityScore", 0))
+        value = float(product.get("valueScore", 0))
+        return quality * 1.5 + value * 0.7 + category_bonus + tag_bonus
+
+    return sorted(products, key=score, reverse=True)
+
+
+def filter_by_categories(products: List[Dict], categories: List[str]) -> List[Dict]:
+    wanted = set(categories)
+    return [p for p in products if p.get("category") in wanted]
+
+
+def filter_by_keywords(products: List[Dict], keywords: List[str]) -> List[Dict]:
+    keywords = [k.lower() for k in keywords]
+    result = []
+
+    for product in products:
+        haystack = " ".join(
+            [
+                product.get("name", ""),
+                product.get("category", ""),
+                product.get("brandType", ""),
+                product.get("reviewLabel", ""),
+                " ".join(product.get("tags", [])),
+            ]
+        ).lower()
+
+        if any(keyword in haystack for keyword in keywords):
+            result.append(product)
+
+    return result
+
+
+def meal_scope_products(message: str, products: List[Dict]) -> Optional[List[Dict]]:
+    if contains_any(message, ["ontbijt", "breakfast"]):
+        return filter_by_categories(products, ["Ontbijt", "Zuivel", "Brood", "Groente & Fruit"])
+
+    if contains_any(message, ["lunch"]):
+        return filter_by_categories(products, ["Brood", "Zuivel", "Groente & Fruit", "Houdbaar", "Vis"])
+
+    if contains_any(message, ["avondeten", "diner", "dinner", "maaltijd", "mealprep", "meal prep"]):
+        return filter_by_categories(products, ["Vlees", "Vis", "Groente & Fruit", "Houdbaar", "Diepvries"])
+
+    if contains_any(message, ["snack", "snacks"]):
+        return filter_by_categories(products, ["Snacks", "Groente & Fruit", "Zuivel"])
+
+    return None
+
+
+def choose_under_budget(
+    products: List[Dict],
+    budget: float,
+    preferred_store: Optional[str] = None,
+    max_items: int = 8,
+) -> List[Dict]:
+    chosen = []
+    total = 0.0
+
+    for product in rank_by_value(products, preferred_store):
+        price = product_price(product, preferred_store)
+        if price <= 0:
+            continue
+        if total + price <= budget:
+            chosen.append(product)
+            total += price
+        if len(chosen) >= max_items:
+            break
+
+    return chosen
+
+
+def format_product_lines(
+    products: List[Dict],
+    preferred_store: Optional[str] = None,
+    max_items: int = 6,
+) -> str:
+    lines = []
+
+    for product in products[:max_items]:
+        price = product_price(product, preferred_store)
+        store_name = product_store_name(product, preferred_store)
+        lines.append(
+            f"- {product['name']} — €{price:.2f} bij {store_name}, "
+            f"kwaliteit {product.get('qualityScore', 0)}/10, waarde {product.get('valueScore', 0)}/10"
+        )
+
+    return "\n".join(lines)
+
+
+def explain_scope(
+    visible_items: List[Dict],
+    items: List[Dict],
+    visible_summary: str,
+) -> str:
+    if items:
+        return "Binnen je geselecteerde mandje"
+    if visible_items:
+        return f"Binnen de huidige filterselectie ({visible_summary})"
+    return "Binnen alle producten"
 
 
 def smart_chat_reply(
@@ -258,34 +457,42 @@ def smart_chat_reply(
     search_query: Optional[str] = "",
 ):
     msg = message.lower().strip()
-    remembered_products = session_context.get("last_products", []) if session_context else []
     visible_items = visible_items or []
+    remembered_products = session_context.get("last_products", []) if session_context else []
 
     reference_words = [
-        "deze producten", "die producten", "deze", "die",
-        "deze keuzes", "die keuzes", "deze lijst",
-        "wat ik nu zie", "wat nu zichtbaar is"
+        "deze producten",
+        "die producten",
+        "deze keuzes",
+        "die keuzes",
+        "deze lijst",
+        "wat ik nu zie",
+        "wat nu zichtbaar is",
     ]
     use_remembered = any(term in msg for term in reference_words)
 
     if use_remembered and remembered_products:
-        scope_items = remembered_products
+        base_scope = remembered_products
     elif items:
-        scope_items = items
+        base_scope = items
     elif visible_items:
-        scope_items = visible_items
+        base_scope = visible_items
     else:
-        scope_items = all_products
+        base_scope = all_products
 
-    scope_basket = basket if items and not use_remembered else build_basket(scope_items)
-    best_value_item = max(scope_items, key=lambda i: i.get("valueScore", 0))
-    best_quality_item = max(scope_items, key=lambda i: i.get("qualityScore", 0))
-    cheapest_item = min(scope_items, key=lambda i: get_cheapest_store(i)["price"])
-    weakest_item = min(scope_items, key=lambda i: i.get("qualityScore", 0))
+    if not base_scope:
+        return "Ik heb op dit moment geen producten om te analyseren.", []
 
-    cheapest_sorted = sorted(scope_items, key=lambda i: get_cheapest_store(i)["price"])
-    best_value_sorted = sorted(scope_items, key=lambda i: i.get("valueScore", 0), reverse=True)
-    best_quality_sorted = sorted(scope_items, key=lambda i: i.get("qualityScore", 0), reverse=True)
+    budget = extract_budget(message)
+    preferred_store = detect_store(message)
+    if not preferred_store and active_store and active_store != "all":
+        preferred_store = active_store
+
+    meal_products = meal_scope_products(message, base_scope)
+    scope_items = meal_products if meal_products else base_scope
+
+    if not scope_items:
+        return "Ik heb geen passende producten gevonden binnen deze selectie.", []
 
     visible_summary = get_visible_scope_summary(
         visible_items=visible_items,
@@ -294,118 +501,152 @@ def smart_chat_reply(
         sort_mode=sort_mode,
         search_query=search_query or "",
     )
+    scope_label = explain_scope(visible_items, items, visible_summary)
 
-    if any(word in msg for word in ["winkel", "winkels", "supermarkt", "supermarkten", "beschikbaar"]):
-        if visible_items and not items and not use_remembered:
-            return f"Binnen de huidige filterselectie ({visible_summary}) geldt: " + make_store_answer(scope_items[:4]), scope_items[:4]
-        return make_store_answer(scope_items[:4]), scope_items[:4]
+    if budget is not None or contains_any(msg, ["budget", "onder", "max", "lijst", "boodschappenlijst", "weekboodschappen"]):
+        spend_budget = budget or 25.0
+        max_items = 12 if contains_any(msg, ["week", "weekboodschappen"]) else 7
+        chosen = choose_under_budget(scope_items, spend_budget, preferred_store, max_items=max_items)
 
-    if any(word in msg for word in ["aanbieding", "bonus", "actie"]):
-        promo_items = [item for item in scope_items if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))]
-        if promo_items:
-            if visible_items and not items and not use_remembered:
-                intro = f"Binnen de huidige filterselectie ({visible_summary}) zijn de producten in de aanbieding: "
-            else:
-                intro = "De producten in de aanbieding zijn: "
-            return f"{intro}{format_product_list(promo_items)}.", promo_items[:4]
-        return "Ik zie op dit moment geen producten in de aanbieding binnen deze selectie.", []
+        if not chosen:
+            return f"Ik kan binnen €{spend_budget:.2f} geen goede combinatie vinden in deze selectie.", []
 
-    if any(word in msg for word in ["goedkoop", "goedkope", "besparen", "goedkoopst"]):
-        if visible_items and not items and not use_remembered:
-            intro = f"Binnen de huidige filterselectie ({visible_summary}) zijn de goedkoopste producten: "
-        elif items:
-            intro = "Binnen je huidige selectie zijn de goedkoopste producten: "
-        else:
-            intro = "De goedkoopste producten zijn: "
+        total = total_price(chosen, preferred_store)
+        store_text = f" bij {STORE_NAME_MAP.get(preferred_store, preferred_store)}" if preferred_store else " op basis van de goedkoopste winkel per product"
+
         return (
-            f"{intro}{format_product_list(cheapest_sorted)}. "
-            f"De allergoedkoopste keuze is {cheapest_item['name']} voor €{get_cheapest_store(cheapest_item)['price']:.2f}. "
-            f"De voordeligste supermarkt voor deze scope is {scope_basket['singleStoreBest']['name']}.",
+            f"{scope_label} stel ik dit budgetmandje voor{store_text}. "
+            f"Totaal: €{total:.2f} van maximaal €{spend_budget:.2f}.\n"
+            f"{format_product_lines(chosen, preferred_store, max_items=max_items)}",
+            chosen[:4],
+        )
+
+    if contains_any(msg, ["gezond", "gezonde", "gezondste", "fit"]):
+        healthy = rank_healthy(scope_items)
+        return (
+            f"{scope_label} zijn dit de gezondste keuzes:\n"
+            f"{format_product_lines(healthy, preferred_store, max_items=6)}",
+            healthy[:4],
+        )
+
+    if contains_any(msg, ["eiwit", "eiwitrijk", "proteïne", "protein", "spiermassa", "sport"]):
+        protein = filter_by_keywords(scope_items, ["kwark", "kip", "zalm", "tonijn", "ei", "eieren", "proteïne", "rundergehakt", "vis"])
+        if not protein:
+            protein = filter_by_categories(scope_items, ["Zuivel", "Vlees", "Vis", "Sportvoeding"])
+        protein = rank_by_value(protein, preferred_store)
+
+        if not protein:
+            return "Ik vind binnen deze selectie geen duidelijke eiwitrijke producten.", []
+
+        return (
+            f"{scope_label} zijn dit sterke eiwitrijke keuzes:\n"
+            f"{format_product_lines(protein, preferred_store, max_items=6)}",
+            protein[:4],
+        )
+
+    if meal_products:
+        meal_name = "maaltijd"
+        if "ontbijt" in msg:
+            meal_name = "ontbijt"
+        elif "lunch" in msg:
+            meal_name = "lunch"
+        elif contains_any(msg, ["avondeten", "diner", "dinner"]):
+            meal_name = "avondeten"
+        elif contains_any(msg, ["mealprep", "meal prep"]):
+            meal_name = "mealprep"
+
+        best_meal = rank_by_value(scope_items, preferred_store)[:6]
+        total = total_price(best_meal, preferred_store)
+
+        return (
+            f"{scope_label} is dit een slimme {meal_name}-selectie. "
+            f"Totaal ongeveer: €{total:.2f}.\n"
+            f"{format_product_lines(best_meal, preferred_store, max_items=6)}",
+            best_meal[:4],
+        )
+
+    if contains_any(msg, ["winkel", "winkels", "supermarkt", "supermarkten", "beschikbaar"]):
+        if preferred_store:
+            store_products = rank_by_value(scope_items, preferred_store)[:6]
+            return (
+                f"{scope_label} zijn dit de beste keuzes bij {STORE_NAME_MAP.get(preferred_store, preferred_store)}:\n"
+                f"{format_product_lines(store_products, preferred_store, max_items=6)}",
+                store_products[:4],
+            )
+
+        return make_store_answer(scope_items[:6]), scope_items[:4]
+
+    if contains_any(msg, ["aanbieding", "bonus", "actie"]):
+        promo_items = [
+            item for item in scope_items
+            if any(tag.lower() in ["bonus", "actie"] for tag in item.get("tags", []))
+        ]
+        promo_items = rank_by_value(promo_items, preferred_store)
+
+        if promo_items:
+            return (
+                f"{scope_label} zijn dit de beste aanbiedingen/acties:\n"
+                f"{format_product_lines(promo_items, preferred_store, max_items=6)}",
+                promo_items[:4],
+            )
+
+        return "Ik zie binnen deze selectie geen duidelijke aanbiedingen of acties.", []
+
+    if contains_any(msg, ["goedkoop", "goedkope", "besparen", "goedkoopst", "laagste prijs"]):
+        cheapest_sorted = sorted(scope_items, key=lambda i: product_price(i, preferred_store))
+        return (
+            f"{scope_label} zijn dit de goedkoopste producten:\n"
+            f"{format_product_lines(cheapest_sorted, preferred_store, max_items=6)}",
             cheapest_sorted[:4],
         )
 
-    if any(word in msg for word in ["prijs-kwaliteit", "waarde", "beste keuze"]):
-        if visible_items and not items and not use_remembered:
-            intro = f"Binnen de huidige filterselectie ({visible_summary}) zijn de beste prijs-kwaliteit producten: "
-        elif items:
-            intro = "Binnen je huidige selectie zijn de beste prijs-kwaliteit producten: "
-        else:
-            intro = "De beste prijs-kwaliteit producten zijn: "
+    if contains_any(msg, ["prijs-kwaliteit", "waarde", "beste keuze", "beste deal"]):
+        best_value = rank_by_value(scope_items, preferred_store)
         return (
-            f"{intro}{format_product_list(best_value_sorted)}. "
-            f"De sterkste keuze is {best_value_item['name']} met een waarde-score van {best_value_item.get('valueScore', 0)}/10.",
-            best_value_sorted[:4],
+            f"{scope_label} zijn dit de beste prijs-kwaliteit keuzes:\n"
+            f"{format_product_lines(best_value, preferred_store, max_items=6)}",
+            best_value[:4],
         )
 
-    if any(word in msg for word in ["kwaliteit", "beste kwaliteit", "goedste"]):
-        if visible_items and not items and not use_remembered:
-            intro = f"Binnen de huidige filterselectie ({visible_summary}) zijn de producten met de hoogste kwaliteit: "
-        elif items:
-            intro = "Binnen je huidige selectie zijn de producten met de hoogste kwaliteit: "
-        else:
-            intro = "De producten met de hoogste kwaliteit zijn: "
+    if contains_any(msg, ["kwaliteit", "beste kwaliteit", "hoogste kwaliteit"]):
+        best_quality = sorted(scope_items, key=lambda i: i.get("qualityScore", 0), reverse=True)
         return (
-            f"{intro}{format_product_list(best_quality_sorted)}. "
-            f"De hoogste kwaliteitsscore is {best_quality_item['name']} met {best_quality_item.get('qualityScore', 0)}/10. "
-            f"De laagste kwaliteitsscore is {weakest_item['name']} met {weakest_item.get('qualityScore', 0)}/10.",
-            best_quality_sorted[:4],
+            f"{scope_label} zijn dit de producten met de hoogste kwaliteit:\n"
+            f"{format_product_lines(best_quality, preferred_store, max_items=6)}",
+            best_quality[:4],
         )
 
-    if any(word in msg for word in ["gezond", "gezondere", "gezondst"]):
-        healthy_items = [
-            item for item in scope_items
-            if "gezond" in [tag.lower() for tag in item.get("tags", [])]
-            or item.get("category") in ["Groente & Fruit", "Zuivel"]
-        ]
-        healthy_sorted = sorted(healthy_items, key=lambda i: i.get("qualityScore", 0), reverse=True)
-        if healthy_sorted:
-            if visible_items and not items and not use_remembered:
-                intro = f"Binnen de huidige filterselectie ({visible_summary}) zijn de gezondste keuzes: "
-            elif items:
-                intro = "Binnen je huidige selectie zijn de gezondste keuzes: "
-            else:
-                intro = "De gezondste keuzes zijn: "
-            return (
-                f"{intro}{format_product_list(healthy_sorted)}. "
-                f"De beste gezonde keuze is {healthy_sorted[0]['name']} met een kwaliteitsscore van {healthy_sorted[0].get('qualityScore', 0)}/10.",
-                healthy_sorted[:4],
-            )
-        return "Ik zie in de huidige scope niet direct gezonde keuzes.", []
-
-    if any(word in msg for word in ["mandje", "basket", "totaal"]):
+    if contains_any(msg, ["mandje", "basket", "totaal"]):
         if items:
+            scope_basket = basket or build_basket(items)
             return (
-                f"Je geselecteerde mandje heeft nu een goedkoopste totaalprijs van €{scope_basket['splitTotal']:.2f}. "
-                f"De gemiddelde kwaliteit is {scope_basket['averageQualityScore']}/10 en de gemiddelde prijs-kwaliteit is {scope_basket['averageValueScore']}/10.",
+                f"Je geselecteerde mandje heeft een goedkoopste totaalprijs van €{scope_basket['splitTotal']:.2f}. "
+                f"Gemiddelde kwaliteit: {scope_basket['averageQualityScore']}/10. "
+                f"Gemiddelde prijs-kwaliteit: {scope_basket['averageValueScore']}/10.",
                 items[:4],
             )
-        if visible_items:
-            return (
-                f"Binnen de huidige filterselectie ({visible_summary}) is de voordeligste supermarkt "
-                f"{scope_basket['singleStoreBest']['name']} met een totaal van €{scope_basket['singleStoreBest']['total']:.2f}. "
-                f"Als je producten selecteert, kan ik je mandje nog specifieker analyseren.",
-                visible_items[:4],
-            )
+
+        ranked = rank_by_value(scope_items, preferred_store)[:6]
         return (
-            f"Over alle producten bekeken is {scope_basket['singleStoreBest']['name']} de goedkoopste supermarkt. "
-            f"Als je producten selecteert, kan ik je mandje specifieker analyseren.",
-            [],
+            f"Je hebt nog geen mandje geselecteerd. Als startadvies raad ik deze producten aan:\n"
+            f"{format_product_lines(ranked, preferred_store, max_items=6)}",
+            ranked[:4],
         )
 
-    if any(word in msg for word in ["wat zie ik", "wat staat er", "wat is zichtbaar"]):
-        if visible_items:
-            return (
-                f"Binnen de huidige filterselectie vallen {len(visible_items)} producten met deze context: {visible_summary}. "
-                f"De goedkoopste keuze is {cheapest_item['name']} en de beste prijs-kwaliteit keuze is {best_value_item['name']}.",
-                visible_items[:4],
-            )
-        return "Ik heb op dit moment geen filtercontext ontvangen.", []
+    if contains_any(msg, ["wat zie ik", "wat staat er", "wat is zichtbaar"]):
+        ranked = rank_by_value(scope_items, preferred_store)
+        return (
+            f"{scope_label} vallen {len(scope_items)} producten binnen de analyse. "
+            f"De beste prijs-kwaliteit keuze is {ranked[0]['name']}.\n"
+            f"{format_product_lines(ranked, preferred_store, max_items=5)}",
+            ranked[:4],
+        )
 
+    ranked = rank_by_value(scope_items, preferred_store)
     return (
-        f"Op basis van de huidige context raad ik {best_value_item['name']} aan voor prijs-kwaliteit, "
-        f"{best_quality_item['name']} voor kwaliteit en {cheapest_item['name']} als goedkoopste keuze. "
-        f"De voordeligste supermarkt voor deze scope is {scope_basket['singleStoreBest']['name']}.",
-        scope_items[:4],
+        f"{scope_label} raad ik vooral deze producten aan voor prijs, kwaliteit en waarde:\n"
+        f"{format_product_lines(ranked, preferred_store, max_items=5)}",
+        ranked[:4],
     )
 
 
@@ -467,7 +708,7 @@ def get_products(q: Optional[str] = None):
     filtered = [
         p for p in products
         if query in p["name"].lower()
-        or query in p["category"].lower()
+        or query in p.get("category", "").lower()
         or any(query in tag.lower() for tag in p.get("tags", []))
         or query in p.get("reviewLabel", "").lower()
         or query in p.get("brandType", "").lower()
@@ -497,12 +738,7 @@ def ai_recommend(request: AIRequest):
             "difference": round(request.budget - basket["splitTotal"], 2),
         }
 
-    return {
-        "location": request.location,
-        "insights": insights,
-        "basketSummary": basket,
-        "budgetStatus": budget_status,
-    }
+    return {"location": request.location, "insights": insights, "basketSummary": basket, "budgetStatus": budget_status}
 
 
 @app.get("/alerts/suggestions")
@@ -551,7 +787,7 @@ def ai_chat(request: AIChatRequest):
         "reply": reply,
         "basket": basket,
         "session_id": session_id,
-        "source": "local-json-data-v1",
+        "source": "local-json-data-ai-v2",
         "used_visible_products": len(visible_items),
         "used_selected_products": len(items),
     }
@@ -586,11 +822,7 @@ def create_list(request: ShoppingListCreate):
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
 
-        shopping_list = ShoppingList(
-            user_id=request.user_id,
-            name=request.name,
-            product_ids=",".join(map(str, request.product_ids)),
-        )
+        shopping_list = ShoppingList(user_id=request.user_id, name=request.name, product_ids=",".join(map(str, request.product_ids)))
         session.add(shopping_list)
         session.commit()
         session.refresh(shopping_list)
@@ -641,11 +873,7 @@ def create_price_alert(request: PriceAlertCreate):
         if not product:
             raise HTTPException(status_code=404, detail="Product not found")
 
-        alert = PriceAlert(
-            user_id=request.user_id,
-            product_id=request.product_id,
-            target_price=request.target_price,
-        )
+        alert = PriceAlert(user_id=request.user_id, product_id=request.product_id, target_price=request.target_price)
         session.add(alert)
         session.commit()
         session.refresh(alert)

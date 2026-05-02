@@ -1,0 +1,33 @@
+{
+  "product_count": 200,
+  "min_id": 1,
+  "max_id": 200,
+  "missing_ids": [],
+  "duplicate_ids": [],
+  "duplicate_names": [],
+  "stores_required": [
+    "ah",
+    "jumbo",
+    "lidl",
+    "aldi",
+    "plus",
+    "dirk"
+  ],
+  "categories": [
+    "Brood",
+    "Diepvries",
+    "Drinken",
+    "Groente & Fruit",
+    "Houdbaar",
+    "Huishouden",
+    "Ontbijt",
+    "Snacks",
+    "Vis",
+    "Vlees",
+    "Zuivel"
+  ],
+  "products_with_substitute": 200,
+  "products_without_substitute": 0,
+  "validation_errors": [],
+  "status": "production_ready"
+}
