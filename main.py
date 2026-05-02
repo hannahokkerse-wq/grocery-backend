@@ -15,6 +15,10 @@ engine = create_engine(DATABASE_URL, echo=False)
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data" / "products.json"
+FALLBACK_DATA_PATH = BASE_DIR / "data" / "products_fallback.json"
+PRODUCTS_CACHE: List[Dict] = []
+PRODUCTS_SOURCE = "not-loaded"
+PRODUCTS_VALIDATION_WARNING: Optional[str] = None
 
 
 class User(SQLModel, table=True):
@@ -44,8 +48,8 @@ async def lifespan(app: FastAPI):
     if not DATA_PATH.exists():
         raise RuntimeError(f"products.json not found at {DATA_PATH}")
 
-    products = load_products()
-    validate_products_data(products)
+    global PRODUCTS_CACHE
+    PRODUCTS_CACHE = load_validated_products_with_fallback()
 
     yield
 
@@ -75,6 +79,16 @@ SESSION_CONTEXT: Dict[str, Dict] = {}
 
 
 def load_products() -> List[Dict]:
+    """
+    Producten laden.
+
+    Als PRODUCTS_CACHE gevuld is, gebruikt de API die cache.
+    Daardoor kan de backend veilig terugvallen op products_fallback.json
+    wanneer data/products.json ongeldig is.
+    """
+    if PRODUCTS_CACHE:
+        return PRODUCTS_CACHE
+
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -122,6 +136,47 @@ def validate_products_data(products: List[Dict]) -> None:
         preview = "\n".join(errors[:20])
         extra = f"\n... plus {len(errors) - 20} extra fouten" if len(errors) > 20 else ""
         raise RuntimeError(f"products.json validation failed:\n{preview}{extra}")
+
+
+def load_validated_products_with_fallback() -> List[Dict]:
+    """
+    Probeert eerst data/products.json.
+    Als die ongeldig is, probeert hij data/products_fallback.json.
+
+    Als fallback wordt gebruikt:
+    - app start alsnog
+    - /health/data laat warning zien
+    - API blijft werken met laatst bekende goede dataset
+    """
+    global PRODUCTS_SOURCE, PRODUCTS_VALIDATION_WARNING
+
+    try:
+        products = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+        validate_products_data(products)
+        PRODUCTS_SOURCE = str(DATA_PATH)
+        PRODUCTS_VALIDATION_WARNING = None
+        return products
+    except Exception as primary_error:
+        PRODUCTS_VALIDATION_WARNING = f"Primary products.json invalid: {primary_error}"
+
+        if FALLBACK_DATA_PATH.exists():
+            try:
+                fallback_products = json.loads(FALLBACK_DATA_PATH.read_text(encoding="utf-8"))
+                validate_products_data(fallback_products)
+                PRODUCTS_SOURCE = str(FALLBACK_DATA_PATH)
+                PRODUCTS_VALIDATION_WARNING += f" | Using fallback: {FALLBACK_DATA_PATH}"
+                return fallback_products
+            except Exception as fallback_error:
+                raise RuntimeError(
+                    "products.json én products_fallback.json zijn ongeldig. "
+                    f"Primary error: {primary_error}. Fallback error: {fallback_error}"
+                )
+
+        raise RuntimeError(
+            "products.json is ongeldig en er is geen geldige fallback beschikbaar. "
+            f"Zet een geldige fallback op: {FALLBACK_DATA_PATH}. "
+            f"Originele fout: {primary_error}"
+        )
 
 
 def valid_prices(product: Dict) -> Dict[str, float]:
@@ -737,6 +792,17 @@ class PriceAlertCreate(BaseModel):
 @app.get("/")
 def root():
     return {"message": "Grocery Discount API is running"}
+
+
+@app.get("/health/data")
+def health_data():
+    return {
+        "status": "ok" if PRODUCTS_CACHE else "not-loaded",
+        "product_count": len(PRODUCTS_CACHE),
+        "products_source": PRODUCTS_SOURCE,
+        "validation_warning": PRODUCTS_VALIDATION_WARNING,
+        "using_fallback": PRODUCTS_SOURCE.endswith("products_fallback.json"),
+    }
 
 
 @app.get("/stores")
