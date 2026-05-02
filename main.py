@@ -6,6 +6,7 @@ from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
+from products_schema import Product
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 from contextlib import asynccontextmanager
 
@@ -39,8 +40,13 @@ class PriceAlert(SQLModel, table=True):
 async def lifespan(app: FastAPI):
     SQLModel.metadata.create_all(engine)
     DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+
     if not DATA_PATH.exists():
         raise RuntimeError(f"products.json not found at {DATA_PATH}")
+
+    products = load_products()
+    validate_products_data(products)
+
     yield
 
 
@@ -76,6 +82,46 @@ def load_products() -> List[Dict]:
 def save_products(products: List[Dict]) -> None:
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(products, f, ensure_ascii=False, indent=2)
+
+
+def validate_products_data(products: List[Dict]) -> None:
+    """
+    Valideert products.json bij startup.
+    Als data ongeldig is, stopt de backend met een duidelijke foutmelding.
+    """
+    if not isinstance(products, list):
+        raise RuntimeError("products.json moet een JSON-array zijn")
+
+    seen_ids = set()
+    seen_names = set()
+    errors = []
+
+    for index, product in enumerate(products):
+        try:
+            validated = Product.model_validate(product)
+        except Exception as exc:
+            name = product.get("name", f"index {index}") if isinstance(product, dict) else f"index {index}"
+            errors.append(f"{name}: {exc}")
+            continue
+
+        if validated.id in seen_ids:
+            errors.append(f"Duplicate product id: {validated.id}")
+        seen_ids.add(validated.id)
+
+        normalized_name = validated.name.strip().lower()
+        if normalized_name in seen_names:
+            errors.append(f"Duplicate product name: {validated.name}")
+        seen_names.add(normalized_name)
+
+    if seen_ids:
+        missing_ids = sorted(set(range(1, max(seen_ids) + 1)) - seen_ids)
+        if missing_ids:
+            errors.append(f"Missing product ids: {missing_ids}")
+
+    if errors:
+        preview = "\n".join(errors[:20])
+        extra = f"\n... plus {len(errors) - 20} extra fouten" if len(errors) > 20 else ""
+        raise RuntimeError(f"products.json validation failed:\n{preview}{extra}")
 
 
 def valid_prices(product: Dict) -> Dict[str, float]:
