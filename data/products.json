@@ -13,13 +13,14 @@
     },
     "tags": [
       "populair",
-      "gezond"
+      "gezond",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Halfvolle melk 1L huismerk",
     "qualityScore": 9.1,
     "valueScore": 9.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -36,13 +37,15 @@
     },
     "tags": [
       "gezond",
-      "vers"
+      "vers",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Halfvolle melk 1L",
     "qualityScore": 8.4,
     "valueScore": 9.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -59,13 +62,15 @@
     },
     "tags": [
       "bonus",
-      "dagelijks"
+      "dagelijks",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Halfvolle melk 1L",
     "qualityScore": 7.9,
     "valueScore": 8.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -82,13 +87,14 @@
     },
     "tags": [
       "bonus",
-      "basis"
+      "basis",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Volle melk 1L huismerk",
     "qualityScore": 7.8,
     "valueScore": 8.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -105,13 +111,15 @@
     },
     "tags": [
       "dagelijks",
-      "actie"
+      "actie",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Volle melk 1L",
     "qualityScore": 7.6,
     "valueScore": 8.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -128,13 +136,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Volle melk 1L",
     "qualityScore": 8.0,
     "valueScore": 8.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -151,13 +161,14 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Magere melk 1L huismerk",
     "qualityScore": 7.0,
     "valueScore": 7.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -174,13 +185,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Magere melk 1L",
     "qualityScore": 8.2,
     "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -197,13 +210,15 @@
     },
     "tags": [
       "gezond",
-      "vers"
+      "vers",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Magere melk 1L",
     "qualityScore": 8.4,
     "valueScore": 8.9,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -220,13 +235,14 @@
     },
     "tags": [
       "dagelijks",
-      "populair"
+      "populair",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Havermelk 1L huismerk",
     "qualityScore": 7.9,
     "valueScore": 8.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -243,13 +259,15 @@
     },
     "tags": [
       "populair",
-      "bonus"
+      "bonus",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Havermelk 1L",
     "qualityScore": 7.6,
     "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -266,13 +284,15 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Havermelk 1L",
     "qualityScore": 8.1,
     "valueScore": 8.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -289,13 +309,14 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Griekse yoghurt 500g huismerk",
     "qualityScore": 8.6,
     "valueScore": 9.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -312,13 +333,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Griekse yoghurt 500g",
     "qualityScore": 8.5,
     "valueScore": 9.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -335,13 +358,15 @@
     },
     "tags": [
       "populair",
-      "actie"
+      "actie",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Griekse yoghurt 500g",
     "qualityScore": 6.6,
     "valueScore": 7.2,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -358,13 +383,15 @@
     },
     "tags": [
       "bonus",
-      "basis"
+      "basis",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Magere kwark 500g huismerk",
     "qualityScore": 6.9,
     "valueScore": 7.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -381,13 +408,15 @@
     },
     "tags": [
       "dagelijks",
-      "basis"
+      "basis",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Magere kwark 500g",
     "qualityScore": 8.6,
     "valueScore": 9.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -404,13 +433,15 @@
     },
     "tags": [
       "dagelijks",
-      "actie"
+      "actie",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Magere kwark 500g",
     "qualityScore": 7.4,
     "valueScore": 8.0,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -427,13 +458,14 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Roomboter 250g huismerk",
     "qualityScore": 8.8,
     "valueScore": 9.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -450,13 +482,15 @@
     },
     "tags": [
       "populair",
-      "actie"
+      "actie",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Roomboter 250g",
     "qualityScore": 7.8,
     "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -473,13 +507,15 @@
     },
     "tags": [
       "populair",
-      "bonus"
+      "bonus",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Roomboter 250g",
     "qualityScore": 6.7,
     "valueScore": 7.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -496,13 +532,14 @@
     },
     "tags": [
       "vers",
-      "gezond"
+      "gezond",
+      "zuivel"
     ],
-    "substitute": "",
+    "substitute": "Jonge kaas plakken 400g huismerk",
     "qualityScore": 8.7,
     "valueScore": 9.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -519,13 +556,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Jonge kaas plakken 400g",
     "qualityScore": 7.5,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -542,13 +581,15 @@
     },
     "tags": [
       "bonus",
-      "basis"
+      "basis",
+      "zuivel",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Jonge kaas plakken 400g",
     "qualityScore": 7.0,
     "valueScore": 7.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -565,13 +606,15 @@
     },
     "tags": [
       "actie",
-      "dagelijks"
+      "dagelijks",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 6 stuks huismerk",
     "qualityScore": 6.7,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -588,13 +631,15 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 6 stuks",
     "qualityScore": 8.8,
     "valueScore": 9.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -611,13 +656,15 @@
     },
     "tags": [
       "populair",
-      "actie"
+      "actie",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 6 stuks",
     "qualityScore": 9.0,
     "valueScore": 9.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -634,13 +681,15 @@
     },
     "tags": [
       "vers",
-      "gezond"
+      "gezond",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 12 stuks huismerk",
     "qualityScore": 8.6,
     "valueScore": 9.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -657,13 +706,15 @@
     },
     "tags": [
       "gezond",
-      "populair"
+      "populair",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 12 stuks",
     "qualityScore": 8.2,
     "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -680,13 +731,15 @@
     },
     "tags": [
       "actie",
-      "dagelijks"
+      "dagelijks",
+      "zuivel",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Eieren 12 stuks",
     "qualityScore": 8.1,
     "valueScore": 8.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -703,13 +756,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Bananen 1kg huismerk",
     "qualityScore": 7.2,
     "valueScore": 7.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -726,13 +781,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "vers",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Bananen 1kg",
     "qualityScore": 7.7,
     "valueScore": 8.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -749,13 +806,15 @@
     },
     "tags": [
       "gezond",
-      "bonus"
+      "bonus",
+      "vers",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Bananen 1kg",
     "qualityScore": 8.9,
     "valueScore": 9.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -772,13 +831,14 @@
     },
     "tags": [
       "dagelijks",
-      "gezond"
+      "gezond",
+      "vers"
     ],
-    "substitute": "",
+    "substitute": "Appels 1kg huismerk",
     "qualityScore": 8.5,
     "valueScore": 9.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -795,13 +855,15 @@
     },
     "tags": [
       "dagelijks",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Appels 1kg",
     "qualityScore": 8.8,
     "valueScore": 9.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -818,13 +880,15 @@
     },
     "tags": [
       "dagelijks",
-      "vers"
+      "vers",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Appels 1kg",
     "qualityScore": 8.7,
     "valueScore": 9.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -841,13 +905,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Peren 1kg huismerk",
     "qualityScore": 7.7,
     "valueScore": 8.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -864,13 +930,15 @@
     },
     "tags": [
       "populair",
-      "gezond"
+      "gezond",
+      "vers",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Peren 1kg",
     "qualityScore": 8.5,
     "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -887,13 +955,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Peren 1kg",
     "qualityScore": 7.1,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -910,13 +980,14 @@
     },
     "tags": [
       "dagelijks",
-      "vers"
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappels 1kg huismerk",
     "qualityScore": 8.0,
     "valueScore": 8.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -933,13 +1004,15 @@
     },
     "tags": [
       "gezond",
-      "bonus"
+      "bonus",
+      "vers",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappels 1kg",
     "qualityScore": 7.7,
     "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -956,13 +1029,15 @@
     },
     "tags": [
       "basis",
-      "vers"
+      "vers",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappels 1kg",
     "qualityScore": 7.7,
     "valueScore": 8.2,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -979,13 +1054,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Tomaten 500g huismerk",
     "qualityScore": 8.8,
     "valueScore": 9.3,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1002,13 +1079,15 @@
     },
     "tags": [
       "vers",
-      "basis"
+      "basis",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Tomaten 500g",
     "qualityScore": 8.5,
     "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1025,13 +1104,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Tomaten 500g",
     "qualityScore": 7.2,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1048,13 +1129,14 @@
     },
     "tags": [
       "gezond",
-      "populair"
+      "populair",
+      "vers"
     ],
-    "substitute": "",
+    "substitute": "Komkommer stuk huismerk",
     "qualityScore": 7.7,
     "valueScore": 8.3,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1071,13 +1153,15 @@
     },
     "tags": [
       "dagelijks",
-      "actie"
+      "actie",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Komkommer stuk",
     "qualityScore": 7.3,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1094,13 +1178,15 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Komkommer stuk",
     "qualityScore": 7.8,
     "valueScore": 8.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1117,13 +1203,14 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "vers"
     ],
-    "substitute": "",
+    "substitute": "Paprika mix 3 stuks huismerk",
     "qualityScore": 8.1,
     "valueScore": 8.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1140,13 +1227,15 @@
     },
     "tags": [
       "populair",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Paprika mix 3 stuks",
     "qualityScore": 7.6,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1163,13 +1252,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Paprika mix 3 stuks",
     "qualityScore": 9.0,
     "valueScore": 9.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1186,13 +1277,14 @@
     },
     "tags": [
       "gezond",
-      "actie"
+      "actie",
+      "vers"
     ],
-    "substitute": "",
+    "substitute": "Uien 1kg huismerk",
     "qualityScore": 7.5,
     "valueScore": 8.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1209,13 +1301,15 @@
     },
     "tags": [
       "dagelijks",
-      "basis"
+      "basis",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Uien 1kg",
     "qualityScore": 7.8,
     "valueScore": 8.7,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1232,13 +1326,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Uien 1kg",
     "qualityScore": 8.2,
     "valueScore": 8.9,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1255,13 +1351,14 @@
     },
     "tags": [
       "gezond",
-      "actie"
+      "actie",
+      "vers"
     ],
-    "substitute": "",
+    "substitute": "Aardappelen 2kg huismerk",
     "qualityScore": 7.6,
     "valueScore": 8.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1278,13 +1375,15 @@
     },
     "tags": [
       "populair",
-      "dagelijks"
+      "dagelijks",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Aardappelen 2kg",
     "qualityScore": 6.6,
     "valueScore": 7.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1301,13 +1400,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Aardappelen 2kg",
     "qualityScore": 7.1,
     "valueScore": 7.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1324,13 +1425,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Broccoli 500g huismerk",
     "qualityScore": 8.6,
     "valueScore": 9.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1347,13 +1450,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Broccoli 500g",
     "qualityScore": 6.7,
     "valueScore": 7.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1370,13 +1475,15 @@
     },
     "tags": [
       "basis",
-      "populair"
+      "populair",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Broccoli 500g",
     "qualityScore": 7.2,
     "valueScore": 7.9,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1393,13 +1500,15 @@
     },
     "tags": [
       "bonus",
-      "dagelijks"
+      "dagelijks",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Spinazie 400g huismerk",
     "qualityScore": 9.0,
     "valueScore": 9.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1416,13 +1525,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Spinazie 400g",
     "qualityScore": 8.9,
     "valueScore": 9.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1439,13 +1550,15 @@
     },
     "tags": [
       "basis",
-      "vers"
+      "vers",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Spinazie 400g",
     "qualityScore": 8.9,
     "valueScore": 9.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1462,13 +1575,14 @@
     },
     "tags": [
       "vers",
-      "bonus"
+      "bonus",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Wortelen 1kg huismerk",
     "qualityScore": 7.5,
     "valueScore": 8.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1485,13 +1599,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "gezond",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Wortelen 1kg",
     "qualityScore": 7.7,
     "valueScore": 8.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1508,13 +1624,15 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "vers",
+      "gezond"
     ],
-    "substitute": "",
+    "substitute": "Wortelen 1kg",
     "qualityScore": 8.1,
     "valueScore": 8.8,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1531,13 +1649,14 @@
     },
     "tags": [
       "basis",
-      "gezond"
+      "gezond",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Volkoren brood huismerk",
     "qualityScore": 7.9,
     "valueScore": 8.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1554,13 +1673,15 @@
     },
     "tags": [
       "gezond",
-      "bonus"
+      "bonus",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Volkoren brood",
     "qualityScore": 8.0,
     "valueScore": 8.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1577,13 +1698,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Volkoren brood",
     "qualityScore": 6.8,
     "valueScore": 7.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1602,11 +1725,11 @@
       "actie",
       "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Wit brood huismerk",
     "qualityScore": 7.4,
     "valueScore": 8.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1623,13 +1746,14 @@
     },
     "tags": [
       "basis",
-      "dagelijks"
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Wit brood",
     "qualityScore": 6.8,
     "valueScore": 7.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1646,13 +1770,14 @@
     },
     "tags": [
       "vers",
-      "dagelijks"
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Wit brood",
     "qualityScore": 7.9,
     "valueScore": 8.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1669,13 +1794,14 @@
     },
     "tags": [
       "bonus",
-      "vers"
+      "vers",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Bruin brood huismerk",
     "qualityScore": 8.9,
     "valueScore": 9.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1692,13 +1818,15 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Bruin brood",
     "qualityScore": 6.6,
     "valueScore": 7.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1715,13 +1843,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Bruin brood",
     "qualityScore": 8.8,
     "valueScore": 9.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1738,13 +1868,14 @@
     },
     "tags": [
       "gezond",
-      "vers"
+      "vers",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Croissants 4 stuks huismerk",
     "qualityScore": 8.2,
     "valueScore": 8.7,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1761,13 +1892,15 @@
     },
     "tags": [
       "actie",
-      "gezond"
+      "gezond",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Croissants 4 stuks",
     "qualityScore": 8.9,
     "valueScore": 9.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1784,13 +1917,14 @@
     },
     "tags": [
       "dagelijks",
-      "actie"
+      "actie",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Croissants 4 stuks",
     "qualityScore": 7.3,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1807,13 +1941,14 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "houdbaar"
     ],
-    "substitute": "",
+    "substitute": "Pasta 500g huismerk",
     "qualityScore": 7.7,
     "valueScore": 8.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1830,13 +1965,15 @@
     },
     "tags": [
       "basis",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Pasta 500g",
     "qualityScore": 7.9,
     "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1853,13 +1990,15 @@
     },
     "tags": [
       "dagelijks",
-      "vers"
+      "vers",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Pasta 500g",
     "qualityScore": 7.1,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1876,13 +2015,15 @@
     },
     "tags": [
       "populair",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Volkoren pasta 500g huismerk",
     "qualityScore": 6.6,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1899,13 +2040,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Volkoren pasta 500g",
     "qualityScore": 6.8,
     "valueScore": 7.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1922,13 +2065,15 @@
     },
     "tags": [
       "populair",
-      "actie"
+      "actie",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Volkoren pasta 500g",
     "qualityScore": 8.6,
     "valueScore": 9.2,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1945,13 +2090,15 @@
     },
     "tags": [
       "dagelijks",
-      "populair"
+      "populair",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Rijst 1kg huismerk",
     "qualityScore": 8.8,
     "valueScore": 9.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1968,13 +2115,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Rijst 1kg",
     "qualityScore": 8.4,
     "valueScore": 8.9,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -1990,14 +2139,16 @@
       "dirk": 2.17
     },
     "tags": [
-      "gezond",
-      "vers"
+      "vers",
+      "houdbaar",
+      "basis",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Rijst 1kg",
     "qualityScore": 7.4,
     "valueScore": 7.9,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2014,13 +2165,15 @@
     },
     "tags": [
       "gezond",
-      "vers"
+      "vers",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Couscous 500g huismerk",
     "qualityScore": 8.3,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2037,13 +2190,15 @@
     },
     "tags": [
       "dagelijks",
-      "basis"
+      "basis",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Couscous 500g",
     "qualityScore": 8.2,
     "valueScore": 8.7,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2060,13 +2215,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Couscous 500g",
     "qualityScore": 7.9,
     "valueScore": 8.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2083,13 +2240,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Tomatensaus 500g huismerk",
     "qualityScore": 6.6,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2106,13 +2265,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Tomatensaus 500g",
     "qualityScore": 7.0,
     "valueScore": 7.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2129,13 +2290,15 @@
     },
     "tags": [
       "populair",
-      "bonus"
+      "bonus",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Tomatensaus 500g",
     "qualityScore": 7.0,
     "valueScore": 7.8,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2152,13 +2315,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Pesto groen 190g huismerk",
     "qualityScore": 6.9,
     "valueScore": 7.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2175,13 +2340,15 @@
     },
     "tags": [
       "vers",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Pesto groen 190g",
     "qualityScore": 7.0,
     "valueScore": 7.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2198,13 +2365,15 @@
     },
     "tags": [
       "bonus",
-      "populair"
+      "populair",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Pesto groen 190g",
     "qualityScore": 7.7,
     "valueScore": 8.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2221,13 +2390,15 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Olijfolie 1L huismerk",
     "qualityScore": 8.7,
     "valueScore": 9.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2244,13 +2415,15 @@
     },
     "tags": [
       "bonus",
-      "populair"
+      "populair",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Olijfolie 1L",
     "qualityScore": 7.8,
     "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2267,13 +2440,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Olijfolie 1L",
     "qualityScore": 8.6,
     "valueScore": 9.1,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2290,13 +2465,15 @@
     },
     "tags": [
       "populair",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Zonnebloemolie 1L huismerk",
     "qualityScore": 8.3,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2313,13 +2490,15 @@
     },
     "tags": [
       "actie",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Zonnebloemolie 1L",
     "qualityScore": 7.5,
     "valueScore": 8.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2336,13 +2515,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Zonnebloemolie 1L",
     "qualityScore": 9.0,
     "valueScore": 9.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2359,13 +2540,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Kidneybonen blik huismerk",
     "qualityScore": 8.0,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2382,13 +2565,15 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Kidneybonen blik",
     "qualityScore": 7.3,
     "valueScore": 7.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2405,13 +2590,15 @@
     },
     "tags": [
       "vers",
-      "bonus"
+      "bonus",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Kidneybonen blik",
     "qualityScore": 8.8,
     "valueScore": 9.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2428,13 +2615,15 @@
     },
     "tags": [
       "actie",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Kikkererwten blik huismerk",
     "qualityScore": 9.1,
     "valueScore": 9.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2451,13 +2640,15 @@
     },
     "tags": [
       "gezond",
-      "basis"
+      "basis",
+      "houdbaar",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Kikkererwten blik",
     "qualityScore": 8.6,
     "valueScore": 9.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2474,13 +2665,15 @@
     },
     "tags": [
       "actie",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Kikkererwten blik",
     "qualityScore": 7.7,
     "valueScore": 8.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2497,13 +2690,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Tonijn blik huismerk",
     "qualityScore": 7.0,
     "valueScore": 7.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2520,13 +2715,15 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Tonijn blik",
     "qualityScore": 7.0,
     "valueScore": 7.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2543,13 +2740,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Tonijn blik",
     "qualityScore": 7.8,
     "valueScore": 8.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2566,13 +2765,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Mais blik huismerk",
     "qualityScore": 6.8,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Jumbo.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2589,13 +2790,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Mais blik",
     "qualityScore": 7.1,
     "valueScore": 7.9,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2612,13 +2815,15 @@
     },
     "tags": [
       "actie",
-      "gezond"
+      "gezond",
+      "houdbaar",
+      "basis"
     ],
-    "substitute": "",
+    "substitute": "Mais blik",
     "qualityScore": 7.5,
     "valueScore": 8.2,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2635,13 +2840,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Havermout 500g huismerk",
     "qualityScore": 8.0,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2658,13 +2865,15 @@
     },
     "tags": [
       "populair",
-      "vers"
+      "vers",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Havermout 500g",
     "qualityScore": 8.4,
     "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2681,13 +2890,15 @@
     },
     "tags": [
       "gezond",
-      "basis"
+      "basis",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Havermout 500g",
     "qualityScore": 8.6,
     "valueScore": 9.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2704,13 +2915,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Muesli 750g huismerk",
     "qualityScore": 8.0,
     "valueScore": 8.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2727,13 +2940,15 @@
     },
     "tags": [
       "gezond",
-      "actie"
+      "actie",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Muesli 750g",
     "qualityScore": 6.9,
     "valueScore": 7.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2750,13 +2965,15 @@
     },
     "tags": [
       "dagelijks",
-      "gezond"
+      "gezond",
+      "ontbijt",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Muesli 750g",
     "qualityScore": 6.9,
     "valueScore": 7.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2773,13 +2990,15 @@
     },
     "tags": [
       "basis",
-      "populair"
+      "populair",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Cornflakes 500g huismerk",
     "qualityScore": 7.3,
     "valueScore": 7.9,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2796,13 +3015,15 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "ontbijt",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cornflakes 500g",
     "qualityScore": 7.5,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2819,13 +3040,15 @@
     },
     "tags": [
       "basis",
-      "dagelijks"
+      "dagelijks",
+      "ontbijt",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cornflakes 500g",
     "qualityScore": 8.5,
     "valueScore": 9.1,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2842,13 +3065,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Pindakaas 350g huismerk",
     "qualityScore": 8.3,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2865,13 +3090,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Pindakaas 350g",
     "qualityScore": 8.5,
     "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2888,13 +3115,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "gezond",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Pindakaas 350g",
     "qualityScore": 9.0,
     "valueScore": 9.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2911,13 +3140,15 @@
     },
     "tags": [
       "vers",
-      "dagelijks"
+      "dagelijks",
+      "ontbijt",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Jam aardbei 450g huismerk",
     "qualityScore": 8.7,
     "valueScore": 9.3,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2934,13 +3165,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Jam aardbei 450g",
     "qualityScore": 8.2,
     "valueScore": 8.7,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2957,13 +3190,15 @@
     },
     "tags": [
       "basis",
-      "actie"
+      "actie",
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Jam aardbei 450g",
     "qualityScore": 7.6,
     "valueScore": 7.9,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -2980,13 +3215,14 @@
     },
     "tags": [
       "vers",
-      "gezond"
+      "ontbijt",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Hagelslag 600g huismerk",
     "qualityScore": 6.8,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3003,13 +3239,15 @@
     },
     "tags": [
       "dagelijks",
-      "bonus"
+      "bonus",
+      "ontbijt",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Hagelslag 600g",
     "qualityScore": 7.6,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3025,14 +3263,15 @@
       "dirk": 2.91
     },
     "tags": [
-      "gezond",
-      "dagelijks"
+      "dagelijks",
+      "ontbijt",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Hagelslag 600g",
     "qualityScore": 6.8,
     "valueScore": 7.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3049,13 +3288,14 @@
     },
     "tags": [
       "bonus",
-      "populair"
+      "populair",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Koffie snelfilter 500g huismerk",
     "qualityScore": 7.5,
     "valueScore": 8.0,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3072,13 +3312,15 @@
     },
     "tags": [
       "bonus",
-      "populair"
+      "populair",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Koffie snelfilter 500g",
     "qualityScore": 8.9,
     "valueScore": 9.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3095,13 +3337,15 @@
     },
     "tags": [
       "bonus",
-      "vers"
+      "vers",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Koffie snelfilter 500g",
     "qualityScore": 7.1,
     "valueScore": 7.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3118,13 +3362,14 @@
     },
     "tags": [
       "basis",
-      "populair"
+      "populair",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Thee 20 zakjes huismerk",
     "qualityScore": 7.8,
     "valueScore": 8.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3141,13 +3386,15 @@
     },
     "tags": [
       "populair",
-      "bonus"
+      "bonus",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Thee 20 zakjes",
     "qualityScore": 7.6,
     "valueScore": 8.1,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3164,13 +3411,14 @@
     },
     "tags": [
       "bonus",
-      "dagelijks"
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Thee 20 zakjes",
     "qualityScore": 8.0,
     "valueScore": 8.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3187,13 +3435,14 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Cola 1.5L huismerk",
     "qualityScore": 8.1,
     "valueScore": 8.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3210,13 +3459,15 @@
     },
     "tags": [
       "populair",
-      "vers"
+      "vers",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cola 1.5L",
     "qualityScore": 6.7,
     "valueScore": 7.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3233,13 +3484,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cola 1.5L",
     "qualityScore": 8.9,
     "valueScore": 9.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3256,13 +3509,14 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Cola zero 1.5L huismerk",
     "qualityScore": 7.8,
     "valueScore": 8.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3278,14 +3532,15 @@
       "dirk": 1.55
     },
     "tags": [
-      "gezond",
-      "actie"
+      "actie",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cola zero 1.5L",
     "qualityScore": 7.5,
     "valueScore": 8.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3302,13 +3557,15 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Cola zero 1.5L",
     "qualityScore": 7.6,
     "valueScore": 8.4,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3325,13 +3582,14 @@
     },
     "tags": [
       "bonus",
-      "populair"
+      "populair",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappelsap 1L huismerk",
     "qualityScore": 8.8,
     "valueScore": 9.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3348,13 +3606,15 @@
     },
     "tags": [
       "gezond",
-      "populair"
+      "populair",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappelsap 1L",
     "qualityScore": 8.5,
     "valueScore": 9.0,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3371,13 +3631,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Sinaasappelsap 1L",
     "qualityScore": 8.1,
     "valueScore": 8.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3394,13 +3656,14 @@
     },
     "tags": [
       "basis",
-      "populair"
+      "populair",
+      "dagelijks"
     ],
-    "substitute": "",
+    "substitute": "Mineraalwater 1.5L huismerk",
     "qualityScore": 9.0,
     "valueScore": 9.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3417,13 +3680,14 @@
     },
     "tags": [
       "dagelijks",
-      "populair"
+      "populair",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Mineraalwater 1.5L",
     "qualityScore": 8.2,
     "valueScore": 9.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3440,13 +3704,15 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "dagelijks",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Mineraalwater 1.5L",
     "qualityScore": 7.7,
     "valueScore": 8.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3463,13 +3729,14 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "snack"
     ],
-    "substitute": "",
+    "substitute": "Chips naturel 200g huismerk",
     "qualityScore": 7.2,
     "valueScore": 7.8,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3486,13 +3753,15 @@
     },
     "tags": [
       "vers",
-      "actie"
+      "actie",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chips naturel 200g",
     "qualityScore": 9.0,
     "valueScore": 9.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3509,13 +3778,15 @@
     },
     "tags": [
       "dagelijks",
-      "basis"
+      "basis",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chips naturel 200g",
     "qualityScore": 8.6,
     "valueScore": 9.1,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3531,14 +3802,14 @@
       "dirk": 1.33
     },
     "tags": [
-      "gezond",
-      "dagelijks"
+      "dagelijks",
+      "snack"
     ],
-    "substitute": "",
+    "substitute": "Chips paprika 200g huismerk",
     "qualityScore": 6.6,
     "valueScore": 7.3,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Lidl.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3555,13 +3826,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chips paprika 200g",
     "qualityScore": 7.4,
     "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3577,14 +3850,15 @@
       "dirk": 1.28
     },
     "tags": [
-      "gezond",
-      "vers"
+      "vers",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chips paprika 200g",
     "qualityScore": 6.7,
     "valueScore": 7.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3601,13 +3875,14 @@
     },
     "tags": [
       "vers",
-      "basis"
+      "basis",
+      "snack"
     ],
-    "substitute": "",
+    "substitute": "Notenmix 200g huismerk",
     "qualityScore": 7.4,
     "valueScore": 8.0,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3624,13 +3899,15 @@
     },
     "tags": [
       "bonus",
-      "vers"
+      "vers",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Notenmix 200g",
     "qualityScore": 8.1,
     "valueScore": 8.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3647,13 +3924,15 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Notenmix 200g",
     "qualityScore": 7.1,
     "valueScore": 7.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3670,13 +3949,14 @@
     },
     "tags": [
       "bonus",
-      "dagelijks"
+      "dagelijks",
+      "snack"
     ],
-    "substitute": "",
+    "substitute": "Chocoladereep 100g huismerk",
     "qualityScore": 8.8,
     "valueScore": 9.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3693,13 +3973,15 @@
     },
     "tags": [
       "dagelijks",
-      "actie"
+      "actie",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chocoladereep 100g",
     "qualityScore": 8.1,
     "valueScore": 8.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3715,14 +3997,15 @@
       "dirk": 1.1
     },
     "tags": [
-      "gezond",
-      "vers"
+      "vers",
+      "snack",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Chocoladereep 100g",
     "qualityScore": 7.3,
     "valueScore": 8.0,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3739,13 +4022,14 @@
     },
     "tags": [
       "dagelijks",
-      "populair"
+      "populair",
+      "diepvries"
     ],
-    "substitute": "",
+    "substitute": "Diepvries pizza margherita huismerk",
     "qualityScore": 8.9,
     "valueScore": 9.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3762,13 +4046,15 @@
     },
     "tags": [
       "actie",
-      "gezond"
+      "gezond",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries pizza margherita",
     "qualityScore": 8.0,
     "valueScore": 8.7,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3784,14 +4070,15 @@
       "dirk": 2.7
     },
     "tags": [
-      "vers",
-      "basis"
+      "basis",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries pizza margherita",
     "qualityScore": 9.0,
     "valueScore": 9.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3808,13 +4095,14 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "diepvries"
     ],
-    "substitute": "",
+    "substitute": "Diepvries spinazie 450g huismerk",
     "qualityScore": 8.0,
     "valueScore": 8.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3831,13 +4119,15 @@
     },
     "tags": [
       "basis",
-      "gezond"
+      "gezond",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries spinazie 450g",
     "qualityScore": 8.0,
     "valueScore": 8.7,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3853,14 +4143,15 @@
       "dirk": 1.3
     },
     "tags": [
-      "vers",
-      "dagelijks"
+      "dagelijks",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries spinazie 450g",
     "qualityScore": 7.8,
     "valueScore": 8.6,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3877,13 +4168,14 @@
     },
     "tags": [
       "populair",
-      "dagelijks"
+      "dagelijks",
+      "diepvries"
     ],
-    "substitute": "",
+    "substitute": "Diepvries broccoli 450g huismerk",
     "qualityScore": 6.9,
     "valueScore": 7.3,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3900,13 +4192,15 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries broccoli 450g",
     "qualityScore": 9.0,
     "valueScore": 9.8,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3923,13 +4217,14 @@
     },
     "tags": [
       "dagelijks",
-      "vers"
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Diepvries broccoli 450g",
     "qualityScore": 7.1,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3946,13 +4241,13 @@
     },
     "tags": [
       "populair",
-      "gezond"
+      "diepvries"
     ],
-    "substitute": "",
+    "substitute": "IJs vanille 1L huismerk",
     "qualityScore": 7.5,
     "valueScore": 8.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3968,14 +4263,15 @@
       "dirk": 2.24
     },
     "tags": [
-      "vers",
-      "actie"
+      "actie",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "IJs vanille 1L",
     "qualityScore": 7.3,
     "valueScore": 7.9,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -3991,14 +4287,15 @@
       "dirk": 2.21
     },
     "tags": [
-      "gezond",
-      "dagelijks"
+      "dagelijks",
+      "diepvries",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "IJs vanille 1L",
     "qualityScore": 8.8,
     "valueScore": 9.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4015,13 +4312,15 @@
     },
     "tags": [
       "vers",
-      "populair"
+      "populair",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipfilet 500g huismerk",
     "qualityScore": 7.5,
     "valueScore": 8.0,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4038,13 +4337,15 @@
     },
     "tags": [
       "actie",
-      "basis"
+      "basis",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipfilet 500g",
     "qualityScore": 7.8,
     "valueScore": 8.3,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4061,13 +4362,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipfilet 500g",
     "qualityScore": 7.2,
     "valueScore": 7.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4084,13 +4387,15 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipdijfilet 500g huismerk",
     "qualityScore": 8.9,
     "valueScore": 9.4,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4107,13 +4412,15 @@
     },
     "tags": [
       "actie",
-      "populair"
+      "populair",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipdijfilet 500g",
     "qualityScore": 7.7,
     "valueScore": 8.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4130,13 +4437,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kipdijfilet 500g",
     "qualityScore": 8.0,
     "valueScore": 8.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4153,13 +4462,15 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Rundergehakt 500g huismerk",
     "qualityScore": 8.4,
     "valueScore": 8.9,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Goede prijs-kwaliteit voor dagelijkse boodschappen; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4176,13 +4487,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Rundergehakt 500g",
     "qualityScore": 6.8,
     "valueScore": 7.2,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4199,13 +4512,15 @@
     },
     "tags": [
       "bonus",
-      "basis"
+      "basis",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Rundergehakt 500g",
     "qualityScore": 8.0,
     "valueScore": 8.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4222,13 +4537,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Spekreepjes 250g huismerk",
     "qualityScore": 7.4,
     "valueScore": 7.9,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4245,13 +4562,15 @@
     },
     "tags": [
       "gezond",
-      "basis"
+      "basis",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Spekreepjes 250g",
     "qualityScore": 8.9,
     "valueScore": 9.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4268,13 +4587,15 @@
     },
     "tags": [
       "gezond",
-      "bonus"
+      "bonus",
+      "vlees",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Spekreepjes 250g",
     "qualityScore": 9.1,
     "valueScore": 9.5,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4291,13 +4612,15 @@
     },
     "tags": [
       "actie",
-      "vers"
+      "vers",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Zalmfilet 250g huismerk",
     "qualityScore": 6.7,
     "valueScore": 7.2,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4314,13 +4637,15 @@
     },
     "tags": [
       "gezond",
-      "dagelijks"
+      "dagelijks",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Zalmfilet 250g",
     "qualityScore": 7.1,
     "valueScore": 7.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4337,13 +4662,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Zalmfilet 250g",
     "qualityScore": 8.6,
     "valueScore": 9.1,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4360,13 +4687,15 @@
     },
     "tags": [
       "actie",
-      "gezond"
+      "gezond",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kabeljauw 250g huismerk",
     "qualityScore": 9.0,
     "valueScore": 9.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Sterke keuze door hoge kwaliteit en goede prijs; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4383,13 +4712,15 @@
     },
     "tags": [
       "populair",
-      "basis"
+      "basis",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kabeljauw 250g",
     "qualityScore": 7.0,
     "valueScore": 7.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4406,13 +4737,15 @@
     },
     "tags": [
       "basis",
-      "bonus"
+      "bonus",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Kabeljauw 250g",
     "qualityScore": 7.3,
     "valueScore": 7.8,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4429,13 +4762,15 @@
     },
     "tags": [
       "bonus",
-      "actie"
+      "actie",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Garnalen 200g huismerk",
     "qualityScore": 7.0,
     "valueScore": 7.5,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Prima basisproduct; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4452,13 +4787,15 @@
     },
     "tags": [
       "populair",
-      "vers"
+      "vers",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Garnalen 200g",
     "qualityScore": 9.0,
     "valueScore": 9.4,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Dirk.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4475,13 +4812,15 @@
     },
     "tags": [
       "gezond",
-      "vers"
+      "vers",
+      "vis",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Garnalen 200g",
     "qualityScore": 8.8,
     "valueScore": 9.3,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4498,13 +4837,15 @@
     },
     "tags": [
       "actie",
-      "bonus"
+      "bonus",
+      "huishouden",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Wasmiddel vloeibaar 1L huismerk",
     "qualityScore": 7.0,
     "valueScore": 7.6,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4521,13 +4862,15 @@
     },
     "tags": [
       "basis",
-      "vers"
+      "vers",
+      "huishouden",
+      "eiwitrijk"
     ],
-    "substitute": "",
+    "substitute": "Wasmiddel vloeibaar 1L",
     "qualityScore": 6.9,
     "valueScore": 7.5,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4544,13 +4887,15 @@
     },
     "tags": [
       "bonus",
-      "gezond"
+      "huishouden",
+      "eiwitrijk",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Wasmiddel vloeibaar 1L",
     "qualityScore": 8.1,
     "valueScore": 8.7,
-    "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "brandType": "voordeel",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4566,14 +4911,14 @@
       "dirk": 1.27
     },
     "tags": [
-      "gezond",
-      "populair"
+      "populair",
+      "huishouden"
     ],
-    "substitute": "",
+    "substitute": "Afwasmiddel 500ml huismerk",
     "qualityScore": 6.6,
     "valueScore": 7.1,
     "brandType": "mix",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Jumbo.",
     "lastUpdated": "2026-04-16"
   },
   {
@@ -4590,13 +4935,479 @@
     },
     "tags": [
       "vers",
-      "basis"
+      "basis",
+      "huishouden",
+      "budget"
     ],
-    "substitute": "",
+    "substitute": "Afwasmiddel 500ml",
     "qualityScore": 7.0,
     "valueScore": 7.6,
     "brandType": "huismerk",
-    "reviewLabel": "realistische budgetkeuze met goede prijs-kwaliteit",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 201,
+    "name": "Shampoo huismerk 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.69,
+      "plus": 2.29,
+      "dirk": 1.89
+    },
+    "tags": [
+      "dagelijks",
+      "basis",
+      "budget"
+    ],
+    "substitute": "Babyshampoo 200ml",
+    "qualityScore": 7.6,
+    "valueScore": 8.5,
+    "brandType": "huismerk",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 202,
+    "name": "Douchegel huismerk 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.49,
+      "jumbo": 1.39,
+      "lidl": 1.09,
+      "aldi": 0.99,
+      "plus": 1.59,
+      "dirk": 1.19
+    },
+    "tags": [
+      "dagelijks",
+      "basis",
+      "budget"
+    ],
+    "substitute": "Handzeep vloeibaar 300ml",
+    "qualityScore": 7.4,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 203,
+    "name": "Tandpasta basic 75ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.59,
+      "jumbo": 1.49,
+      "lidl": 1.19,
+      "aldi": 1.09,
+      "plus": 1.69,
+      "dirk": 1.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Tandpasta basic 75ml voordeel",
+    "qualityScore": 7.8,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 204,
+    "name": "Tandpasta basic 75ml voordeel",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.39,
+      "jumbo": 1.35,
+      "lidl": 1.15,
+      "aldi": 1.05,
+      "plus": 1.49,
+      "dirk": 1.19
+    },
+    "tags": [
+      "dagelijks",
+      "basis",
+      "budget"
+    ],
+    "substitute": "Tandpasta basic 75ml",
+    "qualityScore": 7.5,
+    "valueScore": 8.8,
+    "brandType": "voordeel",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 205,
+    "name": "Deodorant spray 150ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.49,
+      "jumbo": 2.39,
+      "lidl": 1.99,
+      "aldi": 1.89,
+      "plus": 2.59,
+      "dirk": 2.09
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Deodorant roller 50ml",
+    "qualityScore": 7.7,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 206,
+    "name": "Deodorant roller 50ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.99,
+      "jumbo": 1.89,
+      "lidl": 1.59,
+      "aldi": 1.49,
+      "plus": 2.09,
+      "dirk": 1.69
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Deodorant spray 150ml",
+    "qualityScore": 7.5,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 207,
+    "name": "Handzeep vloeibaar 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.39,
+      "jumbo": 1.29,
+      "lidl": 1.05,
+      "aldi": 0.99,
+      "plus": 1.49,
+      "dirk": 1.09
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Douchegel huismerk 300ml",
+    "qualityScore": 7.6,
+    "valueScore": 8.9,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 208,
+    "name": "Maandverband normaal 14 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.69,
+      "lidl": 2.19,
+      "aldi": 2.09,
+      "plus": 2.89,
+      "dirk": 2.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Tampons regular 16 stuks",
+    "qualityScore": 8.0,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 209,
+    "name": "Tampons regular 16 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.99,
+      "jumbo": 2.89,
+      "lidl": 2.39,
+      "aldi": 2.29,
+      "plus": 3.09,
+      "dirk": 2.49
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Maandverband normaal 14 stuks",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 210,
+    "name": "Inlegkruisjes 30 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.69,
+      "aldi": 1.59,
+      "plus": 2.29,
+      "dirk": 1.79
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Maandverband normaal 14 stuks",
+    "qualityScore": 7.9,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "Praktische verzorgingskeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 211,
+    "name": "Wasmiddel vloeibaar 20 wasbeurten",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 5.49,
+      "jumbo": 5.29,
+      "lidl": 4.49,
+      "aldi": 4.29,
+      "plus": 5.69,
+      "dirk": 4.79
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Wasmiddel vloeibaar 20 wasbeurten voordeel",
+    "qualityScore": 7.8,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 212,
+    "name": "Wasmiddel vloeibaar 20 wasbeurten voordeel",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 4.99,
+      "jumbo": 4.89,
+      "lidl": 4.19,
+      "aldi": 3.99,
+      "plus": 5.19,
+      "dirk": 4.39
+    },
+    "tags": [
+      "huishouden",
+      "basis",
+      "budget"
+    ],
+    "substitute": "Wasmiddel vloeibaar 20 wasbeurten",
+    "qualityScore": 7.4,
+    "valueScore": 8.8,
+    "brandType": "voordeel",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 213,
+    "name": "Allesreiniger 1L",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.29,
+      "aldi": 1.19,
+      "plus": 1.89,
+      "dirk": 1.39
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Wasmiddel vloeibaar 20 wasbeurten",
+    "qualityScore": 7.6,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 214,
+    "name": "Toiletpapier 6 rollen",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 3.29,
+      "jumbo": 3.19,
+      "lidl": 2.69,
+      "aldi": 2.59,
+      "plus": 3.39,
+      "dirk": 2.79
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Keukenpapier 2 rollen",
+    "qualityScore": 7.7,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 215,
+    "name": "Keukenpapier 2 rollen",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.69,
+      "plus": 2.29,
+      "dirk": 1.89
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Toiletpapier 6 rollen",
+    "qualityScore": 7.4,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 216,
+    "name": "Vuilniszakken 20 stuks",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 2.99,
+      "jumbo": 2.89,
+      "lidl": 2.39,
+      "aldi": 2.29,
+      "plus": 3.09,
+      "dirk": 2.49
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Aluminiumfolie 30m",
+    "qualityScore": 7.5,
+    "valueScore": 8.3,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 217,
+    "name": "Aluminiumfolie 30m",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.39,
+      "aldi": 1.29,
+      "plus": 1.89,
+      "dirk": 1.49
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Vershoudfolie 30m",
+    "qualityScore": 7.3,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 218,
+    "name": "Vershoudfolie 30m",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.59,
+      "jumbo": 1.49,
+      "lidl": 1.19,
+      "aldi": 1.09,
+      "plus": 1.69,
+      "dirk": 1.29
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Aluminiumfolie 30m",
+    "qualityScore": 7.2,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 219,
+    "name": "Babydoekjes 72 stuks",
+    "category": "Baby",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.39,
+      "aldi": 1.29,
+      "plus": 1.89,
+      "dirk": 1.49
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Babyshampoo 200ml",
+    "qualityScore": 7.8,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "Praktische babyverzorging; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 220,
+    "name": "Babyshampoo 200ml",
+    "category": "Baby",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.69,
+      "lidl": 2.19,
+      "aldi": 2.09,
+      "plus": 2.89,
+      "dirk": 2.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Babydoekjes 72 stuks",
+    "qualityScore": 8.0,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Praktische babyverzorging; goedkoopst bij Aldi.",
     "lastUpdated": "2026-04-16"
   }
 ]

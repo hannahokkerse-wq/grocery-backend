@@ -1,0 +1,25 @@
+{
+  "product_count": 220,
+  "min_id": 1,
+  "max_id": 220,
+  "duplicate_ids": [],
+  "duplicate_names": [],
+  "missing_ids": [],
+  "validation_errors": [],
+  "categories": [
+    "Baby",
+    "Brood",
+    "Diepvries",
+    "Drinken",
+    "Groente & Fruit",
+    "Houdbaar",
+    "Huishouden",
+    "Ontbijt",
+    "Persoonlijke verzorging",
+    "Snacks",
+    "Vis",
+    "Vlees",
+    "Zuivel"
+  ],
+  "status": "production_ready"
+}

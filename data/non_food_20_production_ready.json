@@ -1,0 +1,462 @@
+[
+  {
+    "id": 201,
+    "name": "Shampoo huismerk 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.69,
+      "plus": 2.29,
+      "dirk": 1.89
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Douchegel huismerk 300ml",
+    "qualityScore": 7.6,
+    "valueScore": 8.5,
+    "brandType": "huismerk",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 202,
+    "name": "Douchegel huismerk 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.49,
+      "jumbo": 1.39,
+      "lidl": 1.09,
+      "aldi": 0.99,
+      "plus": 1.59,
+      "dirk": 1.19
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Shampoo huismerk 300ml",
+    "qualityScore": 7.4,
+    "valueScore": 8.7,
+    "brandType": "huismerk",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 203,
+    "name": "Tandpasta basic 75ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.59,
+      "jumbo": 1.49,
+      "lidl": 1.19,
+      "aldi": 1.09,
+      "plus": 1.69,
+      "dirk": 1.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Tandpasta basic 75ml voordeel",
+    "qualityScore": 7.8,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 204,
+    "name": "Tandpasta basic 75ml voordeel",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.39,
+      "jumbo": 1.35,
+      "lidl": 1.15,
+      "aldi": 1.05,
+      "plus": 1.49,
+      "dirk": 1.19
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Tandpasta basic 75ml",
+    "qualityScore": 7.5,
+    "valueScore": 8.8,
+    "brandType": "voordeel",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 205,
+    "name": "Deodorant spray 150ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.49,
+      "jumbo": 2.39,
+      "lidl": 1.99,
+      "aldi": 1.89,
+      "plus": 2.59,
+      "dirk": 2.09
+    },
+    "tags": [
+      "dagelijks",
+      "populair"
+    ],
+    "substitute": "Deodorant roller 50ml",
+    "qualityScore": 7.7,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 206,
+    "name": "Deodorant roller 50ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.99,
+      "jumbo": 1.89,
+      "lidl": 1.59,
+      "aldi": 1.49,
+      "plus": 2.09,
+      "dirk": 1.69
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Deodorant spray 150ml",
+    "qualityScore": 7.5,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 207,
+    "name": "Handzeep vloeibaar 300ml",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 1.39,
+      "jumbo": 1.29,
+      "lidl": 1.05,
+      "aldi": 0.99,
+      "plus": 1.49,
+      "dirk": 1.09
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Douchegel huismerk 300ml",
+    "qualityScore": 7.6,
+    "valueScore": 8.9,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 208,
+    "name": "Maandverband normaal 14 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.69,
+      "lidl": 2.19,
+      "aldi": 2.09,
+      "plus": 2.89,
+      "dirk": 2.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Inlegkruisjes 30 stuks",
+    "qualityScore": 8.0,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 209,
+    "name": "Tampons regular 16 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.99,
+      "jumbo": 2.89,
+      "lidl": 2.39,
+      "aldi": 2.29,
+      "plus": 3.09,
+      "dirk": 2.49
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Maandverband normaal 14 stuks",
+    "qualityScore": 8.1,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 210,
+    "name": "Inlegkruisjes 30 stuks",
+    "category": "Persoonlijke verzorging",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.69,
+      "aldi": 1.59,
+      "plus": 2.29,
+      "dirk": 1.79
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Maandverband normaal 14 stuks",
+    "qualityScore": 7.9,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 211,
+    "name": "Wasmiddel vloeibaar 20 wasbeurten",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 5.49,
+      "jumbo": 5.29,
+      "lidl": 4.49,
+      "aldi": 4.29,
+      "plus": 5.69,
+      "dirk": 4.79
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Wasmiddel vloeibaar 20 wasbeurten voordeel",
+    "qualityScore": 7.8,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 212,
+    "name": "Wasmiddel vloeibaar 20 wasbeurten voordeel",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 4.99,
+      "jumbo": 4.89,
+      "lidl": 4.19,
+      "aldi": 3.99,
+      "plus": 5.19,
+      "dirk": 4.39
+    },
+    "tags": [
+      "huishouden",
+      "budget"
+    ],
+    "substitute": "Wasmiddel vloeibaar 20 wasbeurten",
+    "qualityScore": 7.4,
+    "valueScore": 8.8,
+    "brandType": "voordeel",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 213,
+    "name": "Allesreiniger 1L",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.29,
+      "aldi": 1.19,
+      "plus": 1.89,
+      "dirk": 1.39
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Afwasmiddel 500ml",
+    "qualityScore": 7.6,
+    "valueScore": 8.8,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 214,
+    "name": "Toiletpapier 6 rollen",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 3.29,
+      "jumbo": 3.19,
+      "lidl": 2.69,
+      "aldi": 2.59,
+      "plus": 3.39,
+      "dirk": 2.79
+    },
+    "tags": [
+      "huishouden",
+      "dagelijks"
+    ],
+    "substitute": "Keukenpapier 2 rollen",
+    "qualityScore": 7.7,
+    "valueScore": 8.5,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 215,
+    "name": "Keukenpapier 2 rollen",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 2.19,
+      "jumbo": 2.09,
+      "lidl": 1.79,
+      "aldi": 1.69,
+      "plus": 2.29,
+      "dirk": 1.89
+    },
+    "tags": [
+      "huishouden",
+      "dagelijks"
+    ],
+    "substitute": "Toiletpapier 6 rollen",
+    "qualityScore": 7.4,
+    "valueScore": 8.2,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 216,
+    "name": "Vuilniszakken 20 stuks",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 2.99,
+      "jumbo": 2.89,
+      "lidl": 2.39,
+      "aldi": 2.29,
+      "plus": 3.09,
+      "dirk": 2.49
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Vershoudfolie 30m",
+    "qualityScore": 7.5,
+    "valueScore": 8.3,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 217,
+    "name": "Aluminiumfolie 30m",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.39,
+      "aldi": 1.29,
+      "plus": 1.89,
+      "dirk": 1.49
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Vershoudfolie 30m",
+    "qualityScore": 7.3,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 218,
+    "name": "Vershoudfolie 30m",
+    "category": "Huishouden",
+    "prices": {
+      "ah": 1.59,
+      "jumbo": 1.49,
+      "lidl": 1.19,
+      "aldi": 1.09,
+      "plus": 1.69,
+      "dirk": 1.29
+    },
+    "tags": [
+      "huishouden",
+      "basis"
+    ],
+    "substitute": "Aluminiumfolie 30m",
+    "qualityScore": 7.2,
+    "valueScore": 8.6,
+    "brandType": "mix",
+    "reviewLabel": "Praktische huishoudkeuze; momenteel het voordeligst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 219,
+    "name": "Babydoekjes 72 stuks",
+    "category": "Baby",
+    "prices": {
+      "ah": 1.79,
+      "jumbo": 1.69,
+      "lidl": 1.39,
+      "aldi": 1.29,
+      "plus": 1.89,
+      "dirk": 1.49
+    },
+    "tags": [
+      "dagelijks",
+      "budget"
+    ],
+    "substitute": "Babyshampoo 200ml",
+    "qualityScore": 7.8,
+    "valueScore": 8.7,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  },
+  {
+    "id": 220,
+    "name": "Babyshampoo 200ml",
+    "category": "Baby",
+    "prices": {
+      "ah": 2.79,
+      "jumbo": 2.69,
+      "lidl": 2.19,
+      "aldi": 2.09,
+      "plus": 2.89,
+      "dirk": 2.29
+    },
+    "tags": [
+      "dagelijks",
+      "basis"
+    ],
+    "substitute": "Babydoekjes 72 stuks",
+    "qualityScore": 8.0,
+    "valueScore": 8.4,
+    "brandType": "mix",
+    "reviewLabel": "Budgetvriendelijke keuze met sterke prijs-kwaliteit; goedkoopst bij Aldi.",
+    "lastUpdated": "2026-04-16"
+  }
+]
